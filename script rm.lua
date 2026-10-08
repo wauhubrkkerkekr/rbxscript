@@ -10,10 +10,21 @@
 -- Instances: 140 | Scripts: 16 | Modules: 0 | Tags: 0
 local G2L = {};
 
+-- убираем старый гуй, чтобы не спавнить копии при повторном запуске
+do
+	local pg = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
+	for _, obj in ipairs(pg:GetChildren()) do
+		if obj:IsA("ScreenGui") and obj.Name == "Script" then
+			obj:Destroy()
+		end
+	end
+end
+
 -- StarterGui.Script
 G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
 G2L["1"]["Name"] = [[Script]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+G2L["1"]["ResetOnSpawn"] = false; -- гуй не пересоздаётся на респавне
 
 
 -- StarterGui.Script.Head
@@ -1237,10 +1248,10 @@ G2L["89"] = Instance.new("Frame", G2L["2"]);
 G2L["89"]["BorderSizePixel"] = 0;
 G2L["89"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["89"]["Size"] = UDim2.new(0, 791, 0, 59);
-G2L["89"]["Position"] = UDim2.new(0.01643, 0, 0.97723, 0);
+G2L["89"]["Position"] = UDim2.new(0, 0, 0, 0);
 G2L["89"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["89"]["Name"] = [[Title]];
-G2L["89"]["BackgroundTransparency"] = 1;
+G2L["89"]["BackgroundTransparency"] = 1; -- зона перетаскивания невидима
 
 
 -- StarterGui.Script.Toggle
@@ -1290,7 +1301,6 @@ local script = G2L["22"];
 	
 	local noclipEnabled = false
 	
-	-- сам noclip: каждый кадр делаем персонажа непрозрачным для столкновений
 	local connection = nil
 	local function startNoclip()
 		connection = RunService.Stepped:Connect(function()
@@ -1312,7 +1322,6 @@ local script = G2L["22"];
 		end
 	end
 	
-	-- переключение внешнего вида: On виден, Off спрятан (и наоборот)
 	local function updateVisual()
 		if noclipEnabled then
 			onFrame.BackgroundTransparency = 0
@@ -1324,7 +1333,7 @@ local script = G2L["22"];
 	end
 	
 	textButton.MouseButton1Click:Connect(function()
-		noclipEnabled = not noclipEnabled -- true <-> false
+		noclipEnabled = not noclipEnabled
 		updateVisual()
 	
 		if noclipEnabled then
@@ -1334,7 +1343,6 @@ local script = G2L["22"];
 		end
 	end)
 	
-	-- стартовое состояние
 	updateVisual()
 end;
 task.spawn(C_22);
@@ -1349,20 +1357,16 @@ local script = G2L["29"];
 	local Players = game:GetService("Players")
 	local RunService = game:GetService("RunService")
 	
-	local MAX_STAMINA = 100 -- если в игре максимум другой, поменяй число
+	local MAX_STAMINA = 100
 	
 	local player = Players.LocalPlayer
 	local staminaEnabled = false
 	local connection = nil
 	
-	-- ============ Бесконечная стамина ============
-	
-	-- Ищет значение стамины у персонажа или игрока
 	local function findStaminaValue()
 		local character = player.Character
 		if not character then return nil end
 	
-		-- в leaderstats
 		local stats = player:FindFirstChild("leaderstats")
 		if stats then
 			for _, v in ipairs(stats:GetChildren()) do
@@ -1373,7 +1377,6 @@ local script = G2L["29"];
 			end
 		end
 	
-		-- в персонаже
 		for _, v in ipairs(character:GetDescendants()) do
 			if v:IsA("ValueBase") then
 				local name = v.Name:lower()
@@ -1386,7 +1389,6 @@ local script = G2L["29"];
 		return nil
 	end
 	
-	-- Ищет атрибут стамины (Roblox Attributes)
 	local function findStaminaAttribute()
 		local candidates = {player.Character, player}
 		local names = {"Stamina", "stamina", "Energy", "energy", "Stam", "stam"}
@@ -1425,8 +1427,6 @@ local script = G2L["29"];
 		end
 	end
 	
-	-- ============ Переключатель On/Off ============
-	
 	local function updateVisual()
 		if staminaEnabled then
 			onFrame.BackgroundTransparency = 0
@@ -1464,7 +1464,6 @@ local script = G2L["30"];
 	
 	local fullbrightEnabled = false
 	
-	-- Сохраняем оригинальные настройки, чтобы вернуть их при выключении
 	local original = {
 		Brightness = Lighting.Brightness,
 		Ambient = Lighting.Ambient,
@@ -1475,12 +1474,12 @@ local script = G2L["30"];
 	}
 	
 	local function startFullbright()
-		Lighting.Brightness = 2 -- можно поднять до 3, если темновато
+		Lighting.Brightness = 2
 		Lighting.Ambient = Color3.new(1, 1, 1)
 		Lighting.ColorShift_Bottom = Color3.new(1, 1, 1)
 		Lighting.ColorShift_Top = Color3.new(1, 1, 1)
 		Lighting.OutdoorAmbient = Color3.new(1, 1, 1)
-		Lighting.FogEnd = 1e5 -- убирает туман, в хоррор-игре его часто много
+		Lighting.FogEnd = 1e5
 	end
 	
 	local function stopFullbright()
@@ -1528,7 +1527,6 @@ local script = G2L["37"];
 	local antiFreezeEnabled = false
 	local connection = nil
 	
-	-- Слова, по которым ищем мороз в игре
 	local freezeNames = {"freeze", "freezing", "frozen", "temperature", "temp", "cold", "frost"}
 	
 	local function isFreezeThing(name)
@@ -1541,7 +1539,6 @@ local script = G2L["37"];
 		return false
 	end
 	
-	-- Ищем значения Freeze/Temperature у игрока и персонажа
 	local function findFreezeValues()
 		local targets = {}
 		local character = player.Character
@@ -1560,7 +1557,6 @@ local script = G2L["37"];
 		return targets
 	end
 	
-	-- Ищем атрибуты Freeze/Temperature
 	local function resetFreezeAttributes()
 		local targets = {player.Character, player}
 		for _, obj in ipairs(targets) do
@@ -1579,11 +1575,9 @@ local script = G2L["37"];
 	
 	local function startAntiFreeze()
 		connection = RunService.Heartbeat:Connect(function()
-			-- обнуляем Value-объекты
 			for _, v in ipairs(findFreezeValues()) do
 				v.Value = 0
 			end
-			-- обнуляем атрибуты
 			resetFreezeAttributes()
 		end)
 	end
@@ -1635,7 +1629,6 @@ local script = G2L["3e"];
 	local oxygenEnabled = false
 	local connection = nil
 	
-	-- Слова, по которым ищем кислород в игре
 	local oxygenNames = {"oxygen", "air", "breath", "o2"}
 	
 	local function isOxygenThing(name)
@@ -1648,7 +1641,6 @@ local script = G2L["3e"];
 		return false
 	end
 	
-	-- Ищем Value-объекты с кислородом
 	local function findOxygenValues()
 		local targets = {}
 		local character = player.Character
@@ -1667,7 +1659,6 @@ local script = G2L["3e"];
 		return targets
 	end
 	
-	-- Ищем атрибуты с кислородом
 	local function maxOxygenAttributes()
 		local targets = {player.Character, player}
 		for _, obj in ipairs(targets) do
@@ -1676,7 +1667,6 @@ local script = G2L["3e"];
 					if isOxygenThing(attrName) then
 						local current = obj:GetAttribute(attrName)
 						if typeof(current) == "number" then
-							-- ставим максимум, если он известен, иначе большое число
 							obj:SetAttribute(attrName, current.MaxValue or math.max(current, 100))
 						end
 					end
@@ -1688,7 +1678,6 @@ local script = G2L["3e"];
 	local function startOxygen()
 		connection = RunService.Heartbeat:Connect(function()
 			for _, v in ipairs(findOxygenValues()) do
-				-- если у Value есть MaxValue — берём его, иначе 100
 				v.Value = v.MaxValue or math.max(v.Value, 100)
 			end
 			maxOxygenAttributes()
@@ -1730,24 +1719,23 @@ task.spawn(C_3e);
 -- StarterGui.Script.Head.Visuals.Frame.Frame.LocalScript
 local function C_4b()
 local script = G2L["4b"];
-	local track = script.Parent -- полоска
-	local knob = track:WaitForChild("Knob") -- кружок
+	local track = script.Parent
+	local knob = track:WaitForChild("Knob")
 	
 	local UserInputService = game:GetService("UserInputService")
+	local RunService = game:GetService("RunService")
 	local camera = workspace.CurrentCamera
 	
-	local MIN_FOV = 70  -- FOV при кружке слева
-	local MAX_FOV = 120 -- FOV при кружке справа
+	local MIN_FOV = 70
+	local MAX_FOV = 120
 	
 	local dragging = false
 	
-	-- обновляем FOV по положению кружка
 	local function updateFov()
 		local fraction = math.clamp(knob.Position.X.Scale, 0, 1)
 		camera.FieldOfView = MIN_FOV + (MAX_FOV - MIN_FOV) * fraction
 	end
 	
-	-- начали тянуть кружок
 	knob.InputBegan:Connect(function(input)
 		if input.UserInputType == Enum.UserInputType.MouseButton1
 			or input.UserInputType == Enum.UserInputType.Touch then
@@ -1755,7 +1743,6 @@ local script = G2L["4b"];
 		end
 	end)
 	
-	-- отпустили (в любом месте экрана — чтобы кружок не «залипал»)
 	UserInputService.InputEnded:Connect(function(input)
 		if input.UserInputType == Enum.UserInputType.MouseButton1
 			or input.UserInputType == Enum.UserInputType.Touch then
@@ -1763,13 +1750,11 @@ local script = G2L["4b"];
 		end
 	end)
 	
-	-- тянем
 	UserInputService.InputChanged:Connect(function(input)
 		if not dragging then return end
 		if input.UserInputType == Enum.UserInputType.MouseMovement
 			or input.UserInputType == Enum.UserInputType.Touch then
 	
-			-- позиция мыши относительно полоски
 			local x = input.Position.X - track.AbsolutePosition.X
 			local maxOffset = track.AbsoluteSize.X
 			local fraction = math.clamp(x / maxOffset, 0, 1)
@@ -1779,7 +1764,11 @@ local script = G2L["4b"];
 		end
 	end)
 	
-	-- стартовое значение FOV по стартовой позиции кружка
+	-- каждый кадр применяем FOV из позиции кружка: не сбрасывается при беге
+	RunService.RenderStepped:Connect(function()
+		updateFov()
+	end)
+	
 	updateFov()
 	
 end;
@@ -1796,26 +1785,24 @@ local script = G2L["50"];
 	local RunService = game:GetService("RunService")
 	
 	local player = Players.LocalPlayer
-	local camera = workspace.CurrentCamera
 	local mouse = player:GetMouse()
 	
 	local ESP_COLOR = Color3.fromRGB(255, 0, 0)
 	
-	-- Имена монстров Residence Massacre
 	local MONSTER_NAMES = {
-		"Mutant",         -- Ночь 1 (он же Larry)
+		"Mutant",
 		"Larry",
-		"Pest",           -- Ночь 2 + Memories
-		"Stalker",        -- Ночь 2
-		"Mutated Worker", -- Ночь 3
+		"Pest",
+		"Stalker",
+		"Mutated Worker",
 		"Worker",
-		"Spider",         -- Ночь 3
-		"Abomination",    -- Бункер (Memories)
-		"Zombie",         -- Graves (Halloween)
+		"Spider",
+		"Abomination",
+		"Zombie",
 		"Skeleton",
 		"Undead",
-		"Pumpkin",        -- Undead Pumpkins
-		"Jerry",          -- April Fools
+		"Pumpkin",
+		"Jerry",
 		"Winterhorn",
 		"Delusion",
 	}
@@ -1824,10 +1811,8 @@ local script = G2L["50"];
 	local running = false
 	local renderConnection = nil
 	
-	local highlights = {} -- монстр -> Highlight
-	local tracers = {}    -- монстр -> полоска
-	
-	-- ============ Определение монстров ============
+	local highlights = {}
+	local tracers = {}
 	
 	local function isPlayerModel(model)
 		if Players:GetPlayerFromCharacter(model) then return true end
@@ -1844,7 +1829,6 @@ local script = G2L["50"];
 			end
 		end
 	
-		-- запасной вариант: модель с Humanoid, но не игрок
 		return model:FindFirstChildOfClass("Humanoid") ~= nil
 	end
 	
@@ -1853,8 +1837,6 @@ local script = G2L["50"];
 			or model:FindFirstChild("HumanoidRootPart")
 			or model:FindFirstChildWhichIsA("BasePart", true)
 	end
-	
-	-- ============ Подсветка (красный силуэт сквозь стены) ============
 	
 	local function addHighlight(model)
 		if highlights[model] then return end
@@ -1868,14 +1850,16 @@ local script = G2L["50"];
 		highlights[model] = highlight
 	end
 	
-	local function removeAllHighlights()
+	local function removeAll()
 		for _, highlight in pairs(highlights) do
 			if highlight.Parent then highlight:Destroy() end
 		end
 		highlights = {}
+		for _, part in pairs(tracers) do
+			if part.Parent then part:Destroy() end
+		end
+		tracers = {}
 	end
-	
-	-- ============ Полоски от курсора к монстрам ============
 	
 	local function createTracer(model)
 		if tracers[model] then return end
@@ -1888,21 +1872,13 @@ local script = G2L["50"];
 		part.Material = Enum.Material.Neon
 		part.Color = ESP_COLOR
 		part.Transparency = 0.3
-		part.AlwaysOnTop = true
 		part.Size = Vector3.new(0.05, 0.05, 1)
 		part.Parent = workspace.CurrentCamera
 		tracers[model] = part
 	end
 	
-	local function removeAllTracers()
-		for _, part in pairs(tracers) do
-			if part.Parent then part:Destroy() end
-		end
-		tracers = {}
-	end
-	
 	local function updateTracers()
-		local startPoint = mouse.Hit.Position -- точка под курсором в мире
+		local startPoint = mouse.Hit.Position
 	
 		for model, part in pairs(tracers) do
 			if not model.Parent then
@@ -1917,6 +1893,8 @@ local script = G2L["50"];
 						part.Size = Vector3.new(0.05, 0.05, length)
 						part.CFrame = CFrame.lookAt((startPoint + target) / 2, target)
 						part.Transparency = 0.3
+					else
+						part.Transparency = 1
 					end
 				else
 					part.Transparency = 1
@@ -1925,34 +1903,19 @@ local script = G2L["50"];
 		end
 	end
 	
-	-- ============ Включение/выключение ============
-	
 	local function espLoop()
 		while running do
+			local found = 0
 			for _, model in ipairs(workspace:GetDescendants()) do
 				if model:IsA("Model") and isMonster(model) then
 					addHighlight(model)
 					createTracer(model)
+					found += 1
 				end
 			end
+			print("[ESP monsters] найдено монстров:", found)
 			task.wait(2)
 		end
-	end
-	
-	local function startEsp()
-		running = true
-		renderConnection = RunService.RenderStepped:Connect(updateTracers)
-		task.spawn(espLoop)
-	end
-	
-	local function stopEsp()
-		running = false
-		if renderConnection then
-			renderConnection:Disconnect()
-			renderConnection = nil
-		end
-		removeAllHighlights()
-		removeAllTracers()
 	end
 	
 	local function updateVisual()
@@ -1970,9 +1933,16 @@ local script = G2L["50"];
 		updateVisual()
 	
 		if espEnabled then
-			startEsp()
+			running = true
+			renderConnection = RunService.RenderStepped:Connect(updateTracers)
+			task.spawn(espLoop)
 		else
-			stopEsp()
+			running = false
+			if renderConnection then
+				renderConnection:Disconnect()
+				renderConnection = nil
+			end
+			removeAll()
 		end
 	end)
 	
@@ -1992,46 +1962,44 @@ local script = G2L["5a"];
 	local RunService = game:GetService("RunService")
 	
 	local player = Players.LocalPlayer
-	local camera = workspace.CurrentCamera
 	local mouse = player:GetMouse()
 	
-	local ITEM_COLOR = Color3.fromRGB(0, 255, 0) -- зелёный для предметов
+	local ITEM_COLOR = Color3.fromRGB(0, 255, 0)
 	
-	-- Названия предметов Residence Massacre
 	local ITEM_NAMES = {
-		"Flashlight",  -- Фонарик
-		"Battery",     -- Батарейка
-		"Bloxy Cola",  -- Блокси-кола
+		"Flashlight",
+		"Battery",
+		"Bloxy Cola",
 		"Cola",
-		"Fruits",      -- Фрукты
-		"Wrench",      -- Гаечный ключ
-		"Hammer",      -- Молоток
-		"Gas Can",     -- Канистра
-		"Medkit",      -- Аптечка
-		"Camera",      -- Камера
-		"Tablet",      -- Планшет
-		"Lock",        -- Замок
-		"Laser",       -- Лазеры
-		"UV Light",    -- УФ-фонарь
-		"Plushie",     -- Плюшевая игрушка
-		"Key",         -- Ключ
-		"Shotgun",     -- Дробовик
-		"Marshmallow", -- Маршмеллоу
+		"Fruits",
+		"Wrench",
+		"Hammer",
+		"Gas Can",
+		"Medkit",
+		"Camera",
+		"Tablet",
+		"Lock",
+		"Laser",
+		"UV Light",
+		"Plushie",
+		"Key",
+		"Shotgun",
+		"Marshmallow",
 		"Trail Camera",
 		"Birthday Cake",
 		"Lemonade",
 		"Candy Bucket",
-		"Lantern",     -- Фонарь-лампа
-		"Crowbar",     -- Лом
-		"Radar",       -- Радар
-		"Bear Trap",   -- Медвежья капкан
-		"Flare Gun",   -- Ракетница
+		"Lantern",
+		"Crowbar",
+		"Radar",
+		"Bear Trap",
+		"Flare Gun",
 		"Flare",
-		"Tripmine",    -- Мина
+		"Tripmine",
 		"Lemon",
 		"Snowball",
 		"Sprite",
-		"Present",     -- Подарок
+		"Present",
 		"Candy Cane",
 		"Coal",
 		"Hot Chocolate",
@@ -2042,6 +2010,12 @@ local script = G2L["5a"];
 		"Witches Brew",
 	}
 	
+	local MONSTER_NAMES = {
+		"mutant", "larry", "pest", "stalker", "worker", "spider",
+		"abomination", "zombie", "skeleton", "undead", "pumpkin",
+		"jerry", "winterhorn", "delusion",
+	}
+	
 	local espEnabled = false
 	local running = false
 	local renderConnection = nil
@@ -2049,24 +2023,17 @@ local script = G2L["5a"];
 	local highlights = {}
 	local tracers = {}
 	
-	-- ============ Определение предметов ============
-	
-	local function isPlayerModel(model)
-		if Players:GetPlayerFromCharacter(model) then return true end
-		return model.Name:lower():find("player") ~= nil
+	local function isPlayerThing(object)
+		local model = object:IsA("Model") and object
+			or (object.Parent and object.Parent:IsA("Model") and object.Parent)
+			or nil
+		if model and Players:GetPlayerFromCharacter(model) then return true end
+		return object.Name:lower():find("player") ~= nil
 	end
 	
-	local function isMonster(model)
-		if isPlayerModel(model) then return true end
-		for _, name in ipairs({"mutant","larry","pest","stalker","worker","spider","abomination","zombie","skeleton","undead","pumpkin","jerry","winterhorn","delusion"}) do
-			if model.Name:lower():find(name) then return true end
-		end
-		return false
-	end
-	
-	local function matchesItemName(name)
+	local function matchesAny(name, list)
 		name = name:lower()
-		for _, itemName in ipairs(ITEM_NAMES) do
+		for _, itemName in ipairs(list) do
 			if name:find(itemName:lower()) then
 				return true
 			end
@@ -2075,17 +2042,18 @@ local script = G2L["5a"];
 	end
 	
 	local function isItem(object)
-		if isMonster(object) then return false end
+		if isPlayerThing(object) then return false end
 	
-		-- предметы могут лежать как Tool, Model или отдельная Part
-		if object:IsA("Tool") and matchesItemName(object.Name) then
+		if object:IsA("Tool") and matchesAny(object.Name, ITEM_NAMES) then
 			return true
 		end
-		if object:IsA("Model") and matchesItemName(object.Name) then
+		if object:IsA("Model") and matchesAny(object.Name, ITEM_NAMES) then
 			return true
 		end
-		if object:IsA("BasePart") and matchesItemName(object.Name) then
-			return object.Parent and not object.Parent:IsA("Model") or false -- одиночная деталь с именем предмета
+		if object:IsA("BasePart")
+			and object.Parent and not object.Parent:IsA("Model")
+			and matchesAny(object.Name, ITEM_NAMES) then
+			return true
 		end
 	
 		return false
@@ -2094,11 +2062,9 @@ local script = G2L["5a"];
 	local function getAnchorPart(object)
 		if object:IsA("BasePart") then return object end
 		return object.PrimaryPart
-			or object:FindFirstChild("Handle") -- у Tool обычно есть Handle
+			or object:FindFirstChild("Handle")
 			or object:FindFirstChildWhichIsA("BasePart", true)
 	end
-	
-	-- ============ Подсветка ============
 	
 	local function addHighlight(object)
 		if highlights[object] then return end
@@ -2112,14 +2078,16 @@ local script = G2L["5a"];
 		highlights[object] = highlight
 	end
 	
-	local function removeAllHighlights()
+	local function removeAll()
 		for _, highlight in pairs(highlights) do
 			if highlight.Parent then highlight:Destroy() end
 		end
 		highlights = {}
+		for _, part in pairs(tracers) do
+			if part.Parent then part:Destroy() end
+		end
+		tracers = {}
 	end
-	
-	-- ============ Полоски от курсора к предметам ============
 	
 	local function createTracer(object)
 		if tracers[object] then return end
@@ -2132,17 +2100,9 @@ local script = G2L["5a"];
 		part.Material = Enum.Material.Neon
 		part.Color = ITEM_COLOR
 		part.Transparency = 0.3
-		part.AlwaysOnTop = true
 		part.Size = Vector3.new(0.05, 0.05, 1)
 		part.Parent = workspace.CurrentCamera
 		tracers[object] = part
-	end
-	
-	local function removeAllTracers()
-		for _, part in pairs(tracers) do
-			if part.Parent then part:Destroy() end
-		end
-		tracers = {}
 	end
 	
 	local function updateTracers()
@@ -2161,6 +2121,8 @@ local script = G2L["5a"];
 						part.Size = Vector3.new(0.05, 0.05, length)
 						part.CFrame = CFrame.lookAt((startPoint + target) / 2, target)
 						part.Transparency = 0.3
+					else
+						part.Transparency = 1
 					end
 				else
 					part.Transparency = 1
@@ -2169,34 +2131,19 @@ local script = G2L["5a"];
 		end
 	end
 	
-	-- ============ Включение/выключение ============
-	
 	local function espLoop()
 		while running do
+			local found = 0
 			for _, object in ipairs(workspace:GetDescendants()) do
 				if isItem(object) then
 					addHighlight(object)
 					createTracer(object)
+					found += 1
 				end
 			end
+			print("[ESP items] найдено предметов:", found)
 			task.wait(2)
 		end
-	end
-	
-	local function startEsp()
-		running = true
-		renderConnection = RunService.RenderStepped:Connect(updateTracers)
-		task.spawn(espLoop)
-	end
-	
-	local function stopEsp()
-		running = false
-		if renderConnection then
-			renderConnection:Disconnect()
-			renderConnection = nil
-		end
-		removeAllHighlights()
-		removeAllTracers()
 	end
 	
 	local function updateVisual()
@@ -2214,9 +2161,16 @@ local script = G2L["5a"];
 		updateVisual()
 	
 		if espEnabled then
-			startEsp()
+			running = true
+			renderConnection = RunService.RenderStepped:Connect(updateTracers)
+			task.spawn(espLoop)
 		else
-			stopEsp()
+			running = false
+			if renderConnection then
+				renderConnection:Disconnect()
+				renderConnection = nil
+			end
+			removeAll()
 		end
 	end)
 	
@@ -2237,22 +2191,18 @@ local script = G2L["61"];
 	
 	local player = Players.LocalPlayer
 	
-	local ESP_COLOR = Color3.fromRGB(0, 200, 255) -- голубой для игроков
+	local ESP_COLOR = Color3.fromRGB(0, 200, 255)
 	
 	local espEnabled = false
 	local running = false
 	local renderConnection = nil
 	
 	local highlights = {}
-	local labels = {} -- персонаж -> BillboardGui
-	
-	-- ============ Определение игроков ============
+	local labels = {}
 	
 	local function isPlayerModel(model)
 		return Players:GetPlayerFromCharacter(model) ~= nil
 	end
-	
-	-- ============ Подсветка ============
 	
 	local function addHighlight(character)
 		if highlights[character] then return end
@@ -2266,8 +2216,6 @@ local script = G2L["61"];
 		highlights[character] = highlight
 	end
 	
-	-- ============ Надпись с ником и дистанцией ============
-	
 	local function addLabel(character)
 		if labels[character] then return end
 		local head = character:FindFirstChild("Head")
@@ -2276,8 +2224,8 @@ local script = G2L["61"];
 		local billboard = Instance.new("BillboardGui")
 		billboard.Name = "PlayerESP_Label"
 		billboard.Size = UDim2.new(0, 200, 0, 40)
-		billboard.StudsOffset = Vector3.new(0, 3, 0) -- над головой
-		billboard.AlwaysOnTop = true -- видно сквозь стены
+		billboard.StudsOffset = Vector3.new(0, 3, 0)
+		billboard.AlwaysOnTop = true
 		billboard.MaxDistance = 500
 		billboard.Parent = head
 	
@@ -2300,530 +2248,4 @@ local script = G2L["61"];
 	
 		for character, billboard in pairs(labels) do
 			if not character.Parent then
-				-- персонаж исчез
 				if billboard.Parent then billboard:Destroy() end
-				labels[character] = nil
-				if highlights[character] and highlights[character].Parent then
-					highlights[character]:Destroy()
-				end
-				highlights[character] = nil
-			else
-				local root = character:FindFirstChild("HumanoidRootPart")
-				local plr = Players:GetPlayerFromCharacter(character)
-				if root and myRoot and plr then
-					local dist = math.floor((root.Position - myRoot.Position).Magnitude)
-					billboard.TextLabel.Text = plr.DisplayName .. "\n[" .. dist .. " м]"
-				end
-			end
-		end
-	end
-	
-	local function removeAll()
-		for _, highlight in pairs(highlights) do
-			if highlight.Parent then highlight:Destroy() end
-		end
-		highlights = {}
-		for _, billboard in pairs(labels) do
-			if billboard.Parent then billboard:Destroy() end
-		end
-		labels = {}
-	end
-	
-	-- ============ Включение/выключение ============
-	
-	local function scanLoop()
-		while running do
-			for _, plr in ipairs(Players:GetPlayers()) do
-				if plr ~= player and plr.Character then
-					addHighlight(plr.Character)
-					addLabel(plr.Character)
-				end
-			end
-			task.wait(2) -- подхватываем новых игроков и респавны
-		end
-	end
-	
-	local function startEsp()
-		running = true
-		renderConnection = RunService.RenderStepped:Connect(updateLabels)
-		task.spawn(scanLoop)
-	end
-	
-	local function stopEsp()
-		running = false
-		if renderConnection then
-			renderConnection:Disconnect()
-			renderConnection = nil
-		end
-		removeAll()
-	end
-	
-	local function updateVisual()
-		if espEnabled then
-			onFrame.BackgroundTransparency = 0
-			offFrame.BackgroundTransparency = 1
-		else
-			onFrame.BackgroundTransparency = 1
-			offFrame.BackgroundTransparency = 0
-		end
-	end
-	
-	textButton.MouseButton1Click:Connect(function()
-		espEnabled = not espEnabled
-		updateVisual()
-	
-		if espEnabled then
-			startEsp()
-		else
-			stopEsp()
-		end
-	end)
-	
-	updateVisual()
-	
-end;
-task.spawn(C_61);
--- StarterGui.Script.Head.Visuals.Frame.Esp players.LocalScript
-local function C_6a()
-local script = G2L["6a"];
-	local textButton = script.Parent
-	
-	local offFrame = textButton:WaitForChild("Off")
-	local onFrame = textButton:WaitForChild("On")
-	
-	local Players = game:GetService("Players")
-	local RunService = game:GetService("RunService")
-	
-	local player = Players.LocalPlayer
-	
-	local ESP_COLOR = Color3.fromRGB(0, 200, 255) -- голубой для игроков
-	
-	local espEnabled = false
-	local running = false
-	local renderConnection = nil
-	
-	local highlights = {}
-	local labels = {} -- персонаж -> BillboardGui
-	
-	-- ============ Определение игроков ============
-	
-	local function isPlayerModel(model)
-		return Players:GetPlayerFromCharacter(model) ~= nil
-	end
-	
-	-- ============ Подсветка ============
-	
-	local function addHighlight(character)
-		if highlights[character] then return end
-		local highlight = Instance.new("Highlight")
-		highlight.FillColor = ESP_COLOR
-		highlight.OutlineColor = Color3.new(1, 1, 1)
-		highlight.FillTransparency = 0.4
-		highlight.OutlineTransparency = 0.2
-		highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
-		highlight.Parent = character
-		highlights[character] = highlight
-	end
-	
-	-- ============ Надпись с ником и дистанцией ============
-	
-	local function addLabel(character)
-		if labels[character] then return end
-		local head = character:FindFirstChild("Head")
-		if not head then return end
-	
-		local billboard = Instance.new("BillboardGui")
-		billboard.Name = "PlayerESP_Label"
-		billboard.Size = UDim2.new(0, 200, 0, 40)
-		billboard.StudsOffset = Vector3.new(0, 3, 0) -- над головой
-		billboard.AlwaysOnTop = true -- видно сквозь стены
-		billboard.MaxDistance = 500
-		billboard.Parent = head
-	
-		local text = Instance.new("TextLabel")
-		text.Size = UDim2.new(1, 0, 1, 0)
-		text.BackgroundTransparency = 1
-		text.TextColor3 = ESP_COLOR
-		text.TextStrokeTransparency = 0.3
-		text.TextStrokeColor3 = Color3.new(0, 0, 0)
-		text.Font = Enum.Font.GothamBold
-		text.TextScaled = true
-		text.Parent = billboard
-	
-		labels[character] = billboard
-	end
-	
-	local function updateLabels()
-		local myCharacter = player.Character
-		local myRoot = myCharacter and myCharacter:FindFirstChild("HumanoidRootPart")
-	
-		for character, billboard in pairs(labels) do
-			if not character.Parent then
-				-- персонаж исчез
-				if billboard.Parent then billboard:Destroy() end
-				labels[character] = nil
-				if highlights[character] and highlights[character].Parent then
-					highlights[character]:Destroy()
-				end
-				highlights[character] = nil
-			else
-				local root = character:FindFirstChild("HumanoidRootPart")
-				local plr = Players:GetPlayerFromCharacter(character)
-				if root and myRoot and plr then
-					local dist = math.floor((root.Position - myRoot.Position).Magnitude)
-					billboard.TextLabel.Text = plr.DisplayName .. "\n[" .. dist .. " м]"
-				end
-			end
-		end
-	end
-	
-	local function removeAll()
-		for _, highlight in pairs(highlights) do
-			if highlight.Parent then highlight:Destroy() end
-		end
-		highlights = {}
-		for _, billboard in pairs(labels) do
-			if billboard.Parent then billboard:Destroy() end
-		end
-		labels = {}
-	end
-	
-	-- ============ Включение/выключение ============
-	
-	local function scanLoop()
-		while running do
-			for _, plr in ipairs(Players:GetPlayers()) do
-				if plr ~= player and plr.Character then
-					addHighlight(plr.Character)
-					addLabel(plr.Character)
-				end
-			end
-			task.wait(2) -- подхватываем новых игроков и респавны
-		end
-	end
-	
-	local function startEsp()
-		running = true
-		renderConnection = RunService.RenderStepped:Connect(updateLabels)
-		task.spawn(scanLoop)
-	end
-	
-	local function stopEsp()
-		running = false
-		if renderConnection then
-			renderConnection:Disconnect()
-			renderConnection = nil
-		end
-		removeAll()
-	end
-	
-	local function updateVisual()
-		if espEnabled then
-			onFrame.BackgroundTransparency = 0
-			offFrame.BackgroundTransparency = 1
-		else
-			onFrame.BackgroundTransparency = 1
-			offFrame.BackgroundTransparency = 0
-		end
-	end
-	
-	textButton.MouseButton1Click:Connect(function()
-		espEnabled = not espEnabled
-		updateVisual()
-	
-		if espEnabled then
-			startEsp()
-		else
-			stopEsp()
-		end
-	end)
-	
-	updateVisual()
-	
-end;
-task.spawn(C_6a);
--- StarterGui.Script.Head.Tp.Frame.tp house1.LocalScript
-local function C_74()
-local script = G2L["74"];
-	local imageButton = script.Parent
-	
-	local Players = game:GetService("Players")
-	local player = Players.LocalPlayer
-	
-	local HOUSE_POS = Vector3.new(-34.18, 9.54, -47.09) -- дом, 1 этаж
-	
-	imageButton.MouseButton1Click:Connect(function()
-		local character = player.Character
-		local root = character and character:FindFirstChild("HumanoidRootPart")
-		if not root then return end
-	
-		root.CFrame = CFrame.new(HOUSE_POS)
-		print("Телепорт: дом")
-	end)
-	
-end;
-task.spawn(C_74);
--- StarterGui.Script.Head.Tp.Frame.tp house2.LocalScript
-local function C_77()
-local script = G2L["77"];
-	local imageButton = script.Parent
-	
-	local Players = game:GetService("Players")
-	local player = Players.LocalPlayer
-	
-	local SECOND_FLOOR_POS = Vector3.new(-3.90, 25.29, -71.19) -- 2 этаж, центр
-	
-	imageButton.MouseButton1Click:Connect(function()
-		local character = player.Character
-		local root = character and character:FindFirstChild("HumanoidRootPart")
-		if not root then return end
-	
-		root.CFrame = CFrame.new(SECOND_FLOOR_POS)
-		print("Телепорт: 2 этаж")
-	end)
-	
-end;
-task.spawn(C_77);
--- StarterGui.Script.Head.Tp.Frame.generetor.LocalScript
-local function C_7a()
-local script = G2L["7a"];
-	local imageButton = script.Parent
-	
-	local Players = game:GetService("Players")
-	local player = Players.LocalPlayer
-	
-	local OXYGEN_GEN_POS = Vector3.new(-79.69, 6.29, -127.54)
-	
-	imageButton.MouseButton1Click:Connect(function()
-		local character = player.Character
-		local root = character and character:FindFirstChild("HumanoidRootPart")
-		if not root then return end
-	
-		root.CFrame = CFrame.new(OXYGEN_GEN_POS)
-		print("Телепорт: кислородный генератор")
-	end)
-	
-end;
-task.spawn(C_7a);
--- StarterGui.Script.Head.Tp.Frame.FixBOx.LocalScript
-local function C_7d()
-local script = G2L["7d"];
-	local imageButton = script.Parent
-	
-	local Players = game:GetService("Players")
-	local player = Players.LocalPlayer
-	
-	local POWER_BOX_POS = Vector3.new(-2.42, 6.20, -92.56)
-	
-	imageButton.MouseButton1Click:Connect(function()
-		local character = player.Character
-		local root = character and character:FindFirstChild("HumanoidRootPart")
-		if not root then return end
-	
-		root.CFrame = CFrame.new(POWER_BOX_POS)
-		print("Телепорт: электрощиток")
-	end)
-	
-end;
-task.spawn(C_7d);
--- StarterGui.Script.LocalScript
-local function C_8c()
-local script = G2L["8c"];
-	local UserInputService = game:GetService("UserInputService")
-	local RunService = game:GetService("RunService")
-	
-	local gui = script.Parent
-	
-	-- ожидание объекта с таймаутом: скрипт не зависает, если чего-то нет
-	local function wait(obj, name)
-		local child = obj:WaitForChild(name, 5)
-		if not child then
-			warn("НЕ НАЙДЕНО: " .. name .. " (проверь имя в Explorer)")
-		end
-		return child
-	end
-	
-	local head         = wait(gui, "Head")
-	local toggleButton = wait(gui, "Toggle")
-	local textBox      = wait(gui, "TextBox")
-	local titleBar     = head:WaitForChild("Title", 5)   -- шапка может отсутствовать
-	local image        = head:WaitForChild("Image", 5)   -- ImageLabel может отсутствовать
-	local buttonsFrame = head:FindFirstChild("Buttons") or gui:FindFirstChild("Buttons")
-	if not buttonsFrame then
-		warn("НЕ НАЙДЕНО: Buttons")
-	end
-	
-	-- =====================================================================
-	-- СТРАНИЦЫ: одна открыта, остальные скрыты; старт — Home
-	-- page — либо имя, либо путь по цепочке, как у Player: {"Player", "PlayerFrame"}
-	-- =====================================================================
-	local pages = {
-		{button = "HomeButton",      page = "Home"},
-		{button = "VisualsButton",   page = "Visuals"},
-		{button = "TeleportsButton", page = "Tp"},
-		{button = "PlayerButton",    page = {"Player", "PlayerFrame"}},
-		{button = "GuiButton",       page = "Gui"},
-	}
-	
-	local function findPage(page)
-		-- поиск по точному пути: head -> Player -> PlayerFrame
-		if type(page) == "table" then
-			local node = head
-			for _, name in ipairs(page) do
-				node = node and node:FindFirstChild(name) or nil
-			end
-			return node
-		end
-		-- поиск по имени (не трогаем содержимое Buttons)
-		for _, obj in ipairs(gui:GetDescendants()) do
-			if obj.Name == page and (not buttonsFrame or not obj:IsDescendantOf(buttonsFrame)) then
-				if obj:IsA("Folder") or obj:IsA("GuiObject") then
-					return obj
-				end
-			end
-		end
-		return nil
-	end
-	
-	local function setPage(page, visible)
-		if page:IsA("GuiObject") then
-			page.Visible = visible
-			return
-		end
-		-- папка: прячем/показываем всё внутри, включая вложенные папки
-		for _, child in ipairs(page:GetChildren()) do
-			if child:IsA("GuiObject") then
-				child.Visible = visible
-			elseif child:IsA("Folder") then
-				setPage(child, visible)
-			end
-		end
-	end
-	
-	local function selectPage(pageName)
-		for _, pair in ipairs(pages) do
-			local page = findPage(pair.page)
-			if page then
-				setPage(page, pair.page == pageName)
-				if pair.page == pageName then
-					print("Открыл страницу:", page:GetFullName())
-				end
-			else
-				local label = type(pair.page) == "table"
-					and table.concat(pair.page, ".")
-					or pair.page
-				warn("СТРАНИЦА НЕ НАЙДЕНА: " .. label)
-			end
-		end
-	end
-	
-	if buttonsFrame then
-		for _, pair in ipairs(pages) do
-			local btn = buttonsFrame:FindFirstChild(pair.button)
-			if btn then
-				btn.MouseButton1Click:Connect(function()
-					print("КЛИК:", pair.button)
-					selectPage(pair.page)
-				end)
-			else
-				warn("КНОПКА НЕ НАЙДЕНА: " .. pair.button)
-			end
-		end
-	end
-	
-	selectPage("Home")
-	
-	-- =====================================================================
-	-- ПЕРЕТАСКИВАНИЕ: за шапку Title, если она есть; иначе за весь Head
-	-- =====================================================================
-	local dragArea = titleBar or head
-	dragArea.Active = true
-	if titleBar and titleBar.BackgroundTransparency >= 1 then
-		titleBar.BackgroundTransparency = 0.9 -- полностью прозрачный фрейм не ловит клики
-	end
-	
-	local dragging = false
-	local dragStart, startPos
-	local targetPos = head.Position
-	local draggingConn
-	
-	dragArea.InputBegan:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseButton1
-			or input.UserInputType == Enum.UserInputType.Touch then
-			dragging = true
-			dragStart = input.Position
-			startPos = head.Position
-			targetPos = startPos
-	
-			draggingConn = RunService.RenderStepped:Connect(function(dt)
-				local alpha = 1 - math.exp(-12 * dt) -- 12 = скорость: меньше — плавнее
-				head.Position = head.Position:Lerp(targetPos, alpha)
-			end)
-		end
-	end)
-	
-	UserInputService.InputChanged:Connect(function(input)
-		if not dragging then return end
-		if input.UserInputType == Enum.UserInputType.MouseMovement
-			or input.UserInputType == Enum.UserInputType.Touch then
-			local delta = input.Position - dragStart
-			targetPos = UDim2.new(
-				startPos.X.Scale, startPos.X.Offset + delta.X,
-				startPos.Y.Scale, startPos.Y.Offset + delta.Y
-			)
-		end
-	end)
-	
-	UserInputService.InputEnded:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseButton1
-			or input.UserInputType == Enum.UserInputType.Touch then
-			dragging = false
-			if draggingConn then
-				draggingConn:Disconnect()
-				draggingConn = nil
-			end
-		end
-	end)
-	
-	-- =====================================================================
-	-- ПОКАЗ/СКРЫТИЕ: правый Shift (ПК) + кнопка Toggle
-	-- =====================================================================
-	UserInputService.InputBegan:Connect(function(input, gameProcessed)
-		if gameProcessed then return end -- не срабатывать, пока игрок печатает
-		if input.KeyCode == Enum.KeyCode.RightShift then
-			head.Visible = not head.Visible
-		end
-	end)
-	
-	if toggleButton then
-		toggleButton.MouseButton1Click:Connect(function()
-			head.Visible = not head.Visible
-		end)
-	end
-	
-	-- =====================================================================
-	-- КАРТИНКА ПО ID
-	-- =====================================================================
-	if image then
-		image.Visible = false
-		image.ImageTransparency = 0.5
-	end
-	
-	if textBox then
-		textBox.FocusLost:Connect(function(enterPressed)
-			if not enterPressed or not image then return end
-			local id = textBox.Text:match("%d+")
-			if not id then
-				print("Введите числовой ID картинки")
-				return
-			end
-			image.Image = "rbxassetid://" .. id
-			image.Visible = true
-			print("Картинка применена:", id)
-		end)
-	end
-	
-end;
-task.spawn(C_8c);
-
-return G2L["1"], require;
