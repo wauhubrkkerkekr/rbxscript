@@ -7,7 +7,7 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
 
--- Instances: 156 | Scripts: 17 | Modules: 0 | Tags: 0
+-- Instances: 203 | Scripts: 19 | Modules: 0 | Tags: 0
 local G2L = {};
 
 -- StarterGui.Script
@@ -20,44 +20,44 @@ G2L["2"] = Instance.new("LocalScript", G2L["1"]);
 
 
 
+-- StarterGui.Script.StrokePulse
+G2L["3"] = Instance.new("LocalScript", G2L["1"]);
+G2L["3"]["Name"] = [[StrokePulse]];
+
+
 -- StarterGui.Script.Toggle
-G2L["3"] = Instance.new("TextButton", G2L["1"]);
-G2L["3"]["RichText"] = true;
-G2L["3"]["BorderSizePixel"] = 0;
-G2L["3"]["TextSize"] = 21;
-G2L["3"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3"]["BackgroundColor3"] = Color3.fromRGB(117, 117, 117);
-G2L["3"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["3"]["Size"] = UDim2.new(0, 52, 0, 51);
-G2L["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3"]["Text"] = [[WAU]];
-G2L["3"]["Name"] = [[Toggle]];
-G2L["3"]["Position"] = UDim2.new(0.92482, 0, 0.77711, 0);
+G2L["4"] = Instance.new("TextButton", G2L["1"]);
+G2L["4"]["RichText"] = true;
+G2L["4"]["BorderSizePixel"] = 0;
+G2L["4"]["TextSize"] = 21;
+G2L["4"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4"]["BackgroundColor3"] = Color3.fromRGB(117, 117, 117);
+G2L["4"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["4"]["Size"] = UDim2.new(0, 52, 0, 51);
+G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4"]["Text"] = [[WAU]];
+G2L["4"]["Name"] = [[Toggle]];
+G2L["4"]["Position"] = UDim2.new(0.92482, 0, 0.77711, 0);
 
 
 -- StarterGui.Script.Toggle.UICorner
-G2L["4"] = Instance.new("UICorner", G2L["3"]);
-G2L["4"]["CornerRadius"] = UDim.new(1, 0);
+G2L["5"] = Instance.new("UICorner", G2L["4"]);
+G2L["5"]["CornerRadius"] = UDim.new(1, 0);
 
 
 -- StarterGui.Script.Head
-G2L["5"] = Instance.new("Frame", G2L["1"]);
-G2L["5"]["BorderSizePixel"] = 0;
-G2L["5"]["BackgroundColor3"] = Color3.fromRGB(191, 116, 42);
-G2L["5"]["Size"] = UDim2.new(0, 791, 0, 527);
-G2L["5"]["Position"] = UDim2.new(0.3272, 0, 0.16933, 0);
-G2L["5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5"]["Name"] = [[Head]];
-G2L["5"]["BackgroundTransparency"] = 0.35;
-
-
--- StarterGui.Script.Head.UICorner
-G2L["6"] = Instance.new("UICorner", G2L["5"]);
-G2L["6"]["CornerRadius"] = UDim.new(0, 40);
+G2L["6"] = Instance.new("Frame", G2L["1"]);
+G2L["6"]["BorderSizePixel"] = 0;
+G2L["6"]["BackgroundColor3"] = Color3.fromRGB(130, 130, 130);
+G2L["6"]["Size"] = UDim2.new(0, 791, 0, 527);
+G2L["6"]["Position"] = UDim2.new(0.17933, 0, 0.16813, 0);
+G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6"]["Name"] = [[Head]];
+G2L["6"]["BackgroundTransparency"] = 0.35;
 
 
 -- StarterGui.Script.Head.Buttons
-G2L["7"] = Instance.new("Frame", G2L["5"]);
+G2L["7"] = Instance.new("Frame", G2L["6"]);
 G2L["7"]["BorderSizePixel"] = 0;
 G2L["7"]["BackgroundColor3"] = Color3.fromRGB(167, 167, 167);
 G2L["7"]["Size"] = UDim2.new(0, 215, 0, 430);
@@ -182,1190 +182,1457 @@ G2L["14"] = Instance.new("UIGradient", G2L["13"]);
 G2L["14"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(0.503, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
 
 
+-- StarterGui.Script.Head.WauHub
+G2L["15"] = Instance.new("TextLabel", G2L["6"]);
+G2L["15"]["BorderSizePixel"] = 0;
+G2L["15"]["TextSize"] = 45;
+G2L["15"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["15"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["15"]["TextColor3"] = Color3.fromRGB(136, 136, 136);
+G2L["15"]["BackgroundTransparency"] = 1;
+G2L["15"]["RichText"] = true;
+G2L["15"]["Size"] = UDim2.new(0, 203, 0, 50);
+G2L["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["15"]["Text"] = [[Wau hub]];
+G2L["15"]["Name"] = [[WauHub]];
+G2L["15"]["Position"] = UDim2.new(0.04386, 0, 0.01832, 0);
+
+
+-- StarterGui.Script.Head.WauHub.UIStroke
+G2L["16"] = Instance.new("UIStroke", G2L["15"]);
+G2L["16"]["Color"] = Color3.fromRGB(245, 245, 245);
+
+
+-- StarterGui.Script.Head.WauHub.UIStroke.UIGradient
+G2L["17"] = Instance.new("UIGradient", G2L["16"]);
+G2L["17"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(0.503, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
+
+
+-- StarterGui.Script.Head.ff
+G2L["18"] = Instance.new("Frame", G2L["6"]);
+G2L["18"]["BorderSizePixel"] = 0;
+G2L["18"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["18"]["Size"] = UDim2.new(0, 197, 0, 15);
+G2L["18"]["Position"] = UDim2.new(0.37042, 0, 1.01898, 0);
+G2L["18"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["18"]["Name"] = [[ff]];
+
+
+-- StarterGui.Script.Head.ff.UICorner
+G2L["19"] = Instance.new("UICorner", G2L["18"]);
+
+
+
+-- StarterGui.Script.Head.Title
+G2L["1a"] = Instance.new("Frame", G2L["6"]);
+G2L["1a"]["BorderSizePixel"] = 0;
+G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1a"]["Size"] = UDim2.new(0, 791, 0, 59);
+G2L["1a"]["Position"] = UDim2.new(0.01643, 0, 0.97723, 0);
+G2L["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1a"]["Name"] = [[Title]];
+G2L["1a"]["BackgroundTransparency"] = 1;
+
+
 -- StarterGui.Script.Head.Home
-G2L["15"] = Instance.new("Folder", G2L["5"]);
-G2L["15"]["Name"] = [[Home]];
+G2L["1b"] = Instance.new("Frame", G2L["6"]);
+G2L["1b"]["BorderSizePixel"] = 0;
+G2L["1b"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["1b"]["Name"] = [[Home]];
+G2L["1b"]["BackgroundTransparency"] = 1;
 
 
 -- StarterGui.Script.Head.Home.Frame
-G2L["16"] = Instance.new("Frame", G2L["15"]);
-G2L["16"]["Visible"] = false;
-G2L["16"]["BorderSizePixel"] = 0;
-G2L["16"]["BackgroundColor3"] = Color3.fromRGB(167, 167, 167);
-G2L["16"]["Size"] = UDim2.new(0, 471, 0, 409);
-G2L["16"]["Position"] = UDim2.new(0.3426, 0, 0.16319, 0);
-G2L["16"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["16"]["BackgroundTransparency"] = 0.5;
+G2L["1c"] = Instance.new("Frame", G2L["1b"]);
+G2L["1c"]["BorderSizePixel"] = 0;
+G2L["1c"]["BackgroundColor3"] = Color3.fromRGB(167, 167, 167);
+G2L["1c"]["Size"] = UDim2.new(0, 471, 0, 409);
+G2L["1c"]["Position"] = UDim2.new(0.3426, 0, 0.16319, 0);
+G2L["1c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1c"]["BackgroundTransparency"] = 0.5;
 
 
 -- StarterGui.Script.Head.Home.Frame.UICorner
-G2L["17"] = Instance.new("UICorner", G2L["16"]);
+G2L["1d"] = Instance.new("UICorner", G2L["1c"]);
 
 
 
 -- StarterGui.Script.Head.Home.Frame.WauHub updates
-G2L["18"] = Instance.new("TextLabel", G2L["16"]);
-G2L["18"]["BorderSizePixel"] = 0;
-G2L["18"]["TextSize"] = 45;
-G2L["18"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["18"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["18"]["TextColor3"] = Color3.fromRGB(136, 136, 136);
-G2L["18"]["BackgroundTransparency"] = 1;
-G2L["18"]["RichText"] = true;
-G2L["18"]["Size"] = UDim2.new(0, 203, 0, 50);
-G2L["18"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["18"]["Text"] = [[Wau hub updates]];
-G2L["18"]["Name"] = [[WauHub updates]];
-G2L["18"]["Position"] = UDim2.new(0.28377, 0, 0.0281, 0);
+G2L["1e"] = Instance.new("TextLabel", G2L["1c"]);
+G2L["1e"]["BorderSizePixel"] = 0;
+G2L["1e"]["TextSize"] = 45;
+G2L["1e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1e"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["1e"]["TextColor3"] = Color3.fromRGB(136, 136, 136);
+G2L["1e"]["BackgroundTransparency"] = 1;
+G2L["1e"]["RichText"] = true;
+G2L["1e"]["Size"] = UDim2.new(0, 203, 0, 50);
+G2L["1e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1e"]["Text"] = [[Wau hub updates]];
+G2L["1e"]["Name"] = [[WauHub updates]];
+G2L["1e"]["Position"] = UDim2.new(0.28377, 0, 0.0281, 0);
+
+
+-- StarterGui.Script.Head.Home.Frame.WauHub updates.UIStroke
+G2L["1f"] = Instance.new("UIStroke", G2L["1e"]);
+G2L["1f"]["Color"] = Color3.fromRGB(245, 245, 245);
+
+
+-- StarterGui.Script.Head.Home.Frame.WauHub updates.UIStroke.UIGradient
+G2L["20"] = Instance.new("UIGradient", G2L["1f"]);
+G2L["20"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(0.503, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
 
 
 -- StarterGui.Script.Head.Home.Frame.WauHub updates
-G2L["19"] = Instance.new("TextLabel", G2L["16"]);
-G2L["19"]["BorderSizePixel"] = 0;
-G2L["19"]["TextSize"] = 45;
-G2L["19"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["19"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["19"]["TextColor3"] = Color3.fromRGB(136, 136, 136);
-G2L["19"]["BackgroundTransparency"] = 1;
-G2L["19"]["RichText"] = true;
-G2L["19"]["Size"] = UDim2.new(0, 203, 0, 50);
-G2L["19"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["19"]["Text"] = [[No updates:)]];
-G2L["19"]["Name"] = [[WauHub updates]];
-G2L["19"]["Position"] = UDim2.new(0.28377, 0, 0.35084, 0);
+G2L["21"] = Instance.new("TextLabel", G2L["1c"]);
+G2L["21"]["BorderSizePixel"] = 0;
+G2L["21"]["TextSize"] = 45;
+G2L["21"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["21"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["21"]["TextColor3"] = Color3.fromRGB(136, 136, 136);
+G2L["21"]["BackgroundTransparency"] = 1;
+G2L["21"]["RichText"] = true;
+G2L["21"]["Size"] = UDim2.new(0, 158, 0, 50);
+G2L["21"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["21"]["Text"] = [[•A bug fix has been
+​ implemented.]];
+G2L["21"]["Name"] = [[WauHub updates]];
+G2L["21"]["Position"] = UDim2.new(0.28377, 0, 0.27015, 0);
+
+
+-- StarterGui.Script.Head.Home.Frame.WauHub updates.UIStroke
+G2L["22"] = Instance.new("UIStroke", G2L["21"]);
+G2L["22"]["Color"] = Color3.fromRGB(245, 245, 245);
+
+
+-- StarterGui.Script.Head.Home.Frame.WauHub updates.UIStroke.UIGradient
+G2L["23"] = Instance.new("UIGradient", G2L["22"]);
+G2L["23"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(0.503, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
 
 
 -- StarterGui.Script.Head.Home.Frame.Player
-G2L["1a"] = Instance.new("TextLabel", G2L["16"]);
-G2L["1a"]["BorderSizePixel"] = 0;
-G2L["1a"]["TextSize"] = 45;
-G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["1a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["1a"]["TextColor3"] = Color3.fromRGB(136, 136, 136);
-G2L["1a"]["BackgroundTransparency"] = 1;
-G2L["1a"]["RichText"] = true;
-G2L["1a"]["Size"] = UDim2.new(0, 229, 0, 62);
-G2L["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1a"]["Text"] = [[]];
-G2L["1a"]["Name"] = [[Player]];
-G2L["1a"]["Position"] = UDim2.new(0.51307, 0, -0.18706, 0);
+G2L["24"] = Instance.new("TextLabel", G2L["1c"]);
+G2L["24"]["BorderSizePixel"] = 0;
+G2L["24"]["TextSize"] = 45;
+G2L["24"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["24"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["24"]["TextColor3"] = Color3.fromRGB(136, 136, 136);
+G2L["24"]["BackgroundTransparency"] = 1;
+G2L["24"]["RichText"] = true;
+G2L["24"]["Size"] = UDim2.new(0, 229, 0, 62);
+G2L["24"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["24"]["Text"] = [[]];
+G2L["24"]["Name"] = [[Player]];
+G2L["24"]["Position"] = UDim2.new(0.51307, 0, -0.18706, 0);
 
 
 -- StarterGui.Script.Head.Home.Frame.Player.LocalScript
-G2L["1b"] = Instance.new("LocalScript", G2L["1a"]);
+G2L["25"] = Instance.new("LocalScript", G2L["24"]);
 
+
+
+-- StarterGui.Script.Head.Home.Frame.Player.UIStroke
+G2L["26"] = Instance.new("UIStroke", G2L["24"]);
+G2L["26"]["Color"] = Color3.fromRGB(245, 245, 245);
+
+
+-- StarterGui.Script.Head.Home.Frame.Player.UIStroke.UIGradient
+G2L["27"] = Instance.new("UIGradient", G2L["26"]);
+G2L["27"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(0.503, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
 
 
 -- StarterGui.Script.Head.Home.Frame.UIStroke
-G2L["1c"] = Instance.new("UIStroke", G2L["16"]);
-G2L["1c"]["Color"] = Color3.fromRGB(245, 245, 245);
+G2L["28"] = Instance.new("UIStroke", G2L["1c"]);
+G2L["28"]["Color"] = Color3.fromRGB(245, 245, 245);
 
 
 -- StarterGui.Script.Head.Home.Frame.UIStroke.UIGradient
-G2L["1d"] = Instance.new("UIGradient", G2L["1c"]);
-G2L["1d"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(0.503, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
+G2L["29"] = Instance.new("UIGradient", G2L["28"]);
+G2L["29"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(0.503, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
 
 
 -- StarterGui.Script.Head.Player
-G2L["1e"] = Instance.new("Folder", G2L["5"]);
-G2L["1e"]["Name"] = [[Player]];
+G2L["2a"] = Instance.new("Frame", G2L["6"]);
+G2L["2a"]["Visible"] = false;
+G2L["2a"]["BorderSizePixel"] = 0;
+G2L["2a"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["2a"]["Name"] = [[Player]];
+G2L["2a"]["BackgroundTransparency"] = 1;
 
 
 -- StarterGui.Script.Head.Player.PlayerFrame
-G2L["1f"] = Instance.new("Frame", G2L["1e"]);
-G2L["1f"]["Visible"] = false;
-G2L["1f"]["BorderSizePixel"] = 0;
-G2L["1f"]["BackgroundColor3"] = Color3.fromRGB(171, 171, 171);
-G2L["1f"]["Size"] = UDim2.new(0, 494, 0, 461);
-G2L["1f"]["Position"] = UDim2.new(0.34387, 0, 0.04934, 0);
-G2L["1f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1f"]["Name"] = [[PlayerFrame]];
-G2L["1f"]["BackgroundTransparency"] = 0.55;
+G2L["2b"] = Instance.new("Frame", G2L["2a"]);
+G2L["2b"]["BorderSizePixel"] = 0;
+G2L["2b"]["BackgroundColor3"] = Color3.fromRGB(171, 171, 171);
+G2L["2b"]["Size"] = UDim2.new(0, 494, 0, 461);
+G2L["2b"]["Position"] = UDim2.new(0.34387, 0, 0.04934, 0);
+G2L["2b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2b"]["Name"] = [[PlayerFrame]];
+G2L["2b"]["BackgroundTransparency"] = 0.55;
 
 
 -- StarterGui.Script.Head.Player.PlayerFrame.UICorner
-G2L["20"] = Instance.new("UICorner", G2L["1f"]);
-G2L["20"]["CornerRadius"] = UDim.new(0, 30);
+G2L["2c"] = Instance.new("UICorner", G2L["2b"]);
+G2L["2c"]["CornerRadius"] = UDim.new(0, 30);
 
 
 -- StarterGui.Script.Head.Player.PlayerFrame.NoclipText
-G2L["21"] = Instance.new("TextLabel", G2L["1f"]);
-G2L["21"]["BorderSizePixel"] = 0;
-G2L["21"]["TextSize"] = 33;
-G2L["21"]["TextStrokeColor3"] = Color3.fromRGB(163, 163, 163);
-G2L["21"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["21"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["21"]["TextColor3"] = Color3.fromRGB(126, 126, 126);
-G2L["21"]["BackgroundTransparency"] = 1;
-G2L["21"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["21"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["21"]["Text"] = [[Noclip]];
-G2L["21"]["Name"] = [[NoclipText]];
-G2L["21"]["Position"] = UDim2.new(0.04656, 0, 0.07375, 0);
+G2L["2d"] = Instance.new("TextLabel", G2L["2b"]);
+G2L["2d"]["BorderSizePixel"] = 0;
+G2L["2d"]["TextSize"] = 33;
+G2L["2d"]["TextStrokeColor3"] = Color3.fromRGB(163, 163, 163);
+G2L["2d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2d"]["TextColor3"] = Color3.fromRGB(126, 126, 126);
+G2L["2d"]["BackgroundTransparency"] = 1;
+G2L["2d"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["2d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2d"]["Text"] = [[Noclip]];
+G2L["2d"]["Name"] = [[NoclipText]];
+G2L["2d"]["Position"] = UDim2.new(0.04656, 0, 0.07375, 0);
+
+
+-- StarterGui.Script.Head.Player.PlayerFrame.NoclipText.UIStroke
+G2L["2e"] = Instance.new("UIStroke", G2L["2d"]);
+G2L["2e"]["Color"] = Color3.fromRGB(245, 245, 245);
+
+
+-- StarterGui.Script.Head.Player.PlayerFrame.NoclipText.UIStroke.UIGradient
+G2L["2f"] = Instance.new("UIGradient", G2L["2e"]);
+G2L["2f"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(0.503, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
 
 
 -- StarterGui.Script.Head.Player.PlayerFrame.InfStaminaText
-G2L["22"] = Instance.new("TextLabel", G2L["1f"]);
-G2L["22"]["BorderSizePixel"] = 0;
-G2L["22"]["TextSize"] = 33;
-G2L["22"]["TextStrokeColor3"] = Color3.fromRGB(163, 163, 163);
-G2L["22"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["22"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["22"]["TextColor3"] = Color3.fromRGB(126, 126, 126);
-G2L["22"]["BackgroundTransparency"] = 1;
-G2L["22"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["22"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["22"]["Text"] = [[Inf stamina]];
-G2L["22"]["Name"] = [[InfStaminaText]];
-G2L["22"]["Position"] = UDim2.new(0.04656, 0, 0.22126, 0);
+G2L["30"] = Instance.new("TextLabel", G2L["2b"]);
+G2L["30"]["BorderSizePixel"] = 0;
+G2L["30"]["TextSize"] = 33;
+G2L["30"]["TextStrokeColor3"] = Color3.fromRGB(163, 163, 163);
+G2L["30"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["30"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["30"]["TextColor3"] = Color3.fromRGB(126, 126, 126);
+G2L["30"]["BackgroundTransparency"] = 1;
+G2L["30"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["30"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["30"]["Text"] = [[Inf stamina]];
+G2L["30"]["Name"] = [[InfStaminaText]];
+G2L["30"]["Position"] = UDim2.new(0.04656, 0, 0.22126, 0);
+
+
+-- StarterGui.Script.Head.Player.PlayerFrame.InfStaminaText.UIStroke
+G2L["31"] = Instance.new("UIStroke", G2L["30"]);
+G2L["31"]["Color"] = Color3.fromRGB(245, 245, 245);
+
+
+-- StarterGui.Script.Head.Player.PlayerFrame.InfStaminaText.UIStroke.UIGradient
+G2L["32"] = Instance.new("UIGradient", G2L["31"]);
+G2L["32"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(0.503, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
 
 
 -- StarterGui.Script.Head.Player.PlayerFrame.FullBright
-G2L["23"] = Instance.new("TextLabel", G2L["1f"]);
-G2L["23"]["BorderSizePixel"] = 0;
-G2L["23"]["TextSize"] = 33;
-G2L["23"]["TextStrokeColor3"] = Color3.fromRGB(163, 163, 163);
-G2L["23"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["23"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["23"]["TextColor3"] = Color3.fromRGB(126, 126, 126);
-G2L["23"]["BackgroundTransparency"] = 1;
-G2L["23"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["23"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["23"]["Text"] = [[Full Bright]];
-G2L["23"]["Name"] = [[FullBright]];
-G2L["23"]["Position"] = UDim2.new(0.04656, 0, 0.38395, 0);
+G2L["33"] = Instance.new("TextLabel", G2L["2b"]);
+G2L["33"]["BorderSizePixel"] = 0;
+G2L["33"]["TextSize"] = 33;
+G2L["33"]["TextStrokeColor3"] = Color3.fromRGB(163, 163, 163);
+G2L["33"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["33"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["33"]["TextColor3"] = Color3.fromRGB(126, 126, 126);
+G2L["33"]["BackgroundTransparency"] = 1;
+G2L["33"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["33"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["33"]["Text"] = [[Full Bright]];
+G2L["33"]["Name"] = [[FullBright]];
+G2L["33"]["Position"] = UDim2.new(0.04251, 0, 0.55098, 0);
+
+
+-- StarterGui.Script.Head.Player.PlayerFrame.FullBright.UIStroke
+G2L["34"] = Instance.new("UIStroke", G2L["33"]);
+G2L["34"]["Color"] = Color3.fromRGB(245, 245, 245);
+
+
+-- StarterGui.Script.Head.Player.PlayerFrame.FullBright.UIStroke.UIGradient
+G2L["35"] = Instance.new("UIGradient", G2L["34"]);
+G2L["35"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(0.503, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
 
 
 -- StarterGui.Script.Head.Player.PlayerFrame.AntiIce
-G2L["24"] = Instance.new("TextLabel", G2L["1f"]);
-G2L["24"]["BorderSizePixel"] = 0;
-G2L["24"]["TextSize"] = 33;
-G2L["24"]["TextStrokeColor3"] = Color3.fromRGB(163, 163, 163);
-G2L["24"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["24"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["24"]["TextColor3"] = Color3.fromRGB(126, 126, 126);
-G2L["24"]["BackgroundTransparency"] = 1;
-G2L["24"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["24"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["24"]["Text"] = [[Anti ice (Beta)]];
-G2L["24"]["Name"] = [[AntiIce]];
-G2L["24"]["Position"] = UDim2.new(0.04656, 0, 0.55098, 0);
+G2L["36"] = Instance.new("TextLabel", G2L["2b"]);
+G2L["36"]["BorderSizePixel"] = 0;
+G2L["36"]["TextSize"] = 33;
+G2L["36"]["TextStrokeColor3"] = Color3.fromRGB(163, 163, 163);
+G2L["36"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["36"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["36"]["TextColor3"] = Color3.fromRGB(126, 126, 126);
+G2L["36"]["BackgroundTransparency"] = 1;
+G2L["36"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["36"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["36"]["Text"] = [[Anti ice (Beta)]];
+G2L["36"]["Name"] = [[AntiIce]];
+G2L["36"]["Position"] = UDim2.new(0.04656, 0, 0.38178, 0);
+
+
+-- StarterGui.Script.Head.Player.PlayerFrame.AntiIce.UIStroke
+G2L["37"] = Instance.new("UIStroke", G2L["36"]);
+G2L["37"]["Color"] = Color3.fromRGB(245, 245, 245);
+
+
+-- StarterGui.Script.Head.Player.PlayerFrame.AntiIce.UIStroke.UIGradient
+G2L["38"] = Instance.new("UIGradient", G2L["37"]);
+G2L["38"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(0.503, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
 
 
 -- StarterGui.Script.Head.Player.PlayerFrame.InfO2
-G2L["25"] = Instance.new("TextLabel", G2L["1f"]);
-G2L["25"]["BorderSizePixel"] = 0;
-G2L["25"]["TextSize"] = 33;
-G2L["25"]["TextStrokeColor3"] = Color3.fromRGB(163, 163, 163);
-G2L["25"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["25"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["25"]["TextColor3"] = Color3.fromRGB(126, 126, 126);
-G2L["25"]["BackgroundTransparency"] = 1;
-G2L["25"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["25"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["25"]["Text"] = [[Inf O2 (Beta)]];
-G2L["25"]["Name"] = [[InfO2]];
-G2L["25"]["Position"] = UDim2.new(0.04656, 0, 0.72017, 0);
+G2L["39"] = Instance.new("TextLabel", G2L["2b"]);
+G2L["39"]["BorderSizePixel"] = 0;
+G2L["39"]["TextSize"] = 33;
+G2L["39"]["TextStrokeColor3"] = Color3.fromRGB(163, 163, 163);
+G2L["39"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["39"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["39"]["TextColor3"] = Color3.fromRGB(126, 126, 126);
+G2L["39"]["BackgroundTransparency"] = 1;
+G2L["39"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["39"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["39"]["Text"] = [[Inf O2 (Beta)]];
+G2L["39"]["Name"] = [[InfO2]];
+G2L["39"]["Position"] = UDim2.new(0.04656, 0, 0.72017, 0);
+
+
+-- StarterGui.Script.Head.Player.PlayerFrame.InfO2.UIStroke
+G2L["3a"] = Instance.new("UIStroke", G2L["39"]);
+G2L["3a"]["Color"] = Color3.fromRGB(245, 245, 245);
+
+
+-- StarterGui.Script.Head.Player.PlayerFrame.InfO2.UIStroke.UIGradient
+G2L["3b"] = Instance.new("UIGradient", G2L["3a"]);
+G2L["3b"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(0.503, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
 
 
 -- StarterGui.Script.Head.Player.PlayerFrame.Noclip
-G2L["26"] = Instance.new("TextButton", G2L["1f"]);
-G2L["26"]["BorderSizePixel"] = 0;
-G2L["26"]["TextSize"] = 14;
-G2L["26"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["26"]["BackgroundColor3"] = Color3.fromRGB(162, 162, 162);
-G2L["26"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["26"]["Size"] = UDim2.new(0, 149, 0, 50);
-G2L["26"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["26"]["Text"] = [[]];
-G2L["26"]["Name"] = [[Noclip]];
-G2L["26"]["Position"] = UDim2.new(0.5668, 0, 0.07375, 0);
+G2L["3c"] = Instance.new("TextButton", G2L["2b"]);
+G2L["3c"]["BorderSizePixel"] = 0;
+G2L["3c"]["TextSize"] = 14;
+G2L["3c"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3c"]["BackgroundColor3"] = Color3.fromRGB(162, 162, 162);
+G2L["3c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3c"]["Size"] = UDim2.new(0, 149, 0, 50);
+G2L["3c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3c"]["Text"] = [[]];
+G2L["3c"]["Name"] = [[Noclip]];
+G2L["3c"]["Position"] = UDim2.new(0.5668, 0, 0.07375, 0);
 
 
 -- StarterGui.Script.Head.Player.PlayerFrame.Noclip.LocalScript
-G2L["27"] = Instance.new("LocalScript", G2L["26"]);
+G2L["3d"] = Instance.new("LocalScript", G2L["3c"]);
 
 
 
 -- StarterGui.Script.Head.Player.PlayerFrame.Noclip.UICorner
-G2L["28"] = Instance.new("UICorner", G2L["26"]);
+G2L["3e"] = Instance.new("UICorner", G2L["3c"]);
 
 
 
 -- StarterGui.Script.Head.Player.PlayerFrame.Noclip.Off
-G2L["29"] = Instance.new("Frame", G2L["26"]);
-G2L["29"]["BorderSizePixel"] = 0;
-G2L["29"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["29"]["Size"] = UDim2.new(0, 39, 0, 50);
-G2L["29"]["Position"] = UDim2.new(-0.00291, 0, 0, 0);
-G2L["29"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["29"]["Name"] = [[Off]];
+G2L["3f"] = Instance.new("Frame", G2L["3c"]);
+G2L["3f"]["BorderSizePixel"] = 0;
+G2L["3f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3f"]["Size"] = UDim2.new(0, 39, 0, 50);
+G2L["3f"]["Position"] = UDim2.new(-0.00291, 0, 0, 0);
+G2L["3f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3f"]["Name"] = [[Off]];
 
 
 -- StarterGui.Script.Head.Player.PlayerFrame.Noclip.Off.UICorner
-G2L["2a"] = Instance.new("UICorner", G2L["29"]);
+G2L["40"] = Instance.new("UICorner", G2L["3f"]);
 
 
 
 -- StarterGui.Script.Head.Player.PlayerFrame.Noclip.On
-G2L["2b"] = Instance.new("Frame", G2L["26"]);
-G2L["2b"]["BorderSizePixel"] = 0;
-G2L["2b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2b"]["Size"] = UDim2.new(0, 39, 0, 50);
-G2L["2b"]["Position"] = UDim2.new(0.73535, 0, 0, 0);
-G2L["2b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2b"]["Name"] = [[On]];
-G2L["2b"]["BackgroundTransparency"] = 1;
+G2L["41"] = Instance.new("Frame", G2L["3c"]);
+G2L["41"]["BorderSizePixel"] = 0;
+G2L["41"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["41"]["Size"] = UDim2.new(0, 39, 0, 50);
+G2L["41"]["Position"] = UDim2.new(0.73535, 0, 0, 0);
+G2L["41"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["41"]["Name"] = [[On]];
+G2L["41"]["BackgroundTransparency"] = 1;
 
 
 -- StarterGui.Script.Head.Player.PlayerFrame.Noclip.On.UICorner
-G2L["2c"] = Instance.new("UICorner", G2L["2b"]);
+G2L["42"] = Instance.new("UICorner", G2L["41"]);
 
 
 
 -- StarterGui.Script.Head.Player.PlayerFrame.InfStamina
-G2L["2d"] = Instance.new("TextButton", G2L["1f"]);
-G2L["2d"]["BorderSizePixel"] = 0;
-G2L["2d"]["TextSize"] = 14;
-G2L["2d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2d"]["BackgroundColor3"] = Color3.fromRGB(162, 162, 162);
-G2L["2d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["2d"]["Size"] = UDim2.new(0, 149, 0, 50);
-G2L["2d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2d"]["Text"] = [[]];
-G2L["2d"]["Name"] = [[InfStamina]];
-G2L["2d"]["Position"] = UDim2.new(0.57085, 0, 0.22126, 0);
+G2L["43"] = Instance.new("TextButton", G2L["2b"]);
+G2L["43"]["BorderSizePixel"] = 0;
+G2L["43"]["TextSize"] = 14;
+G2L["43"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["43"]["BackgroundColor3"] = Color3.fromRGB(162, 162, 162);
+G2L["43"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["43"]["Size"] = UDim2.new(0, 149, 0, 50);
+G2L["43"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["43"]["Text"] = [[]];
+G2L["43"]["Name"] = [[InfStamina]];
+G2L["43"]["Position"] = UDim2.new(0.57085, 0, 0.22126, 0);
 
 
 -- StarterGui.Script.Head.Player.PlayerFrame.InfStamina.LocalScript
-G2L["2e"] = Instance.new("LocalScript", G2L["2d"]);
+G2L["44"] = Instance.new("LocalScript", G2L["43"]);
 
 
 
 -- StarterGui.Script.Head.Player.PlayerFrame.InfStamina.UICorner
-G2L["2f"] = Instance.new("UICorner", G2L["2d"]);
+G2L["45"] = Instance.new("UICorner", G2L["43"]);
 
 
 
 -- StarterGui.Script.Head.Player.PlayerFrame.InfStamina.Off
-G2L["30"] = Instance.new("Frame", G2L["2d"]);
-G2L["30"]["BorderSizePixel"] = 0;
-G2L["30"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["30"]["Size"] = UDim2.new(0, 39, 0, 50);
-G2L["30"]["Position"] = UDim2.new(-0.00291, 0, 0, 0);
-G2L["30"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["30"]["Name"] = [[Off]];
+G2L["46"] = Instance.new("Frame", G2L["43"]);
+G2L["46"]["BorderSizePixel"] = 0;
+G2L["46"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["46"]["Size"] = UDim2.new(0, 39, 0, 50);
+G2L["46"]["Position"] = UDim2.new(-0.00291, 0, 0, 0);
+G2L["46"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["46"]["Name"] = [[Off]];
 
 
 -- StarterGui.Script.Head.Player.PlayerFrame.InfStamina.Off.UICorner
-G2L["31"] = Instance.new("UICorner", G2L["30"]);
+G2L["47"] = Instance.new("UICorner", G2L["46"]);
 
 
 
 -- StarterGui.Script.Head.Player.PlayerFrame.InfStamina.On
-G2L["32"] = Instance.new("Frame", G2L["2d"]);
-G2L["32"]["BorderSizePixel"] = 0;
-G2L["32"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["32"]["Size"] = UDim2.new(0, 39, 0, 50);
-G2L["32"]["Position"] = UDim2.new(0.73535, 0, 0, 0);
-G2L["32"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["32"]["Name"] = [[On]];
-G2L["32"]["BackgroundTransparency"] = 1;
+G2L["48"] = Instance.new("Frame", G2L["43"]);
+G2L["48"]["BorderSizePixel"] = 0;
+G2L["48"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["48"]["Size"] = UDim2.new(0, 39, 0, 50);
+G2L["48"]["Position"] = UDim2.new(0.73535, 0, 0, 0);
+G2L["48"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["48"]["Name"] = [[On]];
+G2L["48"]["BackgroundTransparency"] = 1;
 
 
 -- StarterGui.Script.Head.Player.PlayerFrame.InfStamina.On.UICorner
-G2L["33"] = Instance.new("UICorner", G2L["32"]);
+G2L["49"] = Instance.new("UICorner", G2L["48"]);
 
 
 
 -- StarterGui.Script.Head.Player.PlayerFrame.FullBright
-G2L["34"] = Instance.new("TextButton", G2L["1f"]);
-G2L["34"]["BorderSizePixel"] = 0;
-G2L["34"]["TextSize"] = 14;
-G2L["34"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["34"]["BackgroundColor3"] = Color3.fromRGB(162, 162, 162);
-G2L["34"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["34"]["Size"] = UDim2.new(0, 149, 0, 50);
-G2L["34"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["34"]["Text"] = [[]];
-G2L["34"]["Name"] = [[FullBright]];
-G2L["34"]["Position"] = UDim2.new(0.58097, 0, 0.38395, 0);
+G2L["4a"] = Instance.new("TextButton", G2L["2b"]);
+G2L["4a"]["BorderSizePixel"] = 0;
+G2L["4a"]["TextSize"] = 14;
+G2L["4a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4a"]["BackgroundColor3"] = Color3.fromRGB(162, 162, 162);
+G2L["4a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4a"]["Size"] = UDim2.new(0, 149, 0, 50);
+G2L["4a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4a"]["Text"] = [[]];
+G2L["4a"]["Name"] = [[FullBright]];
+G2L["4a"]["Position"] = UDim2.new(0.58097, 0, 0.38395, 0);
 
 
 -- StarterGui.Script.Head.Player.PlayerFrame.FullBright.LocalScript
-G2L["35"] = Instance.new("LocalScript", G2L["34"]);
+G2L["4b"] = Instance.new("LocalScript", G2L["4a"]);
 
 
 
 -- StarterGui.Script.Head.Player.PlayerFrame.FullBright.UICorner
-G2L["36"] = Instance.new("UICorner", G2L["34"]);
+G2L["4c"] = Instance.new("UICorner", G2L["4a"]);
 
 
 
 -- StarterGui.Script.Head.Player.PlayerFrame.FullBright.Off
-G2L["37"] = Instance.new("Frame", G2L["34"]);
-G2L["37"]["BorderSizePixel"] = 0;
-G2L["37"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["37"]["Size"] = UDim2.new(0, 39, 0, 50);
-G2L["37"]["Position"] = UDim2.new(-0.03646, 0, 0, 0);
-G2L["37"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["37"]["Name"] = [[Off]];
+G2L["4d"] = Instance.new("Frame", G2L["4a"]);
+G2L["4d"]["BorderSizePixel"] = 0;
+G2L["4d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4d"]["Size"] = UDim2.new(0, 39, 0, 50);
+G2L["4d"]["Position"] = UDim2.new(-0.03646, 0, 0, 0);
+G2L["4d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4d"]["Name"] = [[Off]];
 
 
 -- StarterGui.Script.Head.Player.PlayerFrame.FullBright.Off.UICorner
-G2L["38"] = Instance.new("UICorner", G2L["37"]);
+G2L["4e"] = Instance.new("UICorner", G2L["4d"]);
 
 
 
 -- StarterGui.Script.Head.Player.PlayerFrame.FullBright.On
-G2L["39"] = Instance.new("Frame", G2L["34"]);
-G2L["39"]["BorderSizePixel"] = 0;
-G2L["39"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["39"]["Size"] = UDim2.new(0, 39, 0, 50);
-G2L["39"]["Position"] = UDim2.new(0.73535, 0, 0, 0);
-G2L["39"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["39"]["Name"] = [[On]];
-G2L["39"]["BackgroundTransparency"] = 1;
+G2L["4f"] = Instance.new("Frame", G2L["4a"]);
+G2L["4f"]["BorderSizePixel"] = 0;
+G2L["4f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4f"]["Size"] = UDim2.new(0, 39, 0, 50);
+G2L["4f"]["Position"] = UDim2.new(0.73535, 0, 0, 0);
+G2L["4f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4f"]["Name"] = [[On]];
+G2L["4f"]["BackgroundTransparency"] = 1;
 
 
 -- StarterGui.Script.Head.Player.PlayerFrame.FullBright.On.UICorner
-G2L["3a"] = Instance.new("UICorner", G2L["39"]);
+G2L["50"] = Instance.new("UICorner", G2L["4f"]);
 
 
 
 -- StarterGui.Script.Head.Player.PlayerFrame.AntiIce
-G2L["3b"] = Instance.new("TextButton", G2L["1f"]);
-G2L["3b"]["BorderSizePixel"] = 0;
-G2L["3b"]["TextSize"] = 14;
-G2L["3b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3b"]["BackgroundColor3"] = Color3.fromRGB(162, 162, 162);
-G2L["3b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["3b"]["Size"] = UDim2.new(0, 149, 0, 50);
-G2L["3b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3b"]["Text"] = [[]];
-G2L["3b"]["Name"] = [[AntiIce]];
-G2L["3b"]["Position"] = UDim2.new(0.56883, 0, 0.55098, 0);
+G2L["51"] = Instance.new("TextButton", G2L["2b"]);
+G2L["51"]["BorderSizePixel"] = 0;
+G2L["51"]["TextSize"] = 14;
+G2L["51"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["51"]["BackgroundColor3"] = Color3.fromRGB(162, 162, 162);
+G2L["51"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["51"]["Size"] = UDim2.new(0, 149, 0, 50);
+G2L["51"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["51"]["Text"] = [[]];
+G2L["51"]["Name"] = [[AntiIce]];
+G2L["51"]["Position"] = UDim2.new(0.56883, 0, 0.55098, 0);
 
 
 -- StarterGui.Script.Head.Player.PlayerFrame.AntiIce.LocalScript
-G2L["3c"] = Instance.new("LocalScript", G2L["3b"]);
-
-
-
--- StarterGui.Script.Head.Player.PlayerFrame.AntiIce.UICorner
-G2L["3d"] = Instance.new("UICorner", G2L["3b"]);
-
-
-
--- StarterGui.Script.Head.Player.PlayerFrame.AntiIce.Off
-G2L["3e"] = Instance.new("Frame", G2L["3b"]);
-G2L["3e"]["BorderSizePixel"] = 0;
-G2L["3e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["3e"]["Size"] = UDim2.new(0, 39, 0, 50);
-G2L["3e"]["Position"] = UDim2.new(-0.00291, 0, 0, 0);
-G2L["3e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3e"]["Name"] = [[Off]];
-
-
--- StarterGui.Script.Head.Player.PlayerFrame.AntiIce.Off.UICorner
-G2L["3f"] = Instance.new("UICorner", G2L["3e"]);
-
-
-
--- StarterGui.Script.Head.Player.PlayerFrame.AntiIce.On
-G2L["40"] = Instance.new("Frame", G2L["3b"]);
-G2L["40"]["BorderSizePixel"] = 0;
-G2L["40"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["40"]["Size"] = UDim2.new(0, 39, 0, 50);
-G2L["40"]["Position"] = UDim2.new(0.73535, 0, 0, 0);
-G2L["40"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["40"]["Name"] = [[On]];
-G2L["40"]["BackgroundTransparency"] = 1;
-
-
--- StarterGui.Script.Head.Player.PlayerFrame.AntiIce.On.UICorner
-G2L["41"] = Instance.new("UICorner", G2L["40"]);
-
-
-
--- StarterGui.Script.Head.Player.PlayerFrame.O2
-G2L["42"] = Instance.new("TextButton", G2L["1f"]);
-G2L["42"]["BorderSizePixel"] = 0;
-G2L["42"]["TextSize"] = 14;
-G2L["42"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["42"]["BackgroundColor3"] = Color3.fromRGB(162, 162, 162);
-G2L["42"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["42"]["Size"] = UDim2.new(0, 149, 0, 50);
-G2L["42"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["42"]["Text"] = [[]];
-G2L["42"]["Name"] = [[O2]];
-G2L["42"]["Position"] = UDim2.new(0.56478, 0, 0.72017, 0);
-
-
--- StarterGui.Script.Head.Player.PlayerFrame.O2.LocalScript
-G2L["43"] = Instance.new("LocalScript", G2L["42"]);
-
-
-
--- StarterGui.Script.Head.Player.PlayerFrame.O2.UICorner
-G2L["44"] = Instance.new("UICorner", G2L["42"]);
-
-
-
--- StarterGui.Script.Head.Player.PlayerFrame.O2.Off
-G2L["45"] = Instance.new("Frame", G2L["42"]);
-G2L["45"]["BorderSizePixel"] = 0;
-G2L["45"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["45"]["Size"] = UDim2.new(0, 39, 0, 50);
-G2L["45"]["Position"] = UDim2.new(-0.00291, 0, 0, 0);
-G2L["45"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["45"]["Name"] = [[Off]];
-
-
--- StarterGui.Script.Head.Player.PlayerFrame.O2.Off.UICorner
-G2L["46"] = Instance.new("UICorner", G2L["45"]);
-
-
-
--- StarterGui.Script.Head.Player.PlayerFrame.O2.On
-G2L["47"] = Instance.new("Frame", G2L["42"]);
-G2L["47"]["BorderSizePixel"] = 0;
-G2L["47"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["47"]["Size"] = UDim2.new(0, 39, 0, 50);
-G2L["47"]["Position"] = UDim2.new(0.73535, 0, 0, 0);
-G2L["47"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["47"]["Name"] = [[On]];
-G2L["47"]["BackgroundTransparency"] = 1;
-
-
--- StarterGui.Script.Head.Player.PlayerFrame.O2.On.UICorner
-G2L["48"] = Instance.new("UICorner", G2L["47"]);
-
-
-
--- StarterGui.Script.Head.Player.PlayerFrame.UIStroke
-G2L["49"] = Instance.new("UIStroke", G2L["1f"]);
-G2L["49"]["Color"] = Color3.fromRGB(245, 245, 245);
-
-
--- StarterGui.Script.Head.Player.PlayerFrame.UIStroke.UIGradient
-G2L["4a"] = Instance.new("UIGradient", G2L["49"]);
-G2L["4a"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(0.503, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
-
-
--- StarterGui.Script.Head.WauHub
-G2L["4b"] = Instance.new("TextLabel", G2L["5"]);
-G2L["4b"]["BorderSizePixel"] = 0;
-G2L["4b"]["TextSize"] = 45;
-G2L["4b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["4b"]["TextColor3"] = Color3.fromRGB(136, 136, 136);
-G2L["4b"]["BackgroundTransparency"] = 1;
-G2L["4b"]["RichText"] = true;
-G2L["4b"]["Size"] = UDim2.new(0, 203, 0, 50);
-G2L["4b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4b"]["Text"] = [[Wau hub]];
-G2L["4b"]["Name"] = [[WauHub]];
-G2L["4b"]["Position"] = UDim2.new(0.04386, 0, 0.01832, 0);
-
-
--- StarterGui.Script.Head.ff
-G2L["4c"] = Instance.new("Frame", G2L["5"]);
-G2L["4c"]["BorderSizePixel"] = 0;
-G2L["4c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4c"]["Size"] = UDim2.new(0, 197, 0, 15);
-G2L["4c"]["Position"] = UDim2.new(0.37042, 0, 1.01898, 0);
-G2L["4c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4c"]["Name"] = [[ff]];
-
-
--- StarterGui.Script.Head.ff.UICorner
-G2L["4d"] = Instance.new("UICorner", G2L["4c"]);
-
-
-
--- StarterGui.Script.Head.Visuals
-G2L["4e"] = Instance.new("Folder", G2L["5"]);
-G2L["4e"]["Name"] = [[Visuals]];
-
-
--- StarterGui.Script.Head.Visuals.Frame
-G2L["4f"] = Instance.new("Frame", G2L["4e"]);
-G2L["4f"]["BorderSizePixel"] = 0;
-G2L["4f"]["BackgroundColor3"] = Color3.fromRGB(167, 167, 167);
-G2L["4f"]["Size"] = UDim2.new(0, 483, 0, 474);
-G2L["4f"]["Position"] = UDim2.new(0.34513, 0, 0.05123, 0);
-G2L["4f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4f"]["BackgroundTransparency"] = 0.5;
-
-
--- StarterGui.Script.Head.Visuals.Frame.UICorner
-G2L["50"] = Instance.new("UICorner", G2L["4f"]);
-G2L["50"]["CornerRadius"] = UDim.new(0, 20);
-
-
--- StarterGui.Script.Head.Visuals.Frame.Frame
-G2L["51"] = Instance.new("Frame", G2L["4f"]);
-G2L["51"]["BorderSizePixel"] = 0;
-G2L["51"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["51"]["Size"] = UDim2.new(0, 442, 0, 16);
-G2L["51"]["Position"] = UDim2.new(0.04555, 0, 0.12447, 0);
-G2L["51"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-
-
--- StarterGui.Script.Head.Visuals.Frame.Frame.LocalScript
 G2L["52"] = Instance.new("LocalScript", G2L["51"]);
 
 
 
--- StarterGui.Script.Head.Visuals.Frame.Frame.UICorner
+-- StarterGui.Script.Head.Player.PlayerFrame.AntiIce.UICorner
 G2L["53"] = Instance.new("UICorner", G2L["51"]);
 
 
 
--- StarterGui.Script.Head.Visuals.Frame.Frame.Knob
+-- StarterGui.Script.Head.Player.PlayerFrame.AntiIce.Off
 G2L["54"] = Instance.new("Frame", G2L["51"]);
 G2L["54"]["BorderSizePixel"] = 0;
-G2L["54"]["BackgroundColor3"] = Color3.fromRGB(77, 77, 77);
-G2L["54"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["54"]["Size"] = UDim2.new(0, 35, 0, 30);
-G2L["54"]["Position"] = UDim2.new(0.03846, 0, 0.5, 0);
+G2L["54"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["54"]["Size"] = UDim2.new(0, 39, 0, 50);
+G2L["54"]["Position"] = UDim2.new(-0.00291, 0, 0, 0);
 G2L["54"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["54"]["Name"] = [[Knob]];
+G2L["54"]["Name"] = [[Off]];
 
 
--- StarterGui.Script.Head.Visuals.Frame.Frame.Knob.UICorner
+-- StarterGui.Script.Head.Player.PlayerFrame.AntiIce.Off.UICorner
 G2L["55"] = Instance.new("UICorner", G2L["54"]);
 
 
 
--- StarterGui.Script.Head.Visuals.Frame.Esp Monsters
-G2L["56"] = Instance.new("TextButton", G2L["4f"]);
+-- StarterGui.Script.Head.Player.PlayerFrame.AntiIce.On
+G2L["56"] = Instance.new("Frame", G2L["51"]);
 G2L["56"]["BorderSizePixel"] = 0;
-G2L["56"]["TextSize"] = 14;
-G2L["56"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["56"]["BackgroundColor3"] = Color3.fromRGB(162, 162, 162);
-G2L["56"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["56"]["Size"] = UDim2.new(0, 149, 0, 50);
+G2L["56"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["56"]["Size"] = UDim2.new(0, 39, 0, 50);
+G2L["56"]["Position"] = UDim2.new(0.73535, 0, 0, 0);
 G2L["56"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["56"]["Text"] = [[]];
-G2L["56"]["Name"] = [[Esp Monsters]];
-G2L["56"]["Position"] = UDim2.new(0.65051, 0, 0.23046, 0);
+G2L["56"]["Name"] = [[On]];
+G2L["56"]["BackgroundTransparency"] = 1;
 
 
--- StarterGui.Script.Head.Visuals.Frame.Esp Monsters.LocalScript
-G2L["57"] = Instance.new("LocalScript", G2L["56"]);
-
-
-
--- StarterGui.Script.Head.Visuals.Frame.Esp Monsters.UICorner
-G2L["58"] = Instance.new("UICorner", G2L["56"]);
+-- StarterGui.Script.Head.Player.PlayerFrame.AntiIce.On.UICorner
+G2L["57"] = Instance.new("UICorner", G2L["56"]);
 
 
 
--- StarterGui.Script.Head.Visuals.Frame.Esp Monsters.Off
-G2L["59"] = Instance.new("Frame", G2L["56"]);
-G2L["59"]["BorderSizePixel"] = 0;
-G2L["59"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["59"]["Size"] = UDim2.new(0, 39, 0, 50);
-G2L["59"]["Position"] = UDim2.new(-0.00291, 0, 0, 0);
-G2L["59"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["59"]["Name"] = [[Off]];
+-- StarterGui.Script.Head.Player.PlayerFrame.O2
+G2L["58"] = Instance.new("TextButton", G2L["2b"]);
+G2L["58"]["BorderSizePixel"] = 0;
+G2L["58"]["TextSize"] = 14;
+G2L["58"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["58"]["BackgroundColor3"] = Color3.fromRGB(162, 162, 162);
+G2L["58"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["58"]["Size"] = UDim2.new(0, 149, 0, 50);
+G2L["58"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["58"]["Text"] = [[]];
+G2L["58"]["Name"] = [[O2]];
+G2L["58"]["Position"] = UDim2.new(0.56478, 0, 0.72017, 0);
 
 
--- StarterGui.Script.Head.Visuals.Frame.Esp Monsters.Off.UICorner
-G2L["5a"] = Instance.new("UICorner", G2L["59"]);
+-- StarterGui.Script.Head.Player.PlayerFrame.O2.LocalScript
+G2L["59"] = Instance.new("LocalScript", G2L["58"]);
 
 
 
--- StarterGui.Script.Head.Visuals.Frame.Esp Monsters.On
-G2L["5b"] = Instance.new("Frame", G2L["56"]);
+-- StarterGui.Script.Head.Player.PlayerFrame.O2.UICorner
+G2L["5a"] = Instance.new("UICorner", G2L["58"]);
+
+
+
+-- StarterGui.Script.Head.Player.PlayerFrame.O2.Off
+G2L["5b"] = Instance.new("Frame", G2L["58"]);
 G2L["5b"]["BorderSizePixel"] = 0;
 G2L["5b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["5b"]["Size"] = UDim2.new(0, 39, 0, 50);
-G2L["5b"]["Position"] = UDim2.new(0.73535, 0, 0, 0);
+G2L["5b"]["Position"] = UDim2.new(-0.00291, 0, 0, 0);
 G2L["5b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5b"]["Name"] = [[On]];
-G2L["5b"]["BackgroundTransparency"] = 1;
+G2L["5b"]["Name"] = [[Off]];
 
 
--- StarterGui.Script.Head.Visuals.Frame.Esp Monsters.On.UICorner
+-- StarterGui.Script.Head.Player.PlayerFrame.O2.Off.UICorner
 G2L["5c"] = Instance.new("UICorner", G2L["5b"]);
 
 
 
--- StarterGui.Script.Head.Visuals.Frame.Esp monsters
-G2L["5d"] = Instance.new("TextLabel", G2L["4f"]);
+-- StarterGui.Script.Head.Player.PlayerFrame.O2.On
+G2L["5d"] = Instance.new("Frame", G2L["58"]);
 G2L["5d"]["BorderSizePixel"] = 0;
-G2L["5d"]["TextSize"] = 45;
 G2L["5d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["5d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["5d"]["TextColor3"] = Color3.fromRGB(136, 136, 136);
-G2L["5d"]["BackgroundTransparency"] = 1;
-G2L["5d"]["RichText"] = true;
-G2L["5d"]["Size"] = UDim2.new(0, 203, 0, 50);
+G2L["5d"]["Size"] = UDim2.new(0, 39, 0, 50);
+G2L["5d"]["Position"] = UDim2.new(0.73535, 0, 0, 0);
 G2L["5d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5d"]["Text"] = [[Esp monsters]];
-G2L["5d"]["Name"] = [[Esp monsters]];
-G2L["5d"]["Position"] = UDim2.new(0.09913, 0, 0.21513, 0);
+G2L["5d"]["Name"] = [[On]];
+G2L["5d"]["BackgroundTransparency"] = 1;
 
 
--- StarterGui.Script.Head.Visuals.Frame.FOVText
-G2L["5e"] = Instance.new("TextLabel", G2L["4f"]);
-G2L["5e"]["BorderSizePixel"] = 0;
-G2L["5e"]["TextSize"] = 45;
-G2L["5e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["5e"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["5e"]["TextColor3"] = Color3.fromRGB(136, 136, 136);
-G2L["5e"]["BackgroundTransparency"] = 1;
-G2L["5e"]["RichText"] = true;
-G2L["5e"]["Size"] = UDim2.new(0, 203, 0, 50);
-G2L["5e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5e"]["Text"] = [[Fov 90 - 120]];
-G2L["5e"]["Name"] = [[FOVText]];
-G2L["5e"]["Position"] = UDim2.new(0.1157, 0, 0.00416, 0);
-
-
--- StarterGui.Script.Head.Visuals.Frame.Esp items
-G2L["5f"] = Instance.new("TextLabel", G2L["4f"]);
-G2L["5f"]["BorderSizePixel"] = 0;
-G2L["5f"]["TextSize"] = 45;
-G2L["5f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["5f"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["5f"]["TextColor3"] = Color3.fromRGB(136, 136, 136);
-G2L["5f"]["BackgroundTransparency"] = 1;
-G2L["5f"]["RichText"] = true;
-G2L["5f"]["Size"] = UDim2.new(0, 203, 0, 50);
-G2L["5f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5f"]["Text"] = [[Esp items]];
-G2L["5f"]["Name"] = [[Esp items]];
-G2L["5f"]["Position"] = UDim2.new(0.09913, 0, 0.38813, 0);
-
-
--- StarterGui.Script.Head.Visuals.Frame.Esp items
-G2L["60"] = Instance.new("TextButton", G2L["4f"]);
-G2L["60"]["BorderSizePixel"] = 0;
-G2L["60"]["TextSize"] = 14;
-G2L["60"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["60"]["BackgroundColor3"] = Color3.fromRGB(162, 162, 162);
-G2L["60"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["60"]["Size"] = UDim2.new(0, 149, 0, 50);
-G2L["60"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["60"]["Text"] = [[]];
-G2L["60"]["Name"] = [[Esp items]];
-G2L["60"]["Position"] = UDim2.new(0.64844, 0, 0.38869, 0);
-
-
--- StarterGui.Script.Head.Visuals.Frame.Esp items.LocalScript
-G2L["61"] = Instance.new("LocalScript", G2L["60"]);
+-- StarterGui.Script.Head.Player.PlayerFrame.O2.On.UICorner
+G2L["5e"] = Instance.new("UICorner", G2L["5d"]);
 
 
 
--- StarterGui.Script.Head.Visuals.Frame.Esp items.UICorner
-G2L["62"] = Instance.new("UICorner", G2L["60"]);
+-- StarterGui.Script.Head.Player.PlayerFrame.UIStroke
+G2L["5f"] = Instance.new("UIStroke", G2L["2b"]);
+G2L["5f"]["Color"] = Color3.fromRGB(245, 245, 245);
 
 
+-- StarterGui.Script.Head.Player.PlayerFrame.UIStroke.UIGradient
+G2L["60"] = Instance.new("UIGradient", G2L["5f"]);
+G2L["60"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(0.503, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
 
--- StarterGui.Script.Head.Visuals.Frame.Esp items.Off
-G2L["63"] = Instance.new("Frame", G2L["60"]);
+
+-- StarterGui.Script.Head.Visuals
+G2L["61"] = Instance.new("Frame", G2L["6"]);
+G2L["61"]["Visible"] = false;
+G2L["61"]["BorderSizePixel"] = 0;
+G2L["61"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["61"]["Name"] = [[Visuals]];
+G2L["61"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame
+G2L["62"] = Instance.new("ScrollingFrame", G2L["61"]);
+G2L["62"]["Active"] = true;
+G2L["62"]["BorderSizePixel"] = 0;
+G2L["62"]["CanvasSize"] = UDim2.new(0, 0, 1, 0);
+G2L["62"]["BackgroundColor3"] = Color3.fromRGB(167, 167, 167);
+G2L["62"]["Size"] = UDim2.new(0, 483, 0, 477);
+G2L["62"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["62"]["Position"] = UDim2.new(0.35019, 0, 0.04744, 0);
+G2L["62"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["62"]["ScrollBarThickness"] = 11;
+G2L["62"]["BackgroundTransparency"] = 0.5;
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Frame
+G2L["63"] = Instance.new("Frame", G2L["62"]);
 G2L["63"]["BorderSizePixel"] = 0;
 G2L["63"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["63"]["Size"] = UDim2.new(0, 39, 0, 50);
-G2L["63"]["Position"] = UDim2.new(-0.00291, 0, 0, 0);
+G2L["63"]["Size"] = UDim2.new(0, 442, 0, 16);
+G2L["63"]["Position"] = UDim2.new(0.04141, 0, 0.12521, 0);
 G2L["63"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["63"]["Name"] = [[Off]];
 
 
--- StarterGui.Script.Head.Visuals.Frame.Esp items.Off.UICorner
-G2L["64"] = Instance.new("UICorner", G2L["63"]);
-
-
-
--- StarterGui.Script.Head.Visuals.Frame.Esp items.On
-G2L["65"] = Instance.new("Frame", G2L["60"]);
-G2L["65"]["BorderSizePixel"] = 0;
-G2L["65"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["65"]["Size"] = UDim2.new(0, 39, 0, 50);
-G2L["65"]["Position"] = UDim2.new(0.73535, 0, 0, 0);
-G2L["65"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["65"]["Name"] = [[On]];
-G2L["65"]["BackgroundTransparency"] = 1;
-
-
--- StarterGui.Script.Head.Visuals.Frame.Esp items.On.UICorner
-G2L["66"] = Instance.new("UICorner", G2L["65"]);
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Frame.LocalScript
+G2L["64"] = Instance.new("LocalScript", G2L["63"]);
 
 
 
--- StarterGui.Script.Head.Visuals.Frame.Esp players
-G2L["67"] = Instance.new("TextButton", G2L["4f"]);
-G2L["67"]["BorderSizePixel"] = 0;
-G2L["67"]["TextSize"] = 14;
-G2L["67"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["67"]["BackgroundColor3"] = Color3.fromRGB(162, 162, 162);
-G2L["67"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["67"]["Size"] = UDim2.new(0, 149, 0, 50);
-G2L["67"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["67"]["Text"] = [[]];
-G2L["67"]["Name"] = [[Esp players]];
-G2L["67"]["Position"] = UDim2.new(0.65051, 0, 0.55324, 0);
-
-
--- StarterGui.Script.Head.Visuals.Frame.Esp players.LocalScript
-G2L["68"] = Instance.new("LocalScript", G2L["67"]);
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Frame.UICorner
+G2L["65"] = Instance.new("UICorner", G2L["63"]);
 
 
 
--- StarterGui.Script.Head.Visuals.Frame.Esp players.UICorner
-G2L["69"] = Instance.new("UICorner", G2L["67"]);
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Frame.Knob
+G2L["66"] = Instance.new("Frame", G2L["63"]);
+G2L["66"]["BorderSizePixel"] = 0;
+G2L["66"]["BackgroundColor3"] = Color3.fromRGB(77, 77, 77);
+G2L["66"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["66"]["Size"] = UDim2.new(0, 35, 0, 30);
+G2L["66"]["Position"] = UDim2.new(0.03846, 0, 0.5, 0);
+G2L["66"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["66"]["Name"] = [[Knob]];
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Frame.Knob.UICorner
+G2L["67"] = Instance.new("UICorner", G2L["66"]);
 
 
 
--- StarterGui.Script.Head.Visuals.Frame.Esp players.Off
-G2L["6a"] = Instance.new("Frame", G2L["67"]);
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Frame.UIStroke
+G2L["68"] = Instance.new("UIStroke", G2L["63"]);
+G2L["68"]["Color"] = Color3.fromRGB(245, 245, 245);
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Frame.UIStroke.UIGradient
+G2L["69"] = Instance.new("UIGradient", G2L["68"]);
+G2L["69"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(0.503, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Esp Monsters
+G2L["6a"] = Instance.new("TextButton", G2L["62"]);
 G2L["6a"]["BorderSizePixel"] = 0;
-G2L["6a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["6a"]["Size"] = UDim2.new(0, 39, 0, 50);
-G2L["6a"]["Position"] = UDim2.new(-0.00291, 0, 0, 0);
+G2L["6a"]["TextSize"] = 14;
+G2L["6a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6a"]["BackgroundColor3"] = Color3.fromRGB(162, 162, 162);
+G2L["6a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["6a"]["Size"] = UDim2.new(0, 149, 0, 50);
 G2L["6a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["6a"]["Name"] = [[Off]];
+G2L["6a"]["Text"] = [[]];
+G2L["6a"]["Name"] = [[Esp Monsters]];
+G2L["6a"]["Position"] = UDim2.new(0.64636, 0, 0.25126, 0);
 
 
--- StarterGui.Script.Head.Visuals.Frame.Esp players.Off.UICorner
-G2L["6b"] = Instance.new("UICorner", G2L["6a"]);
-
-
-
--- StarterGui.Script.Head.Visuals.Frame.Esp players.On
-G2L["6c"] = Instance.new("Frame", G2L["67"]);
-G2L["6c"]["BorderSizePixel"] = 0;
-G2L["6c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["6c"]["Size"] = UDim2.new(0, 39, 0, 50);
-G2L["6c"]["Position"] = UDim2.new(0.73535, 0, 0, 0);
-G2L["6c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["6c"]["Name"] = [[On]];
-G2L["6c"]["BackgroundTransparency"] = 1;
-
-
--- StarterGui.Script.Head.Visuals.Frame.Esp players.On.UICorner
-G2L["6d"] = Instance.new("UICorner", G2L["6c"]);
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Esp Monsters.LocalScript
+G2L["6b"] = Instance.new("LocalScript", G2L["6a"]);
 
 
 
--- StarterGui.Script.Head.Visuals.Frame.Esp players
-G2L["6e"] = Instance.new("TextLabel", G2L["4f"]);
-G2L["6e"]["BorderSizePixel"] = 0;
-G2L["6e"]["TextSize"] = 45;
-G2L["6e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["6e"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["6e"]["TextColor3"] = Color3.fromRGB(136, 136, 136);
-G2L["6e"]["BackgroundTransparency"] = 1;
-G2L["6e"]["RichText"] = true;
-G2L["6e"]["Size"] = UDim2.new(0, 203, 0, 50);
-G2L["6e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["6e"]["Text"] = [[Esp players]];
-G2L["6e"]["Name"] = [[Esp players]];
-G2L["6e"]["Position"] = UDim2.new(0.09913, 0, 0.55479, 0);
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Esp Monsters.UICorner
+G2L["6c"] = Instance.new("UICorner", G2L["6a"]);
 
 
--- StarterGui.Script.Head.Visuals.Frame.UIStroke
-G2L["6f"] = Instance.new("UIStroke", G2L["4f"]);
-G2L["6f"]["Color"] = Color3.fromRGB(245, 245, 245);
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Esp Monsters.Off
+G2L["6d"] = Instance.new("Frame", G2L["6a"]);
+G2L["6d"]["BorderSizePixel"] = 0;
+G2L["6d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6d"]["Size"] = UDim2.new(0, 39, 0, 50);
+G2L["6d"]["Position"] = UDim2.new(-0.00291, 0, 0, 0);
+G2L["6d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6d"]["Name"] = [[Off]];
 
 
--- StarterGui.Script.Head.Visuals.Frame.UIStroke.UIGradient
-G2L["70"] = Instance.new("UIGradient", G2L["6f"]);
-G2L["70"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(0.503, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Esp Monsters.Off.UICorner
+G2L["6e"] = Instance.new("UICorner", G2L["6d"]);
 
 
--- StarterGui.Script.Head.Visuals.Frame.effects
-G2L["71"] = Instance.new("TextButton", G2L["4f"]);
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Esp Monsters.On
+G2L["6f"] = Instance.new("Frame", G2L["6a"]);
+G2L["6f"]["BorderSizePixel"] = 0;
+G2L["6f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6f"]["Size"] = UDim2.new(0, 39, 0, 50);
+G2L["6f"]["Position"] = UDim2.new(0.73535, 0, 0, 0);
+G2L["6f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6f"]["Name"] = [[On]];
+G2L["6f"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Esp Monsters.On.UICorner
+G2L["70"] = Instance.new("UICorner", G2L["6f"]);
+
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Esp monsters
+G2L["71"] = Instance.new("TextLabel", G2L["62"]);
 G2L["71"]["BorderSizePixel"] = 0;
-G2L["71"]["TextSize"] = 14;
-G2L["71"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["71"]["BackgroundColor3"] = Color3.fromRGB(162, 162, 162);
-G2L["71"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["71"]["Size"] = UDim2.new(0, 149, 0, 50);
+G2L["71"]["TextSize"] = 45;
+G2L["71"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["71"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["71"]["TextColor3"] = Color3.fromRGB(136, 136, 136);
+G2L["71"]["BackgroundTransparency"] = 1;
+G2L["71"]["RichText"] = true;
+G2L["71"]["Size"] = UDim2.new(0, 203, 0, 50);
 G2L["71"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["71"]["Text"] = [[]];
-G2L["71"]["Name"] = [[effects]];
-G2L["71"]["Position"] = UDim2.new(0.65051, 0, 0.73257, 0);
+G2L["71"]["Text"] = [[Esp monsters]];
+G2L["71"]["Name"] = [[Esp monsters]];
+G2L["71"]["Position"] = UDim2.new(0.09913, 0, 0.24954, 0);
 
 
--- StarterGui.Script.Head.Visuals.Frame.effects.LocalScript
-G2L["72"] = Instance.new("LocalScript", G2L["71"]);
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Esp monsters.UIStroke
+G2L["72"] = Instance.new("UIStroke", G2L["71"]);
+G2L["72"]["Color"] = Color3.fromRGB(245, 245, 245);
 
 
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Esp monsters.UIStroke.UIGradient
+G2L["73"] = Instance.new("UIGradient", G2L["72"]);
+G2L["73"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(0.503, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
 
--- StarterGui.Script.Head.Visuals.Frame.effects.UICorner
-G2L["73"] = Instance.new("UICorner", G2L["71"]);
 
-
-
--- StarterGui.Script.Head.Visuals.Frame.effects.Off
-G2L["74"] = Instance.new("Frame", G2L["71"]);
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.FOVText
+G2L["74"] = Instance.new("TextLabel", G2L["62"]);
 G2L["74"]["BorderSizePixel"] = 0;
+G2L["74"]["TextSize"] = 45;
 G2L["74"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["74"]["Size"] = UDim2.new(0, 39, 0, 50);
-G2L["74"]["Position"] = UDim2.new(-0.00291, 0, 0, 0);
+G2L["74"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["74"]["TextColor3"] = Color3.fromRGB(136, 136, 136);
+G2L["74"]["BackgroundTransparency"] = 1;
+G2L["74"]["RichText"] = true;
+G2L["74"]["Size"] = UDim2.new(0, 203, 0, 50);
 G2L["74"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["74"]["Name"] = [[Off]];
+G2L["74"]["Text"] = [[Fov 90 - 120]];
+G2L["74"]["Name"] = [[FOVText]];
+G2L["74"]["Position"] = UDim2.new(0.1157, 0, 0.004, 0);
 
 
--- StarterGui.Script.Head.Visuals.Frame.effects.Off.UICorner
-G2L["75"] = Instance.new("UICorner", G2L["74"]);
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.FOVText.UIStroke
+G2L["75"] = Instance.new("UIStroke", G2L["74"]);
+G2L["75"]["Color"] = Color3.fromRGB(245, 245, 245);
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.FOVText.UIStroke.UIGradient
+G2L["76"] = Instance.new("UIGradient", G2L["75"]);
+G2L["76"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(0.503, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Esp items
+G2L["77"] = Instance.new("TextLabel", G2L["62"]);
+G2L["77"]["BorderSizePixel"] = 0;
+G2L["77"]["TextSize"] = 45;
+G2L["77"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["77"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["77"]["TextColor3"] = Color3.fromRGB(136, 136, 136);
+G2L["77"]["BackgroundTransparency"] = 1;
+G2L["77"]["RichText"] = true;
+G2L["77"]["Size"] = UDim2.new(0, 203, 0, 50);
+G2L["77"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["77"]["Text"] = [[Esp items]];
+G2L["77"]["Name"] = [[Esp items]];
+G2L["77"]["Position"] = UDim2.new(0.11363, 0, 0.57349, 0);
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Esp items.UIStroke
+G2L["78"] = Instance.new("UIStroke", G2L["77"]);
+G2L["78"]["Color"] = Color3.fromRGB(245, 245, 245);
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Esp items.UIStroke.UIGradient
+G2L["79"] = Instance.new("UIGradient", G2L["78"]);
+G2L["79"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(0.503, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Esp items
+G2L["7a"] = Instance.new("TextButton", G2L["62"]);
+G2L["7a"]["BorderSizePixel"] = 0;
+G2L["7a"]["TextSize"] = 14;
+G2L["7a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7a"]["BackgroundColor3"] = Color3.fromRGB(162, 162, 162);
+G2L["7a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7a"]["Size"] = UDim2.new(0, 149, 0, 50);
+G2L["7a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7a"]["Text"] = [[]];
+G2L["7a"]["Name"] = [[Esp items]];
+G2L["7a"]["Position"] = UDim2.new(0.64844, 0, 0.57349, 0);
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Esp items.LocalScript
+G2L["7b"] = Instance.new("LocalScript", G2L["7a"]);
 
 
 
--- StarterGui.Script.Head.Visuals.Frame.effects.On
-G2L["76"] = Instance.new("Frame", G2L["71"]);
-G2L["76"]["BorderSizePixel"] = 0;
-G2L["76"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["76"]["Size"] = UDim2.new(0, 39, 0, 50);
-G2L["76"]["Position"] = UDim2.new(0.73535, 0, 0, 0);
-G2L["76"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["76"]["Name"] = [[On]];
-G2L["76"]["BackgroundTransparency"] = 1;
-
-
--- StarterGui.Script.Head.Visuals.Frame.effects.On.UICorner
-G2L["77"] = Instance.new("UICorner", G2L["76"]);
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Esp items.UICorner
+G2L["7c"] = Instance.new("UICorner", G2L["7a"]);
 
 
 
--- StarterGui.Script.Head.Visuals.Frame.Esp players
-G2L["78"] = Instance.new("TextLabel", G2L["4f"]);
-G2L["78"]["BorderSizePixel"] = 0;
-G2L["78"]["TextSize"] = 45;
-G2L["78"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["78"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["78"]["TextColor3"] = Color3.fromRGB(136, 136, 136);
-G2L["78"]["BackgroundTransparency"] = 1;
-G2L["78"]["RichText"] = true;
-G2L["78"]["Size"] = UDim2.new(0, 203, 0, 50);
-G2L["78"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["78"]["Text"] = [[Esp players]];
-G2L["78"]["Name"] = [[Esp players]];
-G2L["78"]["Position"] = UDim2.new(0.09913, 0, 0.73412, 0);
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Esp items.Off
+G2L["7d"] = Instance.new("Frame", G2L["7a"]);
+G2L["7d"]["BorderSizePixel"] = 0;
+G2L["7d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7d"]["Size"] = UDim2.new(0, 39, 0, 50);
+G2L["7d"]["Position"] = UDim2.new(-0.00291, 0, 0, 0);
+G2L["7d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7d"]["Name"] = [[Off]];
 
 
--- StarterGui.Script.Head.Visuals.Frame.Esp items
-G2L["79"] = Instance.new("TextLabel", G2L["4f"]);
-G2L["79"]["BorderSizePixel"] = 0;
-G2L["79"]["TextSize"] = 45;
-G2L["79"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["79"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["79"]["TextColor3"] = Color3.fromRGB(136, 136, 136);
-G2L["79"]["BackgroundTransparency"] = 1;
-G2L["79"]["RichText"] = true;
-G2L["79"]["Size"] = UDim2.new(0, 203, 0, 50);
-G2L["79"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["79"]["Text"] = [[Esp items]];
-G2L["79"]["Name"] = [[Esp items]];
-G2L["79"]["Position"] = UDim2.new(0.09913, 0, 0.38813, 0);
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Esp items.Off.UICorner
+G2L["7e"] = Instance.new("UICorner", G2L["7d"]);
+
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Esp items.On
+G2L["7f"] = Instance.new("Frame", G2L["7a"]);
+G2L["7f"]["BorderSizePixel"] = 0;
+G2L["7f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7f"]["Size"] = UDim2.new(0, 39, 0, 50);
+G2L["7f"]["Position"] = UDim2.new(0.73535, 0, 0, 0);
+G2L["7f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7f"]["Name"] = [[On]];
+G2L["7f"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Esp items.On.UICorner
+G2L["80"] = Instance.new("UICorner", G2L["7f"]);
+
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Esp players
+G2L["81"] = Instance.new("TextButton", G2L["62"]);
+G2L["81"]["BorderSizePixel"] = 0;
+G2L["81"]["TextSize"] = 14;
+G2L["81"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["81"]["BackgroundColor3"] = Color3.fromRGB(162, 162, 162);
+G2L["81"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["81"]["Size"] = UDim2.new(0, 149, 0, 50);
+G2L["81"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["81"]["Text"] = [[]];
+G2L["81"]["Name"] = [[Esp players]];
+G2L["81"]["Position"] = UDim2.new(0.64844, 0, 0.72265, 0);
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Esp players.Off
+G2L["82"] = Instance.new("Frame", G2L["81"]);
+G2L["82"]["BorderSizePixel"] = 0;
+G2L["82"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["82"]["Size"] = UDim2.new(0, 39, 0, 50);
+G2L["82"]["Position"] = UDim2.new(-0.00291, 0, 0, 0);
+G2L["82"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["82"]["Name"] = [[Off]];
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Esp players.Off.UICorner
+G2L["83"] = Instance.new("UICorner", G2L["82"]);
+
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Esp players.LocalScript
+G2L["84"] = Instance.new("LocalScript", G2L["81"]);
+
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Esp players.On
+G2L["85"] = Instance.new("Frame", G2L["81"]);
+G2L["85"]["BorderSizePixel"] = 0;
+G2L["85"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["85"]["Size"] = UDim2.new(0, 39, 0, 50);
+G2L["85"]["Position"] = UDim2.new(0.73535, 0, 0, 0);
+G2L["85"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["85"]["Name"] = [[On]];
+G2L["85"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Esp players.On.UICorner
+G2L["86"] = Instance.new("UICorner", G2L["85"]);
+
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Esp players.UICorner
+G2L["87"] = Instance.new("UICorner", G2L["81"]);
+
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Esp players
+G2L["88"] = Instance.new("TextLabel", G2L["62"]);
+G2L["88"]["BorderSizePixel"] = 0;
+G2L["88"]["TextSize"] = 45;
+G2L["88"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["88"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["88"]["TextColor3"] = Color3.fromRGB(136, 136, 136);
+G2L["88"]["BackgroundTransparency"] = 1;
+G2L["88"]["RichText"] = true;
+G2L["88"]["Size"] = UDim2.new(0, 203, 0, 50);
+G2L["88"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["88"]["Text"] = [[Esp players]];
+G2L["88"]["Name"] = [[Esp players]];
+G2L["88"]["Position"] = UDim2.new(0.09913, 0, 0.72265, 0);
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Esp players.UIStroke
+G2L["89"] = Instance.new("UIStroke", G2L["88"]);
+G2L["89"]["Color"] = Color3.fromRGB(245, 245, 245);
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Esp players.UIStroke.UIGradient
+G2L["8a"] = Instance.new("UIGradient", G2L["89"]);
+G2L["8a"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(0.503, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.effects
+G2L["8b"] = Instance.new("TextButton", G2L["62"]);
+G2L["8b"]["BorderSizePixel"] = 0;
+G2L["8b"]["TextSize"] = 14;
+G2L["8b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8b"]["BackgroundColor3"] = Color3.fromRGB(162, 162, 162);
+G2L["8b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["8b"]["Size"] = UDim2.new(0, 149, 0, 50);
+G2L["8b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8b"]["Text"] = [[]];
+G2L["8b"]["Name"] = [[effects]];
+G2L["8b"]["Position"] = UDim2.new(0.64636, 0, 0.86801, 0);
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.effects.LocalScript
+G2L["8c"] = Instance.new("LocalScript", G2L["8b"]);
+
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.effects.UICorner
+G2L["8d"] = Instance.new("UICorner", G2L["8b"]);
+
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.effects.Off
+G2L["8e"] = Instance.new("Frame", G2L["8b"]);
+G2L["8e"]["BorderSizePixel"] = 0;
+G2L["8e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8e"]["Size"] = UDim2.new(0, 39, 0, 50);
+G2L["8e"]["Position"] = UDim2.new(-0.00291, 0, 0, 0);
+G2L["8e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8e"]["Name"] = [[Off]];
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.effects.Off.UICorner
+G2L["8f"] = Instance.new("UICorner", G2L["8e"]);
+
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.effects.On
+G2L["90"] = Instance.new("Frame", G2L["8b"]);
+G2L["90"]["BorderSizePixel"] = 0;
+G2L["90"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["90"]["Size"] = UDim2.new(0, 39, 0, 50);
+G2L["90"]["Position"] = UDim2.new(0.73535, 0, 0, 0);
+G2L["90"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["90"]["Name"] = [[On]];
+G2L["90"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.effects.On.UICorner
+G2L["91"] = Instance.new("UICorner", G2L["90"]);
+
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.UICorner
+G2L["92"] = Instance.new("UICorner", G2L["62"]);
+G2L["92"]["CornerRadius"] = UDim.new(0, 20);
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Tracer
+G2L["93"] = Instance.new("TextButton", G2L["62"]);
+G2L["93"]["BorderSizePixel"] = 0;
+G2L["93"]["TextSize"] = 14;
+G2L["93"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["93"]["BackgroundColor3"] = Color3.fromRGB(162, 162, 162);
+G2L["93"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["93"]["Size"] = UDim2.new(0, 149, 0, 50);
+G2L["93"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["93"]["Text"] = [[]];
+G2L["93"]["Name"] = [[Tracer]];
+G2L["93"]["Position"] = UDim2.new(0.64844, 0, 0.4118, 0);
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Tracer.LocalScript
+G2L["94"] = Instance.new("LocalScript", G2L["93"]);
+
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Tracer.UICorner
+G2L["95"] = Instance.new("UICorner", G2L["93"]);
+
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Tracer.Off
+G2L["96"] = Instance.new("Frame", G2L["93"]);
+G2L["96"]["BorderSizePixel"] = 0;
+G2L["96"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["96"]["Size"] = UDim2.new(0, 39, 0, 50);
+G2L["96"]["Position"] = UDim2.new(-0.00291, 0, 0, 0);
+G2L["96"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["96"]["Name"] = [[Off]];
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Tracer.Off.UICorner
+G2L["97"] = Instance.new("UICorner", G2L["96"]);
+
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Tracer.On
+G2L["98"] = Instance.new("Frame", G2L["93"]);
+G2L["98"]["BorderSizePixel"] = 0;
+G2L["98"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["98"]["Size"] = UDim2.new(0, 39, 0, 50);
+G2L["98"]["Position"] = UDim2.new(0.73535, 0, 0, 0);
+G2L["98"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["98"]["Name"] = [[On]];
+G2L["98"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Tracer.On.UICorner
+G2L["99"] = Instance.new("UICorner", G2L["98"]);
+
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.TracerText
+G2L["9a"] = Instance.new("TextLabel", G2L["62"]);
+G2L["9a"]["BorderSizePixel"] = 0;
+G2L["9a"]["TextSize"] = 45;
+G2L["9a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["9a"]["TextColor3"] = Color3.fromRGB(136, 136, 136);
+G2L["9a"]["BackgroundTransparency"] = 1;
+G2L["9a"]["RichText"] = true;
+G2L["9a"]["Size"] = UDim2.new(0, 203, 0, 50);
+G2L["9a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9a"]["Text"] = [[Tracer]];
+G2L["9a"]["Name"] = [[TracerText]];
+G2L["9a"]["Position"] = UDim2.new(0.11363, 0, 0.4118, 0);
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.TracerText.UIStroke
+G2L["9b"] = Instance.new("UIStroke", G2L["9a"]);
+G2L["9b"]["Color"] = Color3.fromRGB(245, 245, 245);
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.TracerText.UIStroke.UIGradient
+G2L["9c"] = Instance.new("UIGradient", G2L["9b"]);
+G2L["9c"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(0.503, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Remove Effects
+G2L["9d"] = Instance.new("TextLabel", G2L["62"]);
+G2L["9d"]["BorderSizePixel"] = 0;
+G2L["9d"]["TextSize"] = 45;
+G2L["9d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["9d"]["TextColor3"] = Color3.fromRGB(136, 136, 136);
+G2L["9d"]["BackgroundTransparency"] = 1;
+G2L["9d"]["RichText"] = true;
+G2L["9d"]["Size"] = UDim2.new(0, 203, 0, 50);
+G2L["9d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9d"]["Text"] = [[Remove Effects]];
+G2L["9d"]["Name"] = [[Remove Effects]];
+G2L["9d"]["Position"] = UDim2.new(0.09913, 0, 0.86686, 0);
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Remove Effects.UIStroke
+G2L["9e"] = Instance.new("UIStroke", G2L["9d"]);
+G2L["9e"]["Color"] = Color3.fromRGB(245, 245, 245);
+
+
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Remove Effects.UIStroke.UIGradient
+G2L["9f"] = Instance.new("UIGradient", G2L["9e"]);
+G2L["9f"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(0.503, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
+
+
+-- StarterGui.Script.Head.Gui
+G2L["a0"] = Instance.new("Frame", G2L["6"]);
+G2L["a0"]["Visible"] = false;
+G2L["a0"]["BorderSizePixel"] = 0;
+G2L["a0"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["a0"]["Name"] = [[Gui]];
+G2L["a0"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.Script.Head.Gui.Frame
+G2L["a1"] = Instance.new("Frame", G2L["a0"]);
+G2L["a1"]["BorderSizePixel"] = 0;
+G2L["a1"]["BackgroundColor3"] = Color3.fromRGB(167, 167, 167);
+G2L["a1"]["Size"] = UDim2.new(0, 467, 0, 483);
+G2L["a1"]["Position"] = UDim2.new(0.36283, 0, 0.03416, 0);
+G2L["a1"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a1"]["BackgroundTransparency"] = 0.5;
+
+
+-- StarterGui.Script.Head.Gui.Frame.UICorner
+G2L["a2"] = Instance.new("UICorner", G2L["a1"]);
+G2L["a2"]["CornerRadius"] = UDim.new(0, 25);
+
+
+-- StarterGui.Script.Head.Gui.Frame.UIStroke
+G2L["a3"] = Instance.new("UIStroke", G2L["a1"]);
+G2L["a3"]["Color"] = Color3.fromRGB(245, 245, 245);
+
+
+-- StarterGui.Script.Head.Gui.Frame.UIStroke.UIGradient
+G2L["a4"] = Instance.new("UIGradient", G2L["a3"]);
+G2L["a4"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(0.503, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
 
 
 -- StarterGui.Script.Head.Tp
-G2L["7a"] = Instance.new("Folder", G2L["5"]);
-G2L["7a"]["Name"] = [[Tp]];
+G2L["a5"] = Instance.new("Frame", G2L["6"]);
+G2L["a5"]["Visible"] = false;
+G2L["a5"]["BorderSizePixel"] = 0;
+G2L["a5"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["a5"]["Name"] = [[Tp]];
+G2L["a5"]["BackgroundTransparency"] = 1;
 
 
 -- StarterGui.Script.Head.Tp.Frame
-G2L["7b"] = Instance.new("Frame", G2L["7a"]);
-G2L["7b"]["Visible"] = false;
-G2L["7b"]["BorderSizePixel"] = 0;
-G2L["7b"]["BackgroundColor3"] = Color3.fromRGB(167, 167, 167);
-G2L["7b"]["Size"] = UDim2.new(0, 483, 0, 474);
-G2L["7b"]["Position"] = UDim2.new(0.34513, 0, 0.05123, 0);
-G2L["7b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["7b"]["BackgroundTransparency"] = 0.5;
+G2L["a6"] = Instance.new("Frame", G2L["a5"]);
+G2L["a6"]["BorderSizePixel"] = 0;
+G2L["a6"]["BackgroundColor3"] = Color3.fromRGB(167, 167, 167);
+G2L["a6"]["Size"] = UDim2.new(0, 483, 0, 474);
+G2L["a6"]["Position"] = UDim2.new(0.34513, 0, 0.05123, 0);
+G2L["a6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a6"]["BackgroundTransparency"] = 0.5;
 
 
 -- StarterGui.Script.Head.Tp.Frame.UICorner
-G2L["7c"] = Instance.new("UICorner", G2L["7b"]);
-G2L["7c"]["CornerRadius"] = UDim.new(0, 25);
+G2L["a7"] = Instance.new("UICorner", G2L["a6"]);
+G2L["a7"]["CornerRadius"] = UDim.new(0, 25);
 
 
 -- StarterGui.Script.Head.Tp.Frame.tp house1
-G2L["7d"] = Instance.new("TextButton", G2L["7b"]);
-G2L["7d"]["BorderSizePixel"] = 0;
-G2L["7d"]["TextSize"] = 41;
-G2L["7d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["7d"]["BackgroundColor3"] = Color3.fromRGB(162, 162, 162);
-G2L["7d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["7d"]["Size"] = UDim2.new(0, 149, 0, 50);
-G2L["7d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["7d"]["Text"] = [[👆]];
-G2L["7d"]["Name"] = [[tp house1]];
-G2L["7d"]["Position"] = UDim2.new(0.56676, 0, 0.09317, 0);
+G2L["a8"] = Instance.new("TextButton", G2L["a6"]);
+G2L["a8"]["BorderSizePixel"] = 0;
+G2L["a8"]["TextSize"] = 41;
+G2L["a8"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a8"]["BackgroundColor3"] = Color3.fromRGB(162, 162, 162);
+G2L["a8"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["a8"]["Size"] = UDim2.new(0, 149, 0, 50);
+G2L["a8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a8"]["Text"] = [[👆]];
+G2L["a8"]["Name"] = [[tp house1]];
+G2L["a8"]["Position"] = UDim2.new(0.56676, 0, 0.09317, 0);
 
 
 -- StarterGui.Script.Head.Tp.Frame.tp house1.LocalScript
-G2L["7e"] = Instance.new("LocalScript", G2L["7d"]);
+G2L["a9"] = Instance.new("LocalScript", G2L["a8"]);
 
 
 
 -- StarterGui.Script.Head.Tp.Frame.tp house1.UICorner
-G2L["7f"] = Instance.new("UICorner", G2L["7d"]);
+G2L["aa"] = Instance.new("UICorner", G2L["a8"]);
 
 
 
 -- StarterGui.Script.Head.Tp.Frame.tp house2
-G2L["80"] = Instance.new("TextButton", G2L["7b"]);
-G2L["80"]["BorderSizePixel"] = 0;
-G2L["80"]["TextSize"] = 41;
-G2L["80"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["80"]["BackgroundColor3"] = Color3.fromRGB(162, 162, 162);
-G2L["80"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["80"]["Size"] = UDim2.new(0, 149, 0, 50);
-G2L["80"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["80"]["Text"] = [[👆]];
-G2L["80"]["Name"] = [[tp house2]];
-G2L["80"]["Position"] = UDim2.new(0.56676, 0, 0.24296, 0);
+G2L["ab"] = Instance.new("TextButton", G2L["a6"]);
+G2L["ab"]["BorderSizePixel"] = 0;
+G2L["ab"]["TextSize"] = 41;
+G2L["ab"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["ab"]["BackgroundColor3"] = Color3.fromRGB(162, 162, 162);
+G2L["ab"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["ab"]["Size"] = UDim2.new(0, 149, 0, 50);
+G2L["ab"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["ab"]["Text"] = [[👆]];
+G2L["ab"]["Name"] = [[tp house2]];
+G2L["ab"]["Position"] = UDim2.new(0.56676, 0, 0.24296, 0);
 
 
 -- StarterGui.Script.Head.Tp.Frame.tp house2.LocalScript
-G2L["81"] = Instance.new("LocalScript", G2L["80"]);
+G2L["ac"] = Instance.new("LocalScript", G2L["ab"]);
 
 
 
 -- StarterGui.Script.Head.Tp.Frame.tp house2.UICorner
-G2L["82"] = Instance.new("UICorner", G2L["80"]);
+G2L["ad"] = Instance.new("UICorner", G2L["ab"]);
 
 
 
 -- StarterGui.Script.Head.Tp.Frame.generetor
-G2L["83"] = Instance.new("TextButton", G2L["7b"]);
-G2L["83"]["BorderSizePixel"] = 0;
-G2L["83"]["TextSize"] = 41;
-G2L["83"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["83"]["BackgroundColor3"] = Color3.fromRGB(162, 162, 162);
-G2L["83"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["83"]["Size"] = UDim2.new(0, 149, 0, 50);
-G2L["83"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["83"]["Text"] = [[👆]];
-G2L["83"]["Name"] = [[generetor]];
-G2L["83"]["Position"] = UDim2.new(0.56676, 0, 0.40752, 0);
+G2L["ae"] = Instance.new("TextButton", G2L["a6"]);
+G2L["ae"]["BorderSizePixel"] = 0;
+G2L["ae"]["TextSize"] = 41;
+G2L["ae"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["ae"]["BackgroundColor3"] = Color3.fromRGB(162, 162, 162);
+G2L["ae"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["ae"]["Size"] = UDim2.new(0, 149, 0, 50);
+G2L["ae"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["ae"]["Text"] = [[👆]];
+G2L["ae"]["Name"] = [[generetor]];
+G2L["ae"]["Position"] = UDim2.new(0.56676, 0, 0.40752, 0);
 
 
 -- StarterGui.Script.Head.Tp.Frame.generetor.LocalScript
-G2L["84"] = Instance.new("LocalScript", G2L["83"]);
+G2L["af"] = Instance.new("LocalScript", G2L["ae"]);
 
 
 
 -- StarterGui.Script.Head.Tp.Frame.generetor.UICorner
-G2L["85"] = Instance.new("UICorner", G2L["83"]);
+G2L["b0"] = Instance.new("UICorner", G2L["ae"]);
 
 
 
 -- StarterGui.Script.Head.Tp.Frame.FixBOx
-G2L["86"] = Instance.new("TextButton", G2L["7b"]);
-G2L["86"]["BorderSizePixel"] = 0;
-G2L["86"]["TextSize"] = 41;
-G2L["86"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["86"]["BackgroundColor3"] = Color3.fromRGB(162, 162, 162);
-G2L["86"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["86"]["Size"] = UDim2.new(0, 149, 0, 50);
-G2L["86"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["86"]["Text"] = [[👆]];
-G2L["86"]["Name"] = [[FixBOx]];
-G2L["86"]["Position"] = UDim2.new(0.56676, 0, 0.57207, 0);
+G2L["b1"] = Instance.new("TextButton", G2L["a6"]);
+G2L["b1"]["BorderSizePixel"] = 0;
+G2L["b1"]["TextSize"] = 41;
+G2L["b1"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b1"]["BackgroundColor3"] = Color3.fromRGB(162, 162, 162);
+G2L["b1"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["b1"]["Size"] = UDim2.new(0, 149, 0, 50);
+G2L["b1"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b1"]["Text"] = [[👆]];
+G2L["b1"]["Name"] = [[FixBOx]];
+G2L["b1"]["Position"] = UDim2.new(0.56676, 0, 0.57207, 0);
 
 
 -- StarterGui.Script.Head.Tp.Frame.FixBOx.LocalScript
-G2L["87"] = Instance.new("LocalScript", G2L["86"]);
+G2L["b2"] = Instance.new("LocalScript", G2L["b1"]);
 
 
 
 -- StarterGui.Script.Head.Tp.Frame.FixBOx.UICorner
-G2L["88"] = Instance.new("UICorner", G2L["86"]);
+G2L["b3"] = Instance.new("UICorner", G2L["b1"]);
 
 
 
 -- StarterGui.Script.Head.Tp.Frame.generetor
-G2L["89"] = Instance.new("TextLabel", G2L["7b"]);
-G2L["89"]["BorderSizePixel"] = 0;
-G2L["89"]["TextSize"] = 45;
-G2L["89"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["89"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["89"]["TextColor3"] = Color3.fromRGB(136, 136, 136);
-G2L["89"]["BackgroundTransparency"] = 1;
-G2L["89"]["RichText"] = true;
-G2L["89"]["Size"] = UDim2.new(0, 203, 0, 50);
-G2L["89"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["89"]["Text"] = [[generetor]];
-G2L["89"]["Name"] = [[generetor]];
-G2L["89"]["Position"] = UDim2.new(0.07004, 0, 0.40604, 0);
+G2L["b4"] = Instance.new("TextLabel", G2L["a6"]);
+G2L["b4"]["BorderSizePixel"] = 0;
+G2L["b4"]["TextSize"] = 45;
+G2L["b4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b4"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["b4"]["TextColor3"] = Color3.fromRGB(136, 136, 136);
+G2L["b4"]["BackgroundTransparency"] = 1;
+G2L["b4"]["RichText"] = true;
+G2L["b4"]["Size"] = UDim2.new(0, 203, 0, 50);
+G2L["b4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b4"]["Text"] = [[generetor]];
+G2L["b4"]["Name"] = [[generetor]];
+G2L["b4"]["Position"] = UDim2.new(0.07004, 0, 0.40604, 0);
+
+
+-- StarterGui.Script.Head.Tp.Frame.generetor.UIStroke
+G2L["b5"] = Instance.new("UIStroke", G2L["b4"]);
+G2L["b5"]["Color"] = Color3.fromRGB(245, 245, 245);
+
+
+-- StarterGui.Script.Head.Tp.Frame.generetor.UIStroke.UIGradient
+G2L["b6"] = Instance.new("UIGradient", G2L["b5"]);
+G2L["b6"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(0.503, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
 
 
 -- StarterGui.Script.Head.Tp.Frame.tp to house2
-G2L["8a"] = Instance.new("TextLabel", G2L["7b"]);
-G2L["8a"]["BorderSizePixel"] = 0;
-G2L["8a"]["TextSize"] = 45;
-G2L["8a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["8a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["8a"]["TextColor3"] = Color3.fromRGB(136, 136, 136);
-G2L["8a"]["BackgroundTransparency"] = 1;
-G2L["8a"]["RichText"] = true;
-G2L["8a"]["Size"] = UDim2.new(0, 203, 0, 50);
-G2L["8a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["8a"]["Text"] = [[House (2)]];
-G2L["8a"]["Name"] = [[tp to house2]];
-G2L["8a"]["Position"] = UDim2.new(0.07004, 0, 0.24115, 0);
+G2L["b7"] = Instance.new("TextLabel", G2L["a6"]);
+G2L["b7"]["BorderSizePixel"] = 0;
+G2L["b7"]["TextSize"] = 45;
+G2L["b7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b7"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["b7"]["TextColor3"] = Color3.fromRGB(136, 136, 136);
+G2L["b7"]["BackgroundTransparency"] = 1;
+G2L["b7"]["RichText"] = true;
+G2L["b7"]["Size"] = UDim2.new(0, 203, 0, 50);
+G2L["b7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b7"]["Text"] = [[House (2)]];
+G2L["b7"]["Name"] = [[tp to house2]];
+G2L["b7"]["Position"] = UDim2.new(0.07004, 0, 0.24115, 0);
+
+
+-- StarterGui.Script.Head.Tp.Frame.tp to house2.UIStroke
+G2L["b8"] = Instance.new("UIStroke", G2L["b7"]);
+G2L["b8"]["Color"] = Color3.fromRGB(245, 245, 245);
+
+
+-- StarterGui.Script.Head.Tp.Frame.tp to house2.UIStroke.UIGradient
+G2L["b9"] = Instance.new("UIGradient", G2L["b8"]);
+G2L["b9"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(0.503, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
 
 
 -- StarterGui.Script.Head.Tp.Frame.tp to house
-G2L["8b"] = Instance.new("TextLabel", G2L["7b"]);
-G2L["8b"]["BorderSizePixel"] = 0;
-G2L["8b"]["TextSize"] = 45;
-G2L["8b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["8b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["8b"]["TextColor3"] = Color3.fromRGB(136, 136, 136);
-G2L["8b"]["BackgroundTransparency"] = 1;
-G2L["8b"]["RichText"] = true;
-G2L["8b"]["Size"] = UDim2.new(0, 203, 0, 50);
-G2L["8b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["8b"]["Text"] = [[House]];
-G2L["8b"]["Name"] = [[tp to house]];
-G2L["8b"]["Position"] = UDim2.new(0.07004, 0, 0.09166, 0);
+G2L["ba"] = Instance.new("TextLabel", G2L["a6"]);
+G2L["ba"]["BorderSizePixel"] = 0;
+G2L["ba"]["TextSize"] = 45;
+G2L["ba"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["ba"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["ba"]["TextColor3"] = Color3.fromRGB(136, 136, 136);
+G2L["ba"]["BackgroundTransparency"] = 1;
+G2L["ba"]["RichText"] = true;
+G2L["ba"]["Size"] = UDim2.new(0, 203, 0, 50);
+G2L["ba"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["ba"]["Text"] = [[House]];
+G2L["ba"]["Name"] = [[tp to house]];
+G2L["ba"]["Position"] = UDim2.new(0.07004, 0, 0.09166, 0);
+
+
+-- StarterGui.Script.Head.Tp.Frame.tp to house.UIStroke
+G2L["bb"] = Instance.new("UIStroke", G2L["ba"]);
+G2L["bb"]["Color"] = Color3.fromRGB(245, 245, 245);
+
+
+-- StarterGui.Script.Head.Tp.Frame.tp to house.UIStroke.UIGradient
+G2L["bc"] = Instance.new("UIGradient", G2L["bb"]);
+G2L["bc"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(0.503, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
 
 
 -- StarterGui.Script.Head.Tp.Frame.FixBox
-G2L["8c"] = Instance.new("TextLabel", G2L["7b"]);
-G2L["8c"]["BorderSizePixel"] = 0;
-G2L["8c"]["TextSize"] = 45;
-G2L["8c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["8c"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["8c"]["TextColor3"] = Color3.fromRGB(136, 136, 136);
-G2L["8c"]["BackgroundTransparency"] = 1;
-G2L["8c"]["RichText"] = true;
-G2L["8c"]["Size"] = UDim2.new(0, 203, 0, 50);
-G2L["8c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["8c"]["Text"] = [[power box]];
-G2L["8c"]["Name"] = [[FixBox]];
-G2L["8c"]["Position"] = UDim2.new(0.06901, 0, 0.57114, 0);
+G2L["bd"] = Instance.new("TextLabel", G2L["a6"]);
+G2L["bd"]["BorderSizePixel"] = 0;
+G2L["bd"]["TextSize"] = 45;
+G2L["bd"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["bd"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["bd"]["TextColor3"] = Color3.fromRGB(136, 136, 136);
+G2L["bd"]["BackgroundTransparency"] = 1;
+G2L["bd"]["RichText"] = true;
+G2L["bd"]["Size"] = UDim2.new(0, 203, 0, 50);
+G2L["bd"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["bd"]["Text"] = [[power box]];
+G2L["bd"]["Name"] = [[FixBox]];
+G2L["bd"]["Position"] = UDim2.new(0.06901, 0, 0.57114, 0);
+
+
+-- StarterGui.Script.Head.Tp.Frame.FixBox.UIStroke
+G2L["be"] = Instance.new("UIStroke", G2L["bd"]);
+G2L["be"]["Color"] = Color3.fromRGB(245, 245, 245);
+
+
+-- StarterGui.Script.Head.Tp.Frame.FixBox.UIStroke.UIGradient
+G2L["bf"] = Instance.new("UIGradient", G2L["be"]);
+G2L["bf"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(0.503, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
 
 
 -- StarterGui.Script.Head.Tp.Frame.UIStroke
-G2L["8d"] = Instance.new("UIStroke", G2L["7b"]);
-G2L["8d"]["Color"] = Color3.fromRGB(245, 245, 245);
+G2L["c0"] = Instance.new("UIStroke", G2L["a6"]);
+G2L["c0"]["Color"] = Color3.fromRGB(245, 245, 245);
 
 
 -- StarterGui.Script.Head.Tp.Frame.UIStroke.UIGradient
-G2L["8e"] = Instance.new("UIGradient", G2L["8d"]);
-G2L["8e"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(0.503, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
+G2L["c1"] = Instance.new("UIGradient", G2L["c0"]);
+G2L["c1"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(0.503, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
 
 
--- StarterGui.Script.Head.Gui
-G2L["8f"] = Instance.new("Folder", G2L["5"]);
-G2L["8f"]["Name"] = [[Gui]];
-
-
--- StarterGui.Script.Head.Gui.Frame
-G2L["90"] = Instance.new("Frame", G2L["8f"]);
-G2L["90"]["Visible"] = false;
-G2L["90"]["BorderSizePixel"] = 0;
-G2L["90"]["BackgroundColor3"] = Color3.fromRGB(167, 167, 167);
-G2L["90"]["Size"] = UDim2.new(0, 467, 0, 483);
-G2L["90"]["Position"] = UDim2.new(0.36283, 0, 0.03416, 0);
-G2L["90"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["90"]["BackgroundTransparency"] = 0.5;
-
-
--- StarterGui.Script.Head.Gui.Frame.UICorner
-G2L["91"] = Instance.new("UICorner", G2L["90"]);
-G2L["91"]["CornerRadius"] = UDim.new(0, 25);
-
-
--- StarterGui.Script.Head.Gui.Frame.UIStroke
-G2L["92"] = Instance.new("UIStroke", G2L["90"]);
-G2L["92"]["Color"] = Color3.fromRGB(245, 245, 245);
-
-
--- StarterGui.Script.Head.Gui.Frame.UIStroke.UIGradient
-G2L["93"] = Instance.new("UIGradient", G2L["92"]);
-G2L["93"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(0.503, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
-
-
--- StarterGui.Script.Head.Gui.Frame.anime
-G2L["94"] = Instance.new("ImageButton", G2L["90"]);
-G2L["94"]["BorderSizePixel"] = 0;
-G2L["94"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["94"]["Image"] = [[rbxassetid://5326906298]];
-G2L["94"]["Size"] = UDim2.new(0, 100, 0, 100);
-G2L["94"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["94"]["Name"] = [[anime]];
-G2L["94"]["Position"] = UDim2.new(0.33405, 0, 0.08696, 0);
-
-
--- StarterGui.Script.Head.Gui.Frame.classic
-G2L["95"] = Instance.new("TextButton", G2L["90"]);
-G2L["95"]["BorderSizePixel"] = 0;
-G2L["95"]["TextSize"] = 14;
-G2L["95"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["95"]["BackgroundColor3"] = Color3.fromRGB(255, 158, 88);
-G2L["95"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["95"]["BackgroundTransparency"] = 0.5;
-G2L["95"]["Size"] = UDim2.new(0, 103, 0, 100);
-G2L["95"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["95"]["Text"] = [[Classic]];
-G2L["95"]["Name"] = [[classic]];
-G2L["95"]["Position"] = UDim2.new(0.04497, 0, 0.08489, 0);
-
-
--- StarterGui.Script.Head.Gui.Frame.ClassicAnimeScript
-G2L["96"] = Instance.new("LocalScript", G2L["90"]);
-G2L["96"]["Name"] = [[ClassicAnimeScript]];
-
-
--- StarterGui.Script.Head.Title
-G2L["97"] = Instance.new("Frame", G2L["5"]);
-G2L["97"]["BorderSizePixel"] = 0;
-G2L["97"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["97"]["Size"] = UDim2.new(0, 791, 0, 59);
-G2L["97"]["Position"] = UDim2.new(0.01643, 0, 0.97723, 0);
-G2L["97"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["97"]["Name"] = [[Title]];
-G2L["97"]["BackgroundTransparency"] = 1;
+-- StarterGui.Script.Head.UICorner
+G2L["c2"] = Instance.new("UICorner", G2L["6"]);
+G2L["c2"]["CornerRadius"] = UDim.new(0, 40);
 
 
 -- StarterGui.Script.Head.UIStroke
-G2L["98"] = Instance.new("UIStroke", G2L["5"]);
-G2L["98"]["Color"] = Color3.fromRGB(245, 245, 245);
+G2L["c3"] = Instance.new("UIStroke", G2L["6"]);
+G2L["c3"]["Color"] = Color3.fromRGB(245, 245, 245);
 
 
 -- StarterGui.Script.Head.UIStroke.UIGradient
-G2L["99"] = Instance.new("UIGradient", G2L["98"]);
-G2L["99"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(0.503, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
+G2L["c4"] = Instance.new("UIGradient", G2L["c3"]);
+G2L["c4"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(0.503, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
 
 
--- StarterGui.Script.Head.ImageLabel
-G2L["9a"] = Instance.new("ImageLabel", G2L["5"]);
-G2L["9a"]["BorderSizePixel"] = 0;
-G2L["9a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["9a"]["Image"] = [[rbxassetid://36517426]];
-G2L["9a"]["Size"] = UDim2.new(0, 50, 0, 38);
-G2L["9a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["9a"]["BackgroundTransparency"] = 1;
-G2L["9a"]["Position"] = UDim2.new(0.27307, 0, 0.0778, 0);
+-- StarterGui.Script.Head.Beta
+G2L["c5"] = Instance.new("TextLabel", G2L["6"]);
+G2L["c5"]["BorderSizePixel"] = 0;
+G2L["c5"]["TextSize"] = 25;
+G2L["c5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["c5"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["c5"]["TextColor3"] = Color3.fromRGB(136, 136, 136);
+G2L["c5"]["BackgroundTransparency"] = 1;
+G2L["c5"]["RichText"] = true;
+G2L["c5"]["Size"] = UDim2.new(0, 121, 0, 25);
+G2L["c5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c5"]["Text"] = [[Beta]];
+G2L["c5"]["Name"] = [[Beta]];
+G2L["c5"]["Position"] = UDim2.new(0.19051, 0, 0, 0);
 
 
--- StarterGui.Script.Head.animeshka
-G2L["9b"] = Instance.new("ImageLabel", G2L["5"]);
-G2L["9b"]["ZIndex"] = 5;
-G2L["9b"]["BorderSizePixel"] = 0;
-G2L["9b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["9b"]["Image"] = [[rbxassetid://5326906298]];
-G2L["9b"]["Size"] = UDim2.new(0, 775, 0, 517);
-G2L["9b"]["Visible"] = false;
-G2L["9b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["9b"]["Name"] = [[animeshka]];
-G2L["9b"]["Position"] = UDim2.new(0.0081, 0, 0.01832, 0);
+-- StarterGui.Script.Head.Beta.UIStroke
+G2L["c6"] = Instance.new("UIStroke", G2L["c5"]);
+G2L["c6"]["Color"] = Color3.fromRGB(245, 245, 245);
 
 
--- StarterGui.Script.Head.animeshka.UICorner
-G2L["9c"] = Instance.new("UICorner", G2L["9b"]);
-G2L["9c"]["CornerRadius"] = UDim.new(0, 25);
+-- StarterGui.Script.Head.Beta.UIStroke.UIGradient
+G2L["c7"] = Instance.new("UIGradient", G2L["c6"]);
+G2L["c7"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(0.503, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
+
+
+-- StarterGui.Script.Head.Version
+G2L["c8"] = Instance.new("TextLabel", G2L["6"]);
+G2L["c8"]["BorderSizePixel"] = 0;
+G2L["c8"]["TextSize"] = 25;
+G2L["c8"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["c8"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["c8"]["TextColor3"] = Color3.fromRGB(136, 136, 136);
+G2L["c8"]["BackgroundTransparency"] = 1;
+G2L["c8"]["RichText"] = true;
+G2L["c8"]["Size"] = UDim2.new(0, 121, 0, 32);
+G2L["c8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c8"]["Text"] = [[Beta version, bugs possible!!!]];
+G2L["c8"]["Name"] = [[Version]];
+G2L["c8"]["Position"] = UDim2.new(0.657, 0, 0.93928, 0);
+
+
+-- StarterGui.Script.Head.Version.UIStroke
+G2L["c9"] = Instance.new("UIStroke", G2L["c8"]);
+G2L["c9"]["Color"] = Color3.fromRGB(245, 245, 245);
+
+
+-- StarterGui.Script.Head.Version.UIStroke.UIGradient
+G2L["ca"] = Instance.new("UIGradient", G2L["c9"]);
+G2L["ca"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(0.503, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
+
+
+-- StarterGui.Script.SettingsLoader
+G2L["cb"] = Instance.new("LocalScript", G2L["1"]);
+G2L["cb"]["Name"] = [[SettingsLoader]];
 
 
 -- StarterGui.Script.LocalScript
@@ -1389,47 +1656,55 @@ local script = G2L["2"];
 			{button = "HomeButton",      page = "Home"},
 			{button = "VisualsButton",   page = "Visuals"},
 			{button = "TeleportsButton", page = "Tp"},
-			{button = "PlayerButton",    page = {"Player", "PlayerFrame"}},
+			{button = "PlayerButton",    page = "Player"},
 			{button = "GuiButton",       page = "Gui"},
 		}
 	
-		local function findPage(page)
-			if type(page) == "table" then
-				local node = head
-				for _, name in ipairs(page) do
-					node = node and node:FindFirstChild(name) or nil
-				end
-				return node
-			end
-			for _, obj in ipairs(gui:GetDescendants()) do
-				if obj.Name == page and (not buttonsFrame or not obj:IsDescendantOf(buttonsFrame)) then
-					if obj:IsA("Folder") or obj:IsA("GuiObject") then
-						return obj
-					end
-				end
-			end
-			return nil
-		end
+		-- подсветка активной вкладки
+	local activeButton = nil
 	
-		local function setPage(page, visible)
-			if page:IsA("GuiObject") then
-				page.Visible = visible
-				return
+	local function setButtonActive(btn, active)
+		if not btn then return end
+		if active then
+			if not btn:GetAttribute("SavedBgColor") then
+				btn:SetAttribute("SavedBgColor", btn.BackgroundColor3)
+				btn:SetAttribute("SavedBgTransparency", btn.BackgroundTransparency)
 			end
-			for _, child in ipairs(page:GetChildren()) do
-				if child:IsA("GuiObject") then
-					child.Visible = visible
-				elseif child:IsA("Folder") then
-					setPage(child, visible)
-				end
-			end
+			btn.BackgroundColor3 = Color3.fromRGB(120, 120, 120)
+			btn.BackgroundTransparency = 0.25
+		else
+			local savedColor = btn:GetAttribute("SavedBgColor")
+			local savedTransparency = btn:GetAttribute("SavedBgTransparency")
+			if savedColor then btn.BackgroundColor3 = savedColor end
+			if savedTransparency then btn.BackgroundTransparency = savedTransparency end
 		end
+	end
+	
+	local function findPage(page)
+		-- ищем контейнер вкладки только среди ПРЯМЫХ детей Head,
+		-- чтобы не поймать одноимённый TextLabel внутри другой вкладки
+		local obj = head:FindFirstChild(page)
+		if obj and (obj:IsA("Folder") or obj:IsA("GuiObject")) then
+			return obj
+		end
+		return nil
+	end
+	
+	-- переключаем видимость самого контейнера вкладки
+	local function setPage(page, visible)
+		page.Visible = visible
+	end
 	
 		if buttonsFrame then
 			for _, pair in ipairs(pages) do
 				local btn = buttonsFrame:FindFirstChild(pair.button)
 				if btn then
 					btn.MouseButton1Click:Connect(function()
+						if activeButton and activeButton ~= btn then
+							setButtonActive(activeButton, false)
+						end
+						activeButton = btn
+						setButtonActive(btn, true)
 						for _, other in ipairs(pages) do
 							local page = findPage(other.page)
 							if page then
@@ -1518,18 +1793,62 @@ local script = G2L["2"];
 	
 end;
 task.spawn(C_2);
+-- StarterGui.Script.StrokePulse
+local function C_3()
+local script = G2L["3"];
+	local RunService = game:GetService("RunService")
+	
+	local gui = script.Parent
+	local head = gui:WaitForChild("Head")
+	
+	-- собираем все UIStroke и UIGradient в главном окне
+	local strokes = {}
+	local gradients = {}
+	for _, obj in ipairs(head:GetDescendants()) do
+		if obj:IsA("UIStroke") then
+			table.insert(strokes, obj)
+		end
+		if obj:IsA("UIGradient") then
+			table.insert(gradients, obj)
+		end
+	end
+	-- UIStroke самого Head тоже входит в GetDescendants
+	
+	-- пульсация прозрачности
+	local speed = 2 -- скорость пульсации
+	local minT = 0.1
+	local maxT = 0.8
+	
+	-- скорость переливания градиента
+	local gradSpeed = 1.5
+	
+	RunService.RenderStepped:Connect(function()
+		local t = (math.sin(os.clock() * speed) + 1) / 2 -- 0..1
+		local transparency = minT + (maxT - minT) * t
+		for _, stroke in ipairs(strokes) do
+			stroke.Transparency = transparency
+		end
+	
+		-- переливание градиента: offset плавно едет вправо, потом влево и обратно
+		local offset = math.sin(os.clock() * gradSpeed) -- -1..1
+		for _, grad in ipairs(gradients) do
+			grad.Offset = Vector2.new(offset, 0)
+		end
+	end)
+end;
+task.spawn(C_3);
 -- StarterGui.Script.Head.Home.Frame.Player.LocalScript
-local function C_1b()
-local script = G2L["1b"];
+local function C_25()
+local script = G2L["25"];
 	local textLabel = script.Parent
 	
 	local player = game.Players.LocalPlayer
 	textLabel.Text = player.Name
 end;
-task.spawn(C_1b);
+task.spawn(C_25);
 -- StarterGui.Script.Head.Player.PlayerFrame.Noclip.LocalScript
-local function C_27()
-local script = G2L["27"];
+local function C_3d()
+local script = G2L["3d"];
 	local textButton = script.Parent
 	
 	local offFrame = textButton:WaitForChild("Off")
@@ -1573,8 +1892,9 @@ local script = G2L["27"];
 		end
 	end
 	
-	textButton.MouseButton1Click:Connect(function()
-		noclipEnabled = not noclipEnabled -- true <-> false
+	local function setEnabled(state)
+		if state == noclipEnabled then return end
+		noclipEnabled = state
 		updateVisual()
 	
 		if noclipEnabled then
@@ -1582,15 +1902,33 @@ local script = G2L["27"];
 		else
 			stopNoclip()
 		end
+	end
+	
+	-- состояние тумблера видно снаружи через атрибут (для сохранения/загрузки)
+	textButton:SetAttribute("WauHubToggle", noclipEnabled)
+	textButton:GetAttributeChangedSignal("WauHubToggle"):Connect(function()
+		setEnabled(textButton:GetAttribute("WauHubToggle"))
+	end)
+	
+	textButton.MouseButton1Click:Connect(function()
+		setEnabled(not noclipEnabled)
 	end)
 	
 	-- стартовое состояние
 	updateVisual()
+	-- WAU Hub: восстановление состояния из сохранения
+	local function wauRestore()
+		local want = button:GetAttribute("WAU_Restore") == true
+		setEnabled(want)
+	end
+	button:GetAttributeChangedSignal("WAU_Restore"):Connect(wauRestore)
+	if button:GetAttribute("WAU_Restore") then wauRestore() end
+	
 end;
-task.spawn(C_27);
+task.spawn(C_3d);
 -- StarterGui.Script.Head.Player.PlayerFrame.InfStamina.LocalScript
-local function C_2e()
-local script = G2L["2e"];
+local function C_44()
+local script = G2L["44"];
 	local textButton = script.Parent
 	
 	local offFrame = textButton:WaitForChild("Off")
@@ -1687,8 +2025,9 @@ local script = G2L["2e"];
 		end
 	end
 	
-	textButton.MouseButton1Click:Connect(function()
-		staminaEnabled = not staminaEnabled
+	local function setEnabled(state)
+		if state == staminaEnabled then return end
+		staminaEnabled = state
 		updateVisual()
 	
 		if staminaEnabled then
@@ -1696,76 +2035,33 @@ local script = G2L["2e"];
 		else
 			stopStamina()
 		end
+	end
+	
+	-- состояние тумблера видно снаружи через атрибут (для сохранения/загрузки)
+	textButton:SetAttribute("WauHubToggle", staminaEnabled)
+	textButton:GetAttributeChangedSignal("WauHubToggle"):Connect(function()
+		setEnabled(textButton:GetAttribute("WauHubToggle"))
 	end)
-	
-	updateVisual()
-	
-end;
-task.spawn(C_2e);
--- StarterGui.Script.Head.Player.PlayerFrame.FullBright.LocalScript
-local function C_35()
-local script = G2L["35"];
-	local textButton = script.Parent
-	
-	local offFrame = textButton:WaitForChild("Off")
-	local onFrame = textButton:WaitForChild("On")
-	
-	local Lighting = game:GetService("Lighting")
-	
-	local fullbrightEnabled = false
-	
-	-- Сохраняем оригинальные настройки, чтобы вернуть их при выключении
-	local original = {
-		Brightness = Lighting.Brightness,
-		Ambient = Lighting.Ambient,
-		ColorShift_Bottom = Lighting.ColorShift_Bottom,
-		ColorShift_Top = Lighting.ColorShift_Top,
-		FogEnd = Lighting.FogEnd,
-		OutdoorAmbient = Lighting.OutdoorAmbient,
-	}
-	
-	local function startFullbright()
-		Lighting.Brightness = 2 -- можно поднять до 3, если темновато
-		Lighting.Ambient = Color3.new(1, 1, 1)
-		Lighting.ColorShift_Bottom = Color3.new(1, 1, 1)
-		Lighting.ColorShift_Top = Color3.new(1, 1, 1)
-		Lighting.OutdoorAmbient = Color3.new(1, 1, 1)
-		Lighting.FogEnd = 1e5 -- убирает туман, в хоррор-игре его часто много
-	end
-	
-	local function stopFullbright()
-		for property, value in original do
-			Lighting[property] = value
-		end
-	end
-	
-	local function updateVisual()
-		if fullbrightEnabled then
-			onFrame.BackgroundTransparency = 0
-			offFrame.BackgroundTransparency = 1
-		else
-			onFrame.BackgroundTransparency = 1
-			offFrame.BackgroundTransparency = 0
-		end
-	end
 	
 	textButton.MouseButton1Click:Connect(function()
-		fullbrightEnabled = not fullbrightEnabled
-		updateVisual()
-	
-		if fullbrightEnabled then
-			startFullbright()
-		else
-			stopFullbright()
-		end
+		setEnabled(not staminaEnabled)
 	end)
 	
 	updateVisual()
+	
+	-- WAU Hub: восстановление состояния из сохранения
+	local function wauRestore()
+		local want = button:GetAttribute("WAU_Restore") == true
+		setEnabled(want)
+	end
+	button:GetAttributeChangedSignal("WAU_Restore"):Connect(wauRestore)
+	if button:GetAttribute("WAU_Restore") then wauRestore() end
+	
 end;
-task.spawn(C_35);
--- StarterGui.Script.Head.Player.PlayerFrame.AntiIce.LocalScript
-local function C_3c()
-local script = G2L["3c"];
+task.spawn(C_44);
+-- StarterGui.Script.Head.Player.PlayerFrame.FullBright.LocalScript
+local function C_4b()
+local script = G2L["4b"];
 	local textButton = script.Parent
 	
 	local offFrame = textButton:WaitForChild("Off")
@@ -1855,8 +2151,9 @@ local script = G2L["3c"];
 		end
 	end
 	
-	textButton.MouseButton1Click:Connect(function()
-		antiFreezeEnabled = not antiFreezeEnabled
+	local function setEnabled(state)
+		if state == antiFreezeEnabled then return end
+		antiFreezeEnabled = state
 		updateVisual()
 	
 		if antiFreezeEnabled then
@@ -1864,15 +2161,113 @@ local script = G2L["3c"];
 		else
 			stopAntiFreeze()
 		end
+	end
+	
+	-- состояние тумблера видно снаружи через атрибут (для сохранения/загрузки)
+	textButton:SetAttribute("WauHubToggle", antiFreezeEnabled)
+	textButton:GetAttributeChangedSignal("WauHubToggle"):Connect(function()
+		setEnabled(textButton:GetAttribute("WauHubToggle"))
+	end)
+	
+	textButton.MouseButton1Click:Connect(function()
+		setEnabled(not antiFreezeEnabled)
 	end)
 	
 	updateVisual()
 	
+	-- WAU Hub: восстановление состояния из сохранения
+	local function wauRestore()
+		local want = button:GetAttribute("WAU_Restore") == true
+		setEnabled(want)
+	end
+	button:GetAttributeChangedSignal("WAU_Restore"):Connect(wauRestore)
+	if button:GetAttribute("WAU_Restore") then wauRestore() end
+	
 end;
-task.spawn(C_3c);
+task.spawn(C_4b);
+-- StarterGui.Script.Head.Player.PlayerFrame.AntiIce.LocalScript
+local function C_52()
+local script = G2L["52"];
+	local textButton = script.Parent
+	
+	local offFrame = textButton:WaitForChild("Off")
+	local onFrame = textButton:WaitForChild("On")
+	
+	local Lighting = game:GetService("Lighting")
+	
+	local fullbrightEnabled = false
+	
+	-- Сохраняем оригинальные настройки, чтобы вернуть их при выключении
+	local original = {
+		Brightness = Lighting.Brightness,
+		Ambient = Lighting.Ambient,
+		ColorShift_Bottom = Lighting.ColorShift_Bottom,
+		ColorShift_Top = Lighting.ColorShift_Top,
+		FogEnd = Lighting.FogEnd,
+		OutdoorAmbient = Lighting.OutdoorAmbient,
+	}
+	
+	local function startFullbright()
+		Lighting.Brightness = 2 -- можно поднять до 3, если темновато
+		Lighting.Ambient = Color3.new(1, 1, 1)
+		Lighting.ColorShift_Bottom = Color3.new(1, 1, 1)
+		Lighting.ColorShift_Top = Color3.new(1, 1, 1)
+		Lighting.OutdoorAmbient = Color3.new(1, 1, 1)
+		Lighting.FogEnd = 1e5 -- убирает туман, в хоррор-игре его часто много
+	end
+	
+	local function stopFullbright()
+		for property, value in original do
+			Lighting[property] = value
+		end
+	end
+	
+	local function updateVisual()
+		if fullbrightEnabled then
+			onFrame.BackgroundTransparency = 0
+			offFrame.BackgroundTransparency = 1
+		else
+			onFrame.BackgroundTransparency = 1
+			offFrame.BackgroundTransparency = 0
+		end
+	end
+	
+	local function setEnabled(state)
+		if state == fullbrightEnabled then return end
+		fullbrightEnabled = state
+		updateVisual()
+	
+		if fullbrightEnabled then
+			startFullbright()
+		else
+			stopFullbright()
+		end
+	end
+	
+	-- состояние тумблера видно снаружи через атрибут (для сохранения/загрузки)
+	textButton:SetAttribute("WauHubToggle", fullbrightEnabled)
+	textButton:GetAttributeChangedSignal("WauHubToggle"):Connect(function()
+		setEnabled(textButton:GetAttribute("WauHubToggle"))
+	end)
+	
+	textButton.MouseButton1Click:Connect(function()
+		setEnabled(not fullbrightEnabled)
+	end)
+	
+	updateVisual()
+	-- WAU Hub: восстановление состояния из сохранения
+	local function wauRestore()
+		local want = button:GetAttribute("WAU_Restore") == true
+		setEnabled(want)
+	end
+	button:GetAttributeChangedSignal("WAU_Restore"):Connect(wauRestore)
+	if button:GetAttribute("WAU_Restore") then wauRestore() end
+	
+end;
+task.spawn(C_52);
 -- StarterGui.Script.Head.Player.PlayerFrame.O2.LocalScript
-local function C_43()
-local script = G2L["43"];
+local function C_59()
+local script = G2L["59"];
 	local textButton = script.Parent
 	
 	local offFrame = textButton:WaitForChild("Off")
@@ -1962,8 +2357,9 @@ local script = G2L["43"];
 		end
 	end
 	
-	textButton.MouseButton1Click:Connect(function()
-		oxygenEnabled = not oxygenEnabled
+	local function setEnabled(state)
+		if state == oxygenEnabled then return end
+		oxygenEnabled = state
 		updateVisual()
 	
 		if oxygenEnabled then
@@ -1971,21 +2367,38 @@ local script = G2L["43"];
 		else
 			stopOxygen()
 		end
+	end
+	
+	-- состояние тумблера видно снаружи через атрибут (для сохранения/загрузки)
+	textButton:SetAttribute("WauHubToggle", oxygenEnabled)
+	textButton:GetAttributeChangedSignal("WauHubToggle"):Connect(function()
+		setEnabled(textButton:GetAttribute("WauHubToggle"))
+	end)
+	
+	textButton.MouseButton1Click:Connect(function()
+		setEnabled(not oxygenEnabled)
 	end)
 	
 	updateVisual()
 	
+	-- WAU Hub: восстановление состояния из сохранения
+	local function wauRestore()
+		local want = button:GetAttribute("WAU_Restore") == true
+		setEnabled(want)
+	end
+	button:GetAttributeChangedSignal("WAU_Restore"):Connect(wauRestore)
+	if button:GetAttribute("WAU_Restore") then wauRestore() end
+	
 end;
-task.spawn(C_43);
--- StarterGui.Script.Head.Visuals.Frame.Frame.LocalScript
-local function C_52()
-local script = G2L["52"];
+task.spawn(C_59);
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Frame.LocalScript
+local function C_64()
+local script = G2L["64"];
 	local track = script.Parent -- полоска
 	local knob = track:WaitForChild("Knob") -- кружок
 	
 	local UserInputService = game:GetService("UserInputService")
 	local RunService = game:GetService("RunService")
-	local camera = workspace.CurrentCamera
 	
 	local MIN_FOV = 70  -- FOV при кружке слева
 	local MAX_FOV = 120 -- FOV при кружке справа
@@ -1994,6 +2407,10 @@ local script = G2L["52"];
 	
 	-- считаем FOV из позиции кружка (кружок правее = больше FOV)
 	local function updateFov()
+		-- берём АКТУАЛЬНУЮ камеру каждый раз: после респавна камера
+		-- пересоздаётся, и старая ссылка перестаёт работать
+		local camera = workspace.CurrentCamera
+		if not camera then return end
 		local fraction = math.clamp(knob.Position.X.Scale, 0, 1)
 		camera.FieldOfView = MIN_FOV + (MAX_FOV - MIN_FOV) * fraction
 	end
@@ -2035,161 +2452,273 @@ local script = G2L["52"];
 	updateFov()
 	
 end;
-task.spawn(C_52);
--- StarterGui.Script.Head.Visuals.Frame.Esp Monsters.LocalScript
-local function C_57()
-local script = G2L["57"];
-	local textButton = script.Parent
-	
-	local offFrame = textButton:WaitForChild("Off")
-	local onFrame = textButton:WaitForChild("On")
-	
+task.spawn(C_64);
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Esp Monsters.LocalScript
+local function C_6b()
+local script = G2L["6b"];
 	local Players = game:GetService("Players")
 	local RunService = game:GetService("RunService")
+	local UserInputService = game:GetService("UserInputService")
 	
-	local player = Players.LocalPlayer
-	local mouse = player:GetMouse()
+	local button = script.Parent
+	local sf = button.Parent  -- ScreenGui
 	
-	local ESP_COLOR = Color3.fromRGB(255, 0, 0)
+	-- Цвета
+	local ESP_COLOR_NORMAL = Color3.fromRGB(255, 0, 0)      -- красный для обычных монстров
+	local ESP_COLOR_SPECIAL = Color3.fromRGB(0, 255, 0)     -- зелёный для Zombie/Skeleton/Pumpkin
 	
-	-- Имена монстров Residence Massacre
-	local MONSTER_NAMES = {
-		"Mutant",         -- Ночь 1 (он же Larry)
-		"Larry",
-		"Pest",           -- Ночь 2 + Memories
-		"Stalker",        -- Ночь 2
-		"Mutated Worker", -- Ночь 3
-		"Worker",
-		"Spider",         -- Ночь 3
-		"Abomination",    -- Бункер (Memories)
-		"Zombie",         -- Graves (Halloween)
+	-- Особые монстры (будут зелёными)
+	local SPECIAL_MONSTERS = {
+		"Zombie",
 		"Skeleton",
-		"Undead",
-		"Pumpkin",        -- Undead Pumpkins
-		"Jerry",          -- April Fools
-		"Winterhorn",
-		"Delusion",
+		"Pumpkin"
 	}
 	
+	-- Список имён для определения монстров
+	local MONSTER_NAMES = {
+		"Mutant", "Larry", "Pest", "Stalker", "Mutated Worker", "Worker",
+		"Spider", "Abomination", "Zombie", "Skeleton", "Undead",
+		"Pumpkin", "Jerry", "Winterhorn", "Delusion",
+	}
+	
+	-- Состояние
 	local espEnabled = false
 	local running = false
 	local renderConnection = nil
 	
+	-- Хранилища объектов
 	local highlights = {}
 	local tracers = {}
+	local labels = {}
 	
-	-- ============ Определение монстров ============
+	-- GUI для линий
+	local tracerGui = Instance.new("ScreenGui")
+	tracerGui.Name = "EspTracerGui"
+	tracerGui.IgnoreGuiInset = true
+	tracerGui.ResetOnSpawn = false
+	tracerGui.DisplayOrder = 10
 	
+	-- Проверка: это игрок?
 	local function isPlayerModel(model)
 		if Players:GetPlayerFromCharacter(model) then return true end
 		return model.Name:lower():find("player") ~= nil
 	end
 	
+	-- Это монстр?
 	local function isMonster(model)
 		if not model:IsA("Model") then return false end
 		if isPlayerModel(model) then return false end
-	
 		for _, name in ipairs(MONSTER_NAMES) do
-			if model.Name:lower():find(name:lower()) then
-				return true
-			end
+			if model.Name:lower():find(name:lower()) then return true end
 		end
-	
-		-- запасной вариант: модель с Humanoid, но не игрок
 		return model:FindFirstChildOfClass("Humanoid") ~= nil
 	end
 	
-	local function getAnchorPart(model)
+	-- Является ли монстр «особым» (зелёный цвет)
+	local function isSpecialMonster(modelName)
+		for _, special in ipairs(SPECIAL_MONSTERS) do
+			if modelName:lower() == special:lower() then
+				return true
+			end
+		end
+		return false
+	end
+	
+	-- Точка привязки для ESP
+	local function getAnchor(model)
 		return model.PrimaryPart
 			or model:FindFirstChild("HumanoidRootPart")
 			or model:FindFirstChildWhichIsA("BasePart", true)
 	end
 	
-	-- ============ Подсветка (красный силуэт сквозь стены) ============
-	
+	-- Создать Highlight с нужным цветом
 	local function addHighlight(model)
 		if highlights[model] then return end
-		local highlight = Instance.new("Highlight")
-		highlight.FillColor = ESP_COLOR
-		highlight.OutlineColor = Color3.new(1, 1, 1)
-		highlight.FillTransparency = 0.4
-		highlight.OutlineTransparency = 0.2
-		highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
-		highlight.Parent = model
-		highlights[model] = highlight
+	
+		local h = Instance.new("Highlight")
+		h.FillTransparency = 0.4
+		h.OutlineTransparency = 0.2
+		h.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+	
+		-- Выбираем цвет в зависимости от типа монстра
+		if isSpecialMonster(model.Name) then
+			h.FillColor = ESP_COLOR_SPECIAL
+			h.OutlineColor = Color3.new(1, 1, 1)  -- белый контур, чтобы зелёный был заметнее
+		else
+			h.FillColor = ESP_COLOR_NORMAL
+			h.OutlineColor = Color3.new(1, 1, 1)
+		end
+	
+		-- Локальная подсветка: не вставляем в модель, а «прикрепляем» через Adornee.
+		-- Объект живёт в локальном ScreenGui игрока и не реплицируется на сервер.
+		h.Adornee = model
+		h.Parent = tracerGui
+		highlights[model] = h
 	end
 	
-	local function removeAll()
-		for _, highlight in pairs(highlights) do
-			if highlight.Parent then highlight:Destroy() end
+	-- Удалить Highlight
+	local function removeHighlight(model)
+		local h = highlights[model]
+		if h and h.Parent then
+			h:Destroy()
+			highlights[model] = nil
+		end
+	end
+	
+	-- Создать метку (BillboardGui + TextLabel)
+	local function addLabel(model)
+		if labels[model] then return end
+		local anchor = getAnchor(model)
+		if not anchor then return end
+	
+		local billboard = Instance.new("BillboardGui")
+		billboard.Name = "MonsterESP_Label"
+		billboard.Size = UDim2.new(0, 200, 0, 40)
+		billboard.StudsOffset = Vector3.new(0, 3, 0)
+		billboard.AlwaysOnTop = true
+		billboard.MaxDistance = 500
+		billboard.Adornee = anchor
+		billboard.Parent = tracerGui
+	
+		local text = Instance.new("TextLabel")
+		text.Size = UDim2.new(1, 0, 1, 0)
+		text.BackgroundTransparency = 1
+		-- Цвет текста подбираем под цвет подсветки
+		if isSpecialMonster(model.Name) then
+			text.TextColor3 = ESP_COLOR_SPECIAL
+		else
+			text.TextColor3 = ESP_COLOR_NORMAL
+		end
+		text.TextStrokeTransparency = 0.3
+		text.TextStrokeColor3 = Color3.new(0, 0, 0)
+		text.Font = Enum.Font.Jura
+		text.TextScaled = true
+		text.Text = model.Name
+		text.Parent = billboard
+	
+		labels[model] = billboard
+	end
+	
+	-- Удалить метку
+	local function removeLabel(model)
+		local b = labels[model]
+		if b and b.Parent then
+			b:Destroy()
+			labels[model] = nil
+		end
+	end
+	
+	-- Создать линию-трассер
+	local function createTracer(model)
+		if tracers[model] then return end
+		local line = Instance.new("Frame")
+		line.AnchorPoint = Vector2.new(0.5, 0.5)
+		line.BorderSizePixel = 0
+		-- Линия тоже будет зелёной для особых монстров
+		if isSpecialMonster(model.Name) then
+			line.BackgroundColor3 = ESP_COLOR_SPECIAL
+		else
+			line.BackgroundColor3 = ESP_COLOR_NORMAL
+		end
+		line.ZIndex = 10
+		line.Parent = tracerGui
+		tracers[model] = line
+	end
+	
+	-- Обновить все линии (один раз за кадр)
+	local function updateTracers()
+		local camera = workspace.CurrentCamera
+		if not camera then return end
+		local mouse = UserInputService:GetMouseLocation()
+	
+		for model, line in pairs(tracers) do
+			if not model.Parent then
+				line:Destroy()
+				tracers[model] = nil
+			else
+				local anchor = getAnchor(model)
+				local ok, target = pcall(function()
+					return camera:WorldToViewportPoint(anchor.Position)
+				end)
+				if ok and target and target.Z > 0 then
+					local x1, y1 = mouse.X, mouse.Y
+					local x2, y2 = target.X, target.Y
+					local dx, dy = x2 - x1, y2 - y1
+					local length = math.sqrt(dx*dx + dy*dy)
+					if length > 2 then
+						line.Visible = true
+						line.Size = UDim2.new(0, length, 0, 2)
+						line.Position = UDim2.new(0, (x1 + x2)/2, 0, (y1 + y2)/2)
+						line.Rotation = math.deg(math.atan2(dy, dx))
+					else
+						line.Visible = false
+					end
+				else
+					line.Visible = false
+				end
+			end
+		end
+	end
+	
+	-- Полностью очистить ESP
+	local function clearEsp()
+		for model, h in pairs(highlights) do
+			if h and h.Parent then h:Destroy() end
 		end
 		highlights = {}
-		for _, part in pairs(tracers) do
-			if part.Parent then part:Destroy() end
+	
+		for model, b in pairs(labels) do
+			if b and b.Parent then b:Destroy() end
+		end
+		labels = {}
+	
+		for model, l in pairs(tracers) do
+			if l and l.Parent then l:Destroy() end
 		end
 		tracers = {}
 	end
 	
-	-- ============ Полоски от курсора к монстрам (без AlwaysOnTop — у Part его нет) ============
+	-- Основной цикл ESP
+	local function startEspLoop()
+		running = true
 	
-	local function createTracer(model)
-		if tracers[model] then return end
-		local part = Instance.new("Part")
-		part.Anchored = true
-		part.CanCollide = false
-		part.CanQuery = false
-		part.CanTouch = false
-		part.Massless = true
-		part.Material = Enum.Material.Neon
-		part.Color = ESP_COLOR
-		part.Transparency = 0.3
-		part.Size = Vector3.new(0.05, 0.05, 1)
-		part.Parent = workspace.CurrentCamera
-		tracers[model] = part
-	end
+		renderConnection = RunService.RenderStepped:Connect(updateTracers)
 	
-	local function updateTracers()
-		local startPoint = mouse.Hit.Position
+		workspace.DescendantAdded:Connect(function(obj)
+			if running and obj:IsA("Model") and isMonster(obj) then
+				addHighlight(obj)
+				addLabel(obj)
+				createTracer(obj)
+			end
+		end)
 	
-		for model, part in pairs(tracers) do
-			if not model.Parent then
-				part:Destroy()
-				tracers[model] = nil
-			else
-				local anchor = getAnchorPart(model)
-				if anchor then
-					local target = anchor.Position
-					local length = (target - startPoint).Magnitude
-					if length > 0.1 then
-						part.Size = Vector3.new(0.05, 0.05, length)
-						part.CFrame = CFrame.lookAt((startPoint + target) / 2, target)
-						part.Transparency = 0.3
-					else
-						part.Transparency = 1
-					end
-				else
-					part.Transparency = 1
-				end
+		-- Обработать уже существующие модели
+		for _, model in ipairs(workspace:GetDescendants()) do
+			if model:IsA("Model") and isMonster(model) then
+				addHighlight(model)
+				addLabel(model)
+				createTracer(model)
 			end
 		end
+	
+		tracerGui.Parent = Players.LocalPlayer:WaitForChild("PlayerGui")
 	end
 	
-	-- ============ Включение/выключение ============
+	local function stopEspLoop()
+		running = false
 	
-	local function espLoop()
-		while running do
-			local found = 0
-			for _, model in ipairs(workspace:GetDescendants()) do
-				if model:IsA("Model") and isMonster(model) then
-					addHighlight(model)
-					createTracer(model)
-					found += 1
-				end
-			end
-			print("[ESP monsters] найдено монстров:", found)
-			task.wait(2)
+		if renderConnection then
+			renderConnection:Disconnect()
+			renderConnection = nil
 		end
+	
+		clearEsp()
+	
+		tracerGui.Parent = nil
 	end
+	
+	local offFrame = button:WaitForChild("Off")
+	local onFrame = button:WaitForChild("On")
 	
 	local function updateVisual()
 		if espEnabled then
@@ -2201,456 +2730,218 @@ local script = G2L["57"];
 		end
 	end
 	
-	textButton.MouseButton1Click:Connect(function()
+	updateVisual()
+	
+	button.MouseButton1Click:Connect(function()
 		espEnabled = not espEnabled
 		updateVisual()
-	
 		if espEnabled then
-			running = true
-			renderConnection = RunService.RenderStepped:Connect(updateTracers)
-			task.spawn(espLoop)
+			startEspLoop()
 		else
-			running = false
-			if renderConnection then
-				renderConnection:Disconnect()
-				renderConnection = nil
-			end
-			removeAll()
+			stopEspLoop()
 		end
 	end)
 	
-	updateVisual()
+	-- WAU Hub: восстановление состояния из сохранения
+	local function wauRestore()
+		local want = button:GetAttribute("WAU_Restore") == true
+		if want ~= espEnabled then
+			espEnabled = not espEnabled
+			updateVisual()
+			if espEnabled then startEspLoop() else stopEspLoop() end
+		end
+	end
+	button:GetAttributeChangedSignal("WAU_Restore"):Connect(wauRestore)
+	if button:GetAttribute("WAU_Restore") then wauRestore() end
 	
 end;
-task.spawn(C_57);
--- StarterGui.Script.Head.Visuals.Frame.Esp items.LocalScript
-local function C_61()
-local script = G2L["61"];
-	local textButton = script.Parent
-	
-	local offFrame = textButton:WaitForChild("Off")
-	local onFrame = textButton:WaitForChild("On")
-	
+task.spawn(C_6b);
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Esp items.LocalScript
+local function C_7b()
+local script = G2L["7b"];
 	local Players = game:GetService("Players")
 	local RunService = game:GetService("RunService")
+	local UserInputService = game:GetService("UserInputService")
 	
-	local player = Players.LocalPlayer
-	local mouse = player:GetMouse()
+	local button = script.Parent
 	
-	local ITEM_COLOR = Color3.fromRGB(0, 255, 0)
+	-- Цвет для предметов: фиолетовый
+	local ESP_COLOR_ITEM = Color3.fromRGB(147, 0, 255)
 	
-	-- Названия предметов (проверь по реальным именам в игре — см. режим отладки ниже)
-	local ITEM_NAMES = {
-		"Flashlight", "Battery", "Bloxy Cola", "Cola", "Fruits",
-		"Wrench", "Hammer", "Gas Can", "Medkit", "Camera", "Tablet",
-		"Lock", "Laser", "UV Light", "Plushie", "Key", "Shotgun",
-		"Marshmallow", "Trail Camera", "Birthday Cake", "Lemonade",
-		"Candy Bucket", "Lantern", "Crowbar", "Radar", "Bear Trap",
-		"Flare Gun", "Flare", "Tripmine", "Lemon", "Snowball",
-		"Sprite", "Present", "Candy Cane", "Coal", "Hot Chocolate",
-		"Christmas Lights", "Monster Mash", "Noodles", "Krampus",
-		"Witches Brew",
-	}
-	
-	-- названия монстров — чтобы не красить их зелёным
-	local MONSTER_NAMES = {
-		"mutant", "larry", "pest", "stalker", "worker", "spider",
-		"abomination", "zombie", "skeleton", "undead", "pumpkin",
-		"jerry", "winterhorn", "delusion",
-	}
-	
-	-- true = печатать в Output всё, что находит и отклоняет (для настройки списка)
-	local DEBUG_MODE = true
-	
+	-- Состояние
 	local espEnabled = false
 	local running = false
 	local renderConnection = nil
 	
+	-- Хранилища
 	local highlights = {}
-	local tracers = {}
+	local labels = {}
 	
-	local function isPlayerThing(object)
-		local model = object:IsA("Model") and object or (object.Parent and object.Parent:IsA("Model") and object.Parent or nil)
-		if model and Players:GetPlayerFromCharacter(model) then return true end
-		return object.Name:lower():find("player") ~= nil
+	-- GUI для меток (имена предметов)
+	local labelGui = Instance.new("ScreenGui")
+	labelGui.Name = "EspItems_Gui"
+	labelGui.IgnoreGuiInset = true
+	labelGui.ResetOnSpawn = false
+	labelGui.DisplayOrder = 10
+	
+	-- Ключевые слова настоящих предметов
+	local ITEM_KEYWORDS = {
+		"key", "card", "battery", "medkit", "med", "heal", "item", "coin",
+		"gem", "fuse", "valve", "tool", "weapon", "ammo", "food", "drink",
+		"badge", "crowbar", "hammer", "screw", "wire", "fuel", "note",
+		"paper", "book", "ticket", "code", "phone", "flashlight", "lantern"
+	}
+	
+	-- Чёрный список: строительные части карты (НЕ подсвечиваем)
+	local BLACKLIST = {
+		"wall", "floor", "ceil", "roof", "base", "ground", "grass", "dirt",
+		"stone", "brick", "road", "path", "terrain", "platform", "ramp",
+		"stair", "door", "window", "fence", "tree", "rock", "water",
+		"spawn", "invisible", "border", "boundary", "collider", "hitbox",
+		"part", "block", "wedge", "corner", "beam", "pillar", "column",
+		"cliff", "sand", "snow", "wood", "metal", "glass", "decal", "sign"
+	}
+	
+	local function nameMatches(name, list)
+		name = name:lower()
+		for _, w in ipairs(list) do
+			if name:find(w) then return true end
+		end
+		return false
 	end
 	
-	local function matchesAny(name, list)
-		name = name:lower()
-		for _, itemName in ipairs(list) do
-			if name:find(itemName:lower()) then
+	local function isInteractive(obj)
+		if obj:FindFirstChildOfClass("ClickDetector") or obj:FindFirstChildOfClass("ProximityPrompt") then
+			return true
+		end
+		for _, d in ipairs(obj:GetDescendants()) do
+			if d:IsA("ClickDetector") or d:IsA("ProximityPrompt") or d:IsA("Tool") then
 				return true
 			end
 		end
 		return false
 	end
 	
-	local function isItem(object)
-		if isPlayerThing(object) then
-			if DEBUG_MODE then print("[ESP] отклонён как игрок:", object.Name, object.ClassName) end
-			return false
+	local function isItem(obj)
+		if not obj:IsA("Model") and not obj:IsA("BasePart") then return false end
+		if obj:IsA("Model") then
+			if Players:GetPlayerFromCharacter(obj) then return false end
+			if obj:FindFirstChildOfClass("Humanoid") then return false end
 		end
-	
-		if object:IsA("Tool") and matchesAny(object.Name, ITEM_NAMES) then
-			return true
+		local name = obj.Name or ""
+		if nameMatches(name, BLACKLIST) then return false end
+		if obj:IsA("BasePart") then
+			local s = obj.Size
+			if math.max(s.X, s.Y, s.Z) > 20 then return false end
+			if obj.Name == "HumanoidRootPart" then return false end
 		end
-		if object:IsA("Model") and matchesAny(object.Name, ITEM_NAMES) then
-			return true
-		end
-		if object:IsA("BasePart")
-			and not object.Parent:IsA("Model")   -- одиночная деталь, не часть модели
-			and matchesAny(object.Name, ITEM_NAMES) then
-			return true
-		end
-	
-		return false
+		return isInteractive(obj) or nameMatches(name, ITEM_KEYWORDS)
 	end
 	
-	local function getAnchorPart(object)
-		if object:IsA("BasePart") then return object end
-		return object.PrimaryPart
-			or object:FindFirstChild("Handle")
-			or object:FindFirstChildWhichIsA("BasePart", true)
-	end
-	
-	local function addHighlight(object)
-		if highlights[object] then return end
-		local highlight = Instance.new("Highlight")
-		highlight.FillColor = ITEM_COLOR
-		highlight.OutlineColor = Color3.new(1, 1, 1)
-		highlight.FillTransparency = 0.4
-		highlight.OutlineTransparency = 0.2
-		highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
-		highlight.Parent = object
-		highlights[object] = highlight
-	end
-	
-	local function removeAll()
-		for _, highlight in pairs(highlights) do
-			if highlight.Parent then highlight:Destroy() end
+	-- Точка привязки для подсветки
+	local function getAnchor(model)
+		if model:IsA("Model") then
+			return model.PrimaryPart or model:FindFirstChild("HumanoidRootPart") or model:FindFirstChildWhichIsA("BasePart", true)
 		end
-		highlights = {}
-		for _, part in pairs(tracers) do
-			if part.Parent then part:Destroy() end
-		end
-		tracers = {}
-	end
-	
-	-- полоски от курсора к предметам (облегчённые: без AlwaysOnTop — его у Part нет)
-	local function createTracer(object)
-		if tracers[object] then return end
-		local part = Instance.new("Part")
-		part.Anchored = true
-		part.CanCollide = false
-		part.CanQuery = false
-		part.CanTouch = false
-		part.Massless = true
-		part.Material = Enum.Material.Neon
-		part.Color = ITEM_COLOR
-		part.Transparency = 0.3
-		part.Size = Vector3.new(0.05, 0.05, 1)
-		part.Parent = workspace.CurrentCamera
-		tracers[object] = part
-	end
-	
-	local function updateTracers()
-		local startPoint = mouse.Hit.Position
-		for object, part in pairs(tracers) do
-			if not object.Parent then
-				part:Destroy()
-				tracers[object] = nil
-			else
-				local anchor = getAnchorPart(object)
-				if anchor then
-					local target = anchor.Position
-					local length = (target - startPoint).Magnitude
-					if length > 0.1 then
-						part.Size = Vector3.new(0.05, 0.05, length)
-						part.CFrame = CFrame.lookAt((startPoint + target) / 2, target)
-						part.Transparency = 0.3
-					else
-						part.Transparency = 1
-					end
-				else
-					part.Transparency = 1
-				end
-			end
-		end
-	end
-	
-	local function espLoop()
-		while running do
-			local found = 0
-			for _, object in ipairs(workspace:GetDescendants()) do
-				if isItem(object) then
-					addHighlight(object)
-					createTracer(object)
-					found += 1
-				end
-			end
-			print("[ESP items] найдено предметов:", found)
-			task.wait(2)
-		end
-	end
-	
-	local function updateVisual()
-		if espEnabled then
-			onFrame.BackgroundTransparency = 0
-			offFrame.BackgroundTransparency = 1
-		else
-			onFrame.BackgroundTransparency = 1
-			offFrame.BackgroundTransparency = 0
-		end
-	end
-	
-	textButton.MouseButton1Click:Connect(function()
-		espEnabled = not espEnabled
-		updateVisual()
-	
-		if espEnabled then
-			running = true
-			renderConnection = RunService.RenderStepped:Connect(updateTracers)
-			task.spawn(espLoop)
-		else
-			running = false
-			if renderConnection then
-				renderConnection:Disconnect()
-				renderConnection = nil
-			end
-			removeAll()
-		end
-	end)
-	
-	updateVisual()
-	
-end;
-task.spawn(C_61);
--- StarterGui.Script.Head.Visuals.Frame.Esp players.LocalScript
-local function C_68()
-local script = G2L["68"];
-	local textButton = script.Parent
-	
-	local offFrame = textButton:WaitForChild("Off")
-	local onFrame = textButton:WaitForChild("On")
-	
-	local Players = game:GetService("Players")
-	
-	local localPlayer = Players.LocalPlayer
-	local ESP_COLOR = Color3.fromRGB(0, 200, 255)
-	
-	local espEnabled = false
-	
-	local highlights = {}
-	local labels = {}
-	local connections = {}
-	
-	local function isPlayerModel(model)
-		return Players:GetPlayerFromCharacter(model) ~= nil
-	end
-	
-	local function addHighlight(character)
-		if highlights[character] then return end
-		local highlight = Instance.new("Highlight")
-		highlight.FillColor = ESP_COLOR
-		highlight.OutlineColor = Color3.new(1, 1, 1)
-		highlight.FillTransparency = 0.4
-		highlight.OutlineTransparency = 0.2
-		highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
-		highlight.Parent = character
-		highlights[character] = highlight
-	end
-	
-	local function addLabel(character)
-		if labels[character] then return end
-		local head = character:FindFirstChild("Head") or character:WaitForChild("Head", 3)
-		if not head then return end
-	
-		local billboard = Instance.new("BillboardGui")
-		billboard.Name = "PlayerESP_Label"
-		billboard.Size = UDim2.new(0, 200, 0, 40)
-		billboard.StudsOffset = Vector3.new(0, 3, 0)
-		billboard.AlwaysOnTop = true
-		billboard.MaxDistance = 500
-		billboard.Parent = head
-	
-		local text = Instance.new("TextLabel")
-		text.Size = UDim2.new(1, 0, 1, 0)
-		text.BackgroundTransparency = 1
-		text.TextColor3 = ESP_COLOR
-		text.TextStrokeTransparency = 0.3
-		text.TextStrokeColor3 = Color3.new(0, 0, 0)
-		text.Font = Enum.Font.GothamBold
-		text.TextScaled = true
-		local plr = Players:GetPlayerFromCharacter(character)
-		text.Text = plr and plr.Name or "Player"
-		text.Parent = billboard
-	
-		labels[character] = billboard
-	end
-	
-	local function trackCharacter(player, character)
-		if not espEnabled then return end
-		if player == localPlayer then return end
-		task.wait(0.5) -- даём персонажу загрузиться
-		if not character.Parent then return end
-		addHighlight(character)
-		addLabel(character)
-	end
-	
-	local function trackPlayer(player)
-		if player == localPlayer then return end
-	
-		-- уже существующий персонаж
-		if player.Character then
-			task.spawn(trackCharacter, player, player.Character)
-		end
-	
-		connections[player] = player.CharacterAdded:Connect(function(char)
-			trackCharacter(player, char)
-		end)
-	end
-	
-	local function startEsp()
-		espEnabled = true
-		for _, player in ipairs(Players:GetPlayers()) do
-			trackPlayer(player)
-		end
-		table.insert(connections, Players.PlayerAdded:Connect(trackPlayer))
-	end
-	
-	local function stopEsp()
-		espEnabled = false
-	
-		for _, conn in ipairs(connections) do
-			pcall(function() conn:Disconnect() end)
-		end
-		connections = {}
-	
-		for _, highlight in pairs(highlights) do
-			if highlight.Parent then highlight:Destroy() end
-		end
-		highlights = {}
-	
-		for _, billboard in pairs(labels) do
-			if billboard.Parent then billboard:Destroy() end
-		end
-		labels = {}
-	end
-	
-	local function updateVisual()
-		if espEnabled then
-			onFrame.BackgroundTransparency = 0
-			offFrame.BackgroundTransparency = 1
-		else
-			onFrame.BackgroundTransparency = 1
-			offFrame.BackgroundTransparency = 0
-		end
-	end
-	
-	textButton.MouseButton1Click:Connect(function()
-		if espEnabled then
-			stopEsp()
-		else
-			startEsp()
-		end
-		updateVisual()
-	end)
-	
-	updateVisual()
-	
-end;
-task.spawn(C_68);
--- StarterGui.Script.Head.Visuals.Frame.effects.LocalScript
-local function C_72()
-local script = G2L["72"];
-	local textButton = script.Parent
-	
-	local offFrame = textButton:WaitForChild("Off")
-	local onFrame = textButton:WaitForChild("On")
-	
-	local Lighting = game:GetService("Lighting")
-	
-	local enabled = false
-	
-	-- список классов эффектов, которые отключаем
-	local EFFECT_CLASSES = {
-		"Atmosphere",
-		"BloomEffect",
-		"BlurEffect",
-		"ColorCorrectionEffect",
-		"SunRaysEffect",
-		"DepthOfFieldEffect",
-		"ColorCorrection", -- старое имя ColorCorrectionEffect
-	}
-	
-	-- хранилище: эффект -> {Enabled = ..., Brightness/Intensity и т.п.}
-	local saved = {}
-	
-	local function getEffectName(effect)
-		for _, className in ipairs(EFFECT_CLASSES) do
-			if effect:IsA(className) then
-				return className
-			end
+		if model:IsA("BasePart") then
+			return model
 		end
 		return nil
 	end
 	
-	local function disableAll()
-		-- пост-эффекты в Lighting
-		for _, child in ipairs(Lighting:GetChildren()) do
-			local className = getEffectName(child)
-			if className and not saved[child] then
-				saved[child] = {
-					Enabled = child.Enabled,
-					-- основные «сила эффекта» свойства у всех таких классов
-					Intensity = child.Intensity,
-					Contrast = child.Contrast,
-					Saturation = child.Saturation,
-					Size = child.Size,
-					TintColor = child.TintColor,
-					Brightness = child.Brightness,
-					Threshold = child.Threshold,
-					Density = child.Density,
-					Color = child.Color,
-					Glare = child.Glare,
-					Haze = child.Haze,
-					Hindrance = child.Hindrance,
-					Sky = child.Sky,
-				}
+	-- Создать Highlight (фиолетовый)
+	local function addHighlight(obj)
+		if highlights[obj] then return end
+	
+		local h = Instance.new("Highlight")
+		h.FillColor = ESP_COLOR_ITEM
+		h.OutlineColor = Color3.new(1, 1, 1)
+		h.FillTransparency = 0.4
+		h.OutlineTransparency = 0.2
+		h.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+		-- Локальная подсветка: не вставляем в объект, а «прикрепляем» через Adornee.
+		-- Объект живёт в локальном ScreenGui игрока и не реплицируется на сервер.
+		h.Adornee = obj
+		h.Parent = labelGui
+		highlights[obj] = h
+	end
+	
+	-- Создать метку (имя предмета)
+	local function addLabel(obj)
+		if labels[obj] then return end
+		local anchor = getAnchor(obj)
+		if not anchor then return end
+	
+		local billboard = Instance.new("BillboardGui")
+		billboard.Name = "ItemESP_Label"
+		billboard.Size = UDim2.new(0, 150, 0, 30)
+		billboard.StudsOffset = Vector3.new(0, 3, 0)
+		billboard.AlwaysOnTop = true
+		billboard.MaxDistance = 400
+		billboard.Adornee = anchor
+		billboard.Parent = labelGui
+	
+		local text = Instance.new("TextLabel")
+		text.Size = UDim2.new(1, 0, 1, 0)
+		text.BackgroundTransparency = 1
+		text.TextColor3 = ESP_COLOR_ITEM
+		text.TextStrokeTransparency = 0.3
+		text.TextStrokeColor3 = Color3.new(0, 0, 0)
+		text.Font = Enum.Font.Jura
+		text.TextScaled = true
+		text.Text = obj.Name
+		text.Parent = billboard
+	
+		labels[obj] = billboard
+	end
+	
+	-- Полностью очистить ESP предметов
+	local function clearEsp()
+		for obj, h in pairs(highlights) do
+			if h and h.Parent then h:Destroy() end
+		end
+		highlights = {}
+	
+		for obj, b in pairs(labels) do
+			if b and b.Parent then b:Destroy() end
+		end
+		labels = {}
+	end
+	
+	-- Основной цикл: следим за появлением новых объектов
+	local function startEspLoop()
+		running = true
+	
+		workspace.DescendantAdded:Connect(function(obj)
+			if running and isItem(obj) then
+				addHighlight(obj)
+				addLabel(obj)
 			end
-			if className then
-				child.Enabled = false
+		end)
+	
+		-- Пройтись по уже существующим
+		for _, obj in ipairs(workspace:GetDescendants()) do
+			if isItem(obj) then
+				addHighlight(obj)
+				addLabel(obj)
 			end
 		end
 	
-		-- Atmosphere выключается через Enabled, остальное — тоже
-		-- эффекты внутри Workspace (редко, но бывает)
-		for _, child in ipairs(workspace:GetDescendants()) do
-			local className = getEffectName(child)
-			if className then
-				if not saved[child] then
-					saved[child] = {Enabled = child.Enabled}
-				end
-				child.Enabled = false
-			end
-		end
+		labelGui.Parent = Players.LocalPlayer:WaitForChild("PlayerGui")
 	end
 	
-	local function restoreAll()
-		for effect, props in pairs(saved) do
-			if effect.Parent then
-				for prop, value in pairs(props) do
-					pcall(function()
-						effect[prop] = value
-					end)
-				end
-			end
-		end
-		saved = {}
+	local function stopEspLoop()
+		running = false
+		clearEsp()
+		labelGui.Parent = nil
 	end
+	
+	-- Переключение через рамки On/Off
+	local offFrame = button:WaitForChild("Off")
+	local onFrame = button:WaitForChild("On")
 	
 	local function updateVisual()
-		if enabled then
+		if espEnabled then
 			onFrame.BackgroundTransparency = 0
 			offFrame.BackgroundTransparency = 1
 		else
@@ -2659,24 +2950,640 @@ local script = G2L["72"];
 		end
 	end
 	
-	textButton.MouseButton1Click:Connect(function()
-		enabled = not enabled
-		updateVisual()
+	updateVisual()
 	
-		if enabled then
-			disableAll()
+	button.MouseButton1Click:Connect(function()
+		espEnabled = not espEnabled
+		updateVisual()
+		if espEnabled then
+			startEspLoop()
 		else
-			restoreAll()
+			stopEspLoop()
 		end
 	end)
+	-- WAU Hub: восстановление состояния из сохранения
+	local function wauRestore()
+		local want = button:GetAttribute("WAU_Restore") == true
+		if want ~= espEnabled then
+			espEnabled = not espEnabled
+			updateVisual()
+			if espEnabled then startEspLoop() else stopEspLoop() end
+		end
+	end
+	button:GetAttributeChangedSignal("WAU_Restore"):Connect(wauRestore)
+	if button:GetAttribute("WAU_Restore") then wauRestore() end
+	
+end;
+task.spawn(C_7b);
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Esp players.LocalScript
+local function C_84()
+local script = G2L["84"];
+	local Players = game:GetService("Players")
+	local RunService = game:GetService("RunService")
+	
+	local button = script.Parent
+	
+	-- Цвет для игроков: голубой
+	local ESP_COLOR_PLAYER = Color3.fromRGB(0, 170, 255)
+	
+	-- Состояние
+	local espEnabled = false
+	local running = false
+	
+	-- Хранилища
+	local highlights = {}
+	local labels = {}
+	
+	-- GUI для меток (имена игроков)
+	local labelGui = Instance.new("ScreenGui")
+	labelGui.Name = "EspPlayers_Gui"
+	labelGui.IgnoreGuiInset = true
+	labelGui.ResetOnSpawn = false
+	labelGui.DisplayOrder = 10
+	
+	-- Это игрок?
+	local function isPlayer(model)
+		if not model:IsA("Model") then return false end
+		return Players:GetPlayerFromCharacter(model) ~= nil
+	end
+	
+	-- Точка привязки для подсветки
+	local function getAnchor(model)
+		return model.PrimaryPart
+			or model:FindFirstChild("HumanoidRootPart")
+			or model:FindFirstChildWhichIsA("BasePart", true)
+	end
+	
+	-- Создать Highlight (голубой)
+	local function addHighlight(model)
+		if highlights[model] then return end
+	
+		local h = Instance.new("Highlight")
+		h.FillColor = ESP_COLOR_PLAYER
+		h.OutlineColor = Color3.new(1, 1, 1)
+		h.FillTransparency = 0.4
+		h.OutlineTransparency = 0.2
+		h.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+		-- Локальная подсветка: не вставляем в модель, а «прикрепляем» через Adornee.
+		-- Объект живёт в локальном ScreenGui игрока и не реплицируется на сервер.
+		h.Adornee = model
+		h.Parent = labelGui
+		highlights[model] = h
+	end
+	
+	local function removeHighlight(model)
+		local h = highlights[model]
+		if h and h.Parent then
+			h:Destroy()
+			highlights[model] = nil
+		end
+	end
+	
+	-- Создать метку (имя игрока)
+	local function addLabel(model)
+		if labels[model] then return end
+		local anchor = getAnchor(model)
+		if not anchor then return end
+	
+		local billboard = Instance.new("BillboardGui")
+		billboard.Name = "PlayerESP_Label"
+		billboard.Size = UDim2.new(0, 150, 0, 30)
+		billboard.StudsOffset = Vector3.new(0, 3, 0)
+		billboard.AlwaysOnTop = true
+		billboard.MaxDistance = 500
+		billboard.Adornee = anchor
+		billboard.Parent = labelGui
+	
+		local text = Instance.new("TextLabel")
+		text.Size = UDim2.new(1, 0, 1, 0)
+		text.BackgroundTransparency = 1
+		text.TextColor3 = ESP_COLOR_PLAYER
+		text.TextStrokeTransparency = 0.3
+		text.TextStrokeColor3 = Color3.new(0, 0, 0)
+		text.Font = Enum.Font.Jura
+		text.TextScaled = true
+		text.Text = model.Name
+		text.Parent = billboard
+	
+		labels[model] = billboard
+	end
+	
+	local function removeLabel(model)
+		local b = labels[model]
+		if b and b.Parent then
+			b:Destroy()
+			labels[model] = nil
+		end
+	end
+	
+	-- Полностью очистить ESP игроков
+	local function clearEsp()
+		for model, h in pairs(highlights) do
+			if h and h.Parent then h:Destroy() end
+		end
+		highlights = {}
+	
+		for model, b in pairs(labels) do
+			if b and b.Parent then b:Destroy() end
+		end
+		labels = {}
+	end
+	
+	-- Основной цикл: следим за появлением новых моделей и обновляем список игроков
+	local function startEspLoop()
+		running = true
+	
+		workspace.DescendantAdded:Connect(function(obj)
+			if running and obj:IsA("Model") and isPlayer(obj) then
+				addHighlight(obj)
+				addLabel(obj)
+			end
+		end)
+	
+		-- Пройтись по уже существующим моделям
+		for _, model in ipairs(workspace:GetDescendants()) do
+			if model:IsA("Model") and isPlayer(model) then
+				addHighlight(model)
+				addLabel(model)
+			end
+		end
+	
+		labelGui.Parent = Players.LocalPlayer:WaitForChild("PlayerGui")
+	end
+	
+	local function stopEspLoop()
+		running = false
+		clearEsp()
+		labelGui.Parent = nil
+	end
+	
+	local offFrame = button:WaitForChild("Off")
+	local onFrame = button:WaitForChild("On")
+	
+	local function updateVisual()
+		if espEnabled then
+			onFrame.BackgroundTransparency = 0
+			offFrame.BackgroundTransparency = 1
+		else
+			onFrame.BackgroundTransparency = 1
+			offFrame.BackgroundTransparency = 0
+		end
+	end
 	
 	updateVisual()
 	
+	button.MouseButton1Click:Connect(function()
+		espEnabled = not espEnabled
+		updateVisual()
+		if espEnabled then
+			startEspLoop()
+		else
+			stopEspLoop()
+		end
+	end)
+	
+	-- WAU Hub: восстановление состояния из сохранения
+	local function wauRestore()
+		local want = button:GetAttribute("WAU_Restore") == true
+		if want ~= espEnabled then
+			espEnabled = not espEnabled
+			updateVisual()
+			if espEnabled then startEspLoop() else stopEspLoop() end
+		end
+	end
+	button:GetAttributeChangedSignal("WAU_Restore"):Connect(wauRestore)
+	if button:GetAttribute("WAU_Restore") then wauRestore() end
+	
 end;
-task.spawn(C_72);
+task.spawn(C_84);
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.effects.LocalScript
+local function C_8c()
+local script = G2L["8c"];
+	local Lighting = game:GetService("Lighting")
+	local button = script.Parent
+	local isOn = false
+	
+	local offFrame = button:WaitForChild("Off")
+	local onFrame = button:WaitForChild("On")
+	
+	local function updateVisual()
+		if isOn then
+			onFrame.BackgroundTransparency = 0
+			offFrame.BackgroundTransparency = 1
+		else
+			onFrame.BackgroundTransparency = 1
+			offFrame.BackgroundTransparency = 0
+		end
+	end
+	
+	local function toggle()
+		isOn = not isOn
+		updateVisual()
+		if not isOn then
+			-- Вырубает вообще все ColorCorrection и Blur в Lighting
+			for _, obj in ipairs(Lighting:GetChildren()) do
+				if obj:IsA("ColorCorrectionEffect") or obj:IsA("BlurEffect") then
+					obj.Enabled = false
+				end
+			end
+		end
+	end
+	
+	updateVisual()
+	button.MouseButton1Click:Connect(toggle)
+	
+	-- WAU Hub: восстановление состояния из сохранения
+	local function wauRestore()
+		local want = button:GetAttribute("WAU_Restore") == true
+		if want ~= isOn then
+			toggle()
+		end
+	end
+	button:GetAttributeChangedSignal("WAU_Restore"):Connect(wauRestore)
+	if button:GetAttribute("WAU_Restore") then wauRestore() end
+	
+end;
+task.spawn(C_8c);
+-- StarterGui.Script.Head.Visuals.ScrollingFrame.Tracer.LocalScript
+local function C_94()
+local script = G2L["94"];
+	local Players = game:GetService("Players")
+	local RunService = game:GetService("RunService")
+	local UserInputService = game:GetService("UserInputService")
+	
+	local button = script.Parent
+	local sf = button.Parent -- ScrollingFrame с тумблерами ESP
+	
+	-- Цвета
+	local COLOR_MONSTER_NORMAL = Color3.fromRGB(255, 0, 0)      -- красный (обычные монстры)
+	local COLOR_MONSTER_SPECIAL = Color3.fromRGB(0, 255, 0)    -- зелёный (Zombie/Skeleton/Pumpkin)
+	local COLOR_ITEM = Color3.fromRGB(147, 0, 255)             -- фиолетовый (предметы)
+	local COLOR_PLAYER = Color3.fromRGB(0, 170, 255)           -- голубой (игроки)
+	
+	-- Особые монстры
+	local SPECIAL_MONSTERS = {"Zombie", "Skeleton", "Pumpkin"}
+	
+	-- Список имён монстров
+	local MONSTER_NAMES = {
+		"Mutant", "Larry", "Pest", "Stalker", "Mutated Worker", "Worker",
+		"Spider", "Abomination", "Zombie", "Skeleton", "Undead",
+		"Pumpkin", "Jerry", "Winterhorn", "Delusion"
+	}
+	
+	-- Ключевые слова настоящих предметов (как в тумблере Esp items)
+	local ITEM_KEYWORDS = {
+		"key", "card", "battery", "medkit", "med", "heal", "item", "coin",
+		"gem", "fuse", "valve", "tool", "weapon", "ammo", "food", "drink",
+		"badge", "crowbar", "hammer", "screw", "wire", "fuel", "note",
+		"paper", "book", "ticket", "code", "phone", "flashlight", "lantern"
+	}
+	
+	-- Чёрный список: строительные части карты (НЕ подсвечиваем)
+	local BLACKLIST = {
+		"wall", "floor", "ceil", "roof", "base", "ground", "grass", "dirt",
+		"stone", "brick", "road", "path", "terrain", "platform", "ramp",
+		"stair", "door", "window", "fence", "tree", "rock", "water",
+		"spawn", "invisible", "border", "boundary", "collider", "hitbox",
+		"part", "block", "wedge", "corner", "beam", "pillar", "column",
+		"cliff", "sand", "snow", "wood", "metal", "glass", "decal", "sign"
+	}
+	
+	-- Состояние
+	local espEnabled = false
+	local running = false
+	local renderConnection = nil
+	
+	-- Хранилища
+	local tracers = {}
+	local labels = {}
+	
+	-- GUI для линий
+	local tracerGui = Instance.new("ScreenGui")
+	tracerGui.Name = "EspAll_Tracers"
+	tracerGui.IgnoreGuiInset = true
+	tracerGui.ResetOnSpawn = false
+	tracerGui.DisplayOrder = 10
+	
+	-- ----------------------
+	-- Вспомогательные функции
+	-- ----------------------
+	
+	-- Включён ли ESP-тумблер: ищем именно TextButton с именем btnName
+	-- (в ScrollingFrame есть TextLabel с таким же именем — его пропускаем)
+	local function isToggleOn(btnName)
+		for _, b in ipairs(sf:GetChildren()) do
+			if b:IsA("TextButton") and b.Name == btnName then
+				local on = b:FindFirstChild("On")
+				if on then
+					return on.BackgroundTransparency < 0.5
+				end
+			end
+		end
+		return false
+	end
+	
+	local function isPlayerModel(model)
+		return Players:GetPlayerFromCharacter(model) ~= nil or (model.Name and model.Name:lower():find("player") ~= nil)
+	end
+	
+	local function isMonster(model)
+		if not model:IsA("Model") then return false end
+		if isPlayerModel(model) then return false end
+		for _, name in ipairs(MONSTER_NAMES) do
+			if model.Name and model.Name:lower():find(name:lower()) then
+				return true
+			end
+		end
+		return model:FindFirstChildOfClass("Humanoid") ~= nil
+	end
+	
+	local function isSpecialMonster(name)
+		for _, sp in ipairs(SPECIAL_MONSTERS) do
+			if name and name:lower() == sp:lower() then return true end
+		end
+		return false
+	end
+	
+	local function nameMatches(name, list)
+		name = name:lower()
+		for _, w in ipairs(list) do
+			if name:find(w) then return true end
+		end
+		return false
+	end
+	
+	local function isInteractive(obj)
+		if obj:FindFirstChildOfClass("ClickDetector") or obj:FindFirstChildOfClass("ProximityPrompt") then
+			return true
+		end
+		for _, d in ipairs(obj:GetDescendants()) do
+			if d:IsA("ClickDetector") or d:IsA("ProximityPrompt") or d:IsA("Tool") then
+				return true
+			end
+		end
+		return false
+	end
+	
+	-- Строгое определение предмета (как в тумблере Esp items):
+	-- интерактивный объект или имя по ключевым словам, без частей карты
+	local function isItem(obj)
+		if not obj:IsA("Model") and not obj:IsA("BasePart") then return false end
+		if obj:IsA("Model") then
+			if Players:GetPlayerFromCharacter(obj) then return false end
+			if obj:FindFirstChildOfClass("Humanoid") then return false end
+		end
+		local name = obj.Name or ""
+		if nameMatches(name, BLACKLIST) then return false end
+		if obj:IsA("BasePart") then
+			local s = obj.Size
+			if math.max(s.X, s.Y, s.Z) > 20 then return false end
+			if obj.Name == "HumanoidRootPart" then return false end
+		end
+		return isInteractive(obj) or nameMatches(name, ITEM_KEYWORDS)
+	end
+	
+	local function getAnchor(obj)
+		if obj:IsA("Model") then
+			return obj.PrimaryPart or obj:FindFirstChild("HumanoidRootPart") or obj:FindFirstChildWhichIsA("BasePart", true)
+		elseif obj:IsA("BasePart") then
+			return obj
+		end
+		return nil
+	end
+	
+	-- Получить цвет для подсветки и линии по типу объекта
+	-- (тип определяется без учёта тумблеров — фильтрация по тумблерам в syncTargets)
+	local function getColors(obj)
+		local name = obj.Name or ""
+	
+		if isPlayerModel(obj) then
+			return COLOR_PLAYER, COLOR_PLAYER
+		end
+	
+		if isMonster(obj) then
+			if isSpecialMonster(name) then
+				return COLOR_MONSTER_SPECIAL, COLOR_MONSTER_SPECIAL
+			end
+			return COLOR_MONSTER_NORMAL, COLOR_MONSTER_NORMAL
+		end
+	
+		if isItem(obj) then
+			return COLOR_ITEM, COLOR_ITEM
+		end
+	
+		return nil, nil
+	end
+	
+	-- Создать метку (имя)
+	local function addLabel(obj)
+		if labels[obj] then return end
+		local _, lineColor = getColors(obj)
+		if not lineColor then return end
+	
+		local anchor = getAnchor(obj)
+		if not anchor then return end
+	
+		local billboard = Instance.new("BillboardGui")
+		billboard.Name = "EspAll_Label"
+		billboard.Size = UDim2.new(0, 150, 0, 30)
+		billboard.StudsOffset = Vector3.new(0, 3, 0)
+		billboard.AlwaysOnTop = true
+		billboard.MaxDistance = 500
+		billboard.Adornee = anchor
+		billboard.Parent = tracerGui
+	
+		local text = Instance.new("TextLabel")
+		text.Size = UDim2.new(1, 0, 1, 0)
+		text.BackgroundTransparency = 1
+		text.TextColor3 = lineColor
+		text.TextStrokeTransparency = 0.3
+		text.TextStrokeColor3 = Color3.new(0, 0, 0)
+		text.Font = Enum.Font.Jura
+		text.TextScaled = true
+		text.Text = obj.Name
+		text.Parent = billboard
+	
+		labels[obj] = billboard
+	end
+	
+	local function removeLabel(obj)
+		local b = labels[obj]
+		if b and b.Parent then
+			b:Destroy()
+		end
+		labels[obj] = nil
+	end
+	
+	-- Создать линию-трекер
+	local function createTracer(obj)
+		if tracers[obj] then return end
+		local _, lineColor = getColors(obj)
+		if not lineColor then return end
+	
+		local line = Instance.new("Frame")
+		line.AnchorPoint = Vector2.new(0.5, 0.5)
+		line.BorderSizePixel = 0
+		line.BackgroundColor3 = lineColor
+		line.ZIndex = 10
+		line.Parent = tracerGui
+		tracers[obj] = line
+	end
+	
+	local function removeTracer(obj)
+		local l = tracers[obj]
+		if l and l.Parent then
+			l:Destroy()
+		end
+		tracers[obj] = nil
+	end
+	
+	local function updateTracers()
+		local camera = workspace.CurrentCamera
+		if not camera then return end
+		-- Линии идут от центра экрана
+		local viewport = camera.ViewportSize
+		local x1, y1 = viewport.X / 2, viewport.Y / 2
+	
+		for obj, line in pairs(tracers) do
+			if not obj.Parent then
+				removeTracer(obj)
+			else
+				local anchor = getAnchor(obj)
+				local ok, target = pcall(function()
+					return camera:WorldToViewportPoint(anchor.Position)
+				end)
+				if ok and target and target.Z > 0 then
+					local x2, y2 = target.X, target.Y
+					local dx, dy = x2 - x1, y2 - y1
+					local length = math.sqrt(dx*dx + dy*dy)
+					if length > 2 then
+						line.Visible = true
+						line.Size = UDim2.new(0, length, 0, 2)
+						line.Position = UDim2.new(0, (x1 + x2)/2, 0, (y1 + y2)/2)
+						line.Rotation = math.deg(math.atan2(dy, dx))
+					else
+						line.Visible = false
+					end
+				else
+					line.Visible = false
+				end
+			end
+		end
+	end
+	
+	-- Полная очистка
+	local function clearEsp()
+		for obj in pairs(labels) do removeLabel(obj) end
+		for obj in pairs(tracers) do removeTracer(obj) end
+	end
+	
+	-- Синхронизация целей: трекер цепляется только к категориям,
+	-- у которых включён соответствующий ESP-тумблер
+	local function syncTargets()
+		local playersOn = isToggleOn("Esp players")
+		local monstersOn = isToggleOn("Esp Monsters")
+		local itemsOn = isToggleOn("Esp items")
+	
+		-- Собираем актуальный список целей
+		local valid = {}
+		for _, obj in ipairs(workspace:GetDescendants()) do
+			if obj:IsA("Model") or obj:IsA("BasePart") then
+				local isPlayer = isPlayerModel(obj)
+				local isMon = (not isPlayer) and isMonster(obj)
+				local isIt = (not isPlayer) and (not isMon) and isItem(obj)
+	
+				if (isPlayer and playersOn) or (isMon and monstersOn) or (isIt and itemsOn) then
+					valid[obj] = true
+				end
+			end
+		end
+	
+		-- Убираем метки и линии у объектов, которые больше не цель
+		for obj in pairs(labels) do
+			if not valid[obj] then removeLabel(obj) end
+		end
+		for obj in pairs(tracers) do
+			if not valid[obj] then removeTracer(obj) end
+		end
+	
+		-- Добавляем новые цели
+		for obj in pairs(valid) do
+			addLabel(obj)
+			createTracer(obj)
+		end
+	end
+	
+	-- Основной цикл: раз в полсекунды пересобираем цели
+	-- (реагируем на включение/выключение других ESP-тумблеров
+	-- и на появление/исчезновение объектов)
+	local function startEspLoop()
+		running = true
+	
+		renderConnection = RunService.RenderStepped:Connect(updateTracers)
+	
+		task.spawn(function()
+			while running do
+				syncTargets()
+				task.wait(0.5)
+			end
+		end)
+	
+		tracerGui.Parent = Players.LocalPlayer:WaitForChild("PlayerGui")
+	end
+	
+	local function stopEspLoop()
+		running = false
+		if renderConnection then
+			renderConnection:Disconnect()
+			renderConnection = nil
+		end
+		clearEsp()
+		tracerGui.Parent = nil
+	end
+	
+	-- Переключение через рамки On/Off
+	local offFrame = button:WaitForChild("Off")
+	local onFrame = button:WaitForChild("On")
+	
+	local function updateVisual()
+		if espEnabled then
+			onFrame.BackgroundTransparency = 0
+			offFrame.BackgroundTransparency = 1
+		else
+			onFrame.BackgroundTransparency = 1
+			offFrame.BackgroundTransparency = 0
+		end
+	end
+	
+	updateVisual()
+	
+	button.MouseButton1Click:Connect(function()
+		espEnabled = not espEnabled
+		updateVisual()
+		if espEnabled then
+			startEspLoop()
+		else
+			stopEspLoop()
+		end
+	end)
+	
+	-- WAU Hub: восстановление состояния из сохранения
+	local function wauRestore()
+		local want = button:GetAttribute("WAU_Restore") == true
+		if want ~= espEnabled then
+			espEnabled = not espEnabled
+			updateVisual()
+			if espEnabled then startEspLoop() else stopEspLoop() end
+		end
+	end
+	button:GetAttributeChangedSignal("WAU_Restore"):Connect(wauRestore)
+	if button:GetAttribute("WAU_Restore") then wauRestore() end
+	
+end;
+task.spawn(C_94);
 -- StarterGui.Script.Head.Tp.Frame.tp house1.LocalScript
-local function C_7e()
-local script = G2L["7e"];
+local function C_a9()
+local script = G2L["a9"];
 	local imageButton = script.Parent
 	
 	local Players = game:GetService("Players")
@@ -2694,10 +3601,10 @@ local script = G2L["7e"];
 	end)
 	
 end;
-task.spawn(C_7e);
+task.spawn(C_a9);
 -- StarterGui.Script.Head.Tp.Frame.tp house2.LocalScript
-local function C_81()
-local script = G2L["81"];
+local function C_ac()
+local script = G2L["ac"];
 	local imageButton = script.Parent
 	
 	local Players = game:GetService("Players")
@@ -2715,10 +3622,10 @@ local script = G2L["81"];
 	end)
 	
 end;
-task.spawn(C_81);
+task.spawn(C_ac);
 -- StarterGui.Script.Head.Tp.Frame.generetor.LocalScript
-local function C_84()
-local script = G2L["84"];
+local function C_af()
+local script = G2L["af"];
 	local imageButton = script.Parent
 	
 	local Players = game:GetService("Players")
@@ -2736,10 +3643,10 @@ local script = G2L["84"];
 	end)
 	
 end;
-task.spawn(C_84);
+task.spawn(C_af);
 -- StarterGui.Script.Head.Tp.Frame.FixBOx.LocalScript
-local function C_87()
-local script = G2L["87"];
+local function C_b2()
+local script = G2L["b2"];
 	local imageButton = script.Parent
 	
 	local Players = game:GetService("Players")
@@ -2757,37 +3664,79 @@ local script = G2L["87"];
 	end)
 	
 end;
-task.spawn(C_87);
--- StarterGui.Script.Head.Gui.Frame.ClassicAnimeScript
-local function C_96()
-local script = G2L["96"];
-	local frame = script.Parent
-	local head = frame:FindFirstAncestor("Head")
-	if not head then return end
+task.spawn(C_b2);
+-- StarterGui.Script.SettingsLoader
+local function C_cb()
+local script = G2L["cb"];
+	-- WAU Hub: загрузка/сохранение состояний переключателей
+	local Players = game:GetService("Players")
+	local ReplicatedStorage = game:GetService("ReplicatedStorage")
 	
-	local classicBtn = frame:FindFirstChild("classic")
-	local animeBtn = frame:FindFirstChild("anime")
-	local animeshka = head:FindFirstChild("animeshka")
-	if not animeshka then return end
+	local remote = ReplicatedStorage:FindFirstChild("WAU_SettingsRemote")
+	if not remote then return end
 	
-	-- Изначально animeshka скрыт
-	animeshka.Visible = false
-	animeshka.ZIndex = 5
+	local player = Players.LocalPlayer
+	local gui = script.Parent
+	local head = gui:WaitForChild("Head")
 	
-	if classicBtn then
-		classicBtn.MouseButton1Click:Connect(function()
-			animeshka.Visible = false
-			print("Classic interface restored")
-		end)
+	-- Собираем все переключатели (кнопки с рамками On/Off)
+	local TOGGLES = {}
+	local function collect(container)
+		for _, c in container:GetChildren() do
+			if c:IsA("TextButton") and c:FindFirstChild("On") and c:FindFirstChild("Off") then
+				TOGGLES[c.Name] = c
+			end
+		end
+	end
+	collect(head:WaitForChild("Player"):WaitForChild("PlayerFrame"))
+	collect(head:WaitForChild("Visuals"):WaitForChild("ScrollingFrame"))
+	
+	-- Читаем текущее состояние кнопки (рамка On видна = включено)
+	local function readState(btn)
+		local onFrame = btn:FindFirstChild("On")
+		return onFrame and onFrame.BackgroundTransparency < 0.5 or false
 	end
 	
-	if animeBtn then
-		animeBtn.MouseButton1Click:Connect(function()
-			animeshka.Visible = true
-			print("Animeshka enabled")
-		end)
-	end
+	-- ЗАГРУЗКА: ждём данные с сервера и включаем сохранённые тумблеры
+	local loaded = false
+	remote.OnClientEvent:Connect(function(action, data)
+		if action ~= "load" or loaded then return end
+		loaded = true
+		if type(data) ~= "table" then return end
+		for name, state in pairs(data) do
+			local btn = TOGGLES[name]
+			if btn and state == true then
+				btn:SetAttribute("WAU_Restore", true)
+			end
+		end
+	end)
+	remote:FireServer("load")
+	
+	-- СОХРАНЕНИЕ: раз в 3 секунды проверяем изменения и отправляем на сервер
+	task.spawn(function()
+		local lastSaved = nil
+		while true do
+			task.wait(3)
+			if loaded then
+				local states = {}
+				for name, btn in pairs(TOGGLES) do
+					states[name] = readState(btn)
+				end
+				local changed = lastSaved == nil
+				if lastSaved then
+					for name, v in pairs(states) do
+						if lastSaved[name] ~= v then changed = true end
+					end
+				end
+				if changed then
+					lastSaved = states
+					remote:FireServer("save", states)
+				end
+			end
+		end
+	end)
+	
 end;
-task.spawn(C_96);
+task.spawn(C_cb);
 
 return G2L["1"], require;
